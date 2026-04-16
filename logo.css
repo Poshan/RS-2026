@@ -1,0 +1,23 @@
+.center h2 {
+  text-align: center;
+}
+.{
+  margin: 0;
+}
+.highlight {
+  color:#87CEEB; /* Optional: white text for better contrast */
+  padding: 0.2em 0.5em; /* Optional: Adding some padding for space */
+  font-weight: bold;
+}
+.smaller{
+  font-size: 0.7em;
+}
+.small{
+  font-size: 0.5em;  
+}
+.gray{
+  color:gray;
+}
+.red{
+  color: red;
+}
