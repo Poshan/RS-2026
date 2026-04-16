@@ -34,15 +34,15 @@ Christian Knoth (Lab)
 
 -   Ask 1 or 2 question (related to the lecture) to be discussed in the class
 
-    -   [No questions from you means **everything** is understood]{.smaller}
+    -   [No questions from you means **everything** is understood]{.small}
 
-    -   [No question from you means **less content** for lecture]{.smaller}
+    -   [No question from you means **less content** for lecture]{.small}
 
-    -   [The more questions we have, the more we all learn]{.smaller}
+    -   [The more questions we have, the more we all learn]{.small}
 
-    -   [Questions may concern **understanding**, or bring up a **discussion**]{.smaller}
+    -   [Questions may concern **understanding**, or bring up a **discussion**]{.small}
 
--   Labs repeat and complement the discussion in class, and help understand the theory by using it in practice
+-   Labs repeat and complement the discussion in class, and help understand the theory by using it in practice{.smaller}
 
 ## Course format- why
 

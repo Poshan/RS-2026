@@ -220,9 +220,9 @@ And along the way, you'll be able to explain:
 
 -   Read chapters 1 and 2 of the course book (up to Sec. 2.3.3, page 29)
 -   Answer (for yourself) the following questions:
-    -   [Why is a geographic dataset without coordinate system information ambiguous?]{.smaller}
-    -   [What is a equipotential surface?]{.smaller}
-    -   [Name one similarity and two differences between latitude and longitude]{.smaller}
-    -   [Name four types of datums and their differences]{.smaller}
-    -   [Name one similarity and two differences between WGS84 and ITRF]{.smaller}
--   Submit your questions to Learnweb by Wednesday [noon]{.highlight} next week (22.04.2026 12:00:00)
+    -   [Why is a geographic dataset without coordinate system information ambiguous?]{.small}
+    -   [What is a equipotential surface?]{.small}
+    -   [Name one similarity and two differences between latitude and longitude]{.small}
+    -   [Name four types of datums and their differences]{.small}
+    -   [Name one similarity and two differences between WGS84 and ITRF]{.small}
+-   Submit your questions to Learnweb by Wednesday [noon]{.highlight} next week (22.04.2026 12:00:00) {.smaller}
