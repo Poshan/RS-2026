@@ -225,4 +225,4 @@ And along the way, you'll be able to explain:
     -   [Name one similarity and two differences between latitude and longitude]{.small}
     -   [Name four types of datums and their differences]{.small}
     -   [Name one similarity and two differences between WGS84 and ITRF]{.small}
--   Submit your questions to Learnweb by Wednesday [noon]{.highlight} next week (22.04.2026 12:00:00) {.smaller}
+-   Submit your questions to Learnweb by Wednesday [noon]{.highlight} next week (22.04.2026 12:00:00){.smaller}
