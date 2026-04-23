@@ -1,0 +1,632 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reference Systems-2026",
+    "section": "",
+    "text": "Welcome to the Reference Systems-2026 course page. THis course is based on Iliffe, Jonathan , and Roger Lott . 2008. Datums and Map Projections for Remote Sensing, GIS, and Surveying. Whittles Pub. CRC Press, Scotland, UK."
+  },
+  {
+    "objectID": "LE02.html#the-earth-is-not-a-mathematical-shape",
+    "href": "LE02.html#the-earth-is-not-a-mathematical-shape",
+    "title": "Coordinates and Reference Systems",
+    "section": "The Earth is not a mathematical shape",
+    "text": "The Earth is not a mathematical shape\nThe physical surface of the Earth is irregular — mountains, valleys, ocean trenches.\nWe cannot define coordinates directly on this surface.\nWe need a simpler model.\n\nSource: https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/"
+  },
+  {
+    "objectID": "LE02.html#first-approximation-the-geoid",
+    "href": "LE02.html#first-approximation-the-geoid",
+    "title": "Coordinates and Reference Systems",
+    "section": "First approximation — the Geoid",
+    "text": "First approximation — the Geoid\nThe geoid is the shape the ocean would take under gravity alone — no currents, no wind, no temperature differences.\n\nAn equipotential surface of Earth’s gravity field\nIrregular — deviates from a smooth shape by ±100 m\nGood for defining heights, too complex for defining coordinates\n\n\nSource: https://www.esa.int/ESA_Multimedia/Images/2011/03/New_GOCE_geoid"
+  },
+  {
+    "objectID": "LE02.html#second-approximation-the-ellipsoid",
+    "href": "LE02.html#second-approximation-the-ellipsoid",
+    "title": "Coordinates and Reference Systems",
+    "section": "Second approximation — the Ellipsoid",
+    "text": "Second approximation — the Ellipsoid\nAn ellipsoid (oblate spheroid) — defined by just two parameters.\n\nSemi-major axis \\(a\\) (equatorial radius)\nInverse flattening \\(1/f\\)\n\nSmooth, mathematically simple, good enough for horizontal coordinates.\n\nSource: Wikipedia commons"
+  },
+  {
+    "objectID": "LE02.html#three-surfaces-summary",
+    "href": "LE02.html#three-surfaces-summary",
+    "title": "Coordinates and Reference Systems",
+    "section": "Three surfaces — summary",
+    "text": "Three surfaces — summary\n\nSource: https://link.springer.com/article/10.1007/s12517-024-11884-w?fromPaywallRec=true#Fig1\n\nPhysical surface =&gt; Real, irregular\nGeoid =&gt; Gravity-based, bumpy; used for Height reference\nEllipsoid =&gt; Mathematical, smooth; Horizontal coordinates"
+  },
+  {
+    "objectID": "LE02.html#what-is-a-coordinate-system",
+    "href": "LE02.html#what-is-a-coordinate-system",
+    "title": "Coordinates and Reference Systems",
+    "section": "What is a coordinate system?",
+    "text": "What is a coordinate system?\nA set of rules for assigning numbers to points.\nPurely abstract — no connection to the Earth yet."
+  },
+  {
+    "objectID": "LE02.html#attributes-of-a-coordinate-system",
+    "href": "LE02.html#attributes-of-a-coordinate-system",
+    "title": "Coordinates and Reference Systems",
+    "section": "Attributes of a coordinate system",
+    "text": "Attributes of a coordinate system\nEvery coordinate system defines:\n\nNumber of axes — 2 or 3\nAxis names — latitude, longitude, easting, X, Y, Z …\nAxis directions — north, east, up …\nAxis units — degrees, metres, feet …\nAxis order — which comes first?"
+  },
+  {
+    "objectID": "LE02.html#many-coordinate-systems-exist",
+    "href": "LE02.html#many-coordinate-systems-exist",
+    "title": "Coordinates and Reference Systems",
+    "section": "Many coordinate systems exist",
+    "text": "Many coordinate systems exist\nThe same point on Earth can be described using different coordinate systems.\nWe now look at the main types."
+  },
+  {
+    "objectID": "LE02.html#coordinates-on-a-sphere",
+    "href": "LE02.html#coordinates-on-a-sphere",
+    "title": "Coordinates and Reference Systems",
+    "section": "Coordinates on a sphere",
+    "text": "Coordinates on a sphere\nOn a sphere, position is defined by two angles:\n\nLatitude \\(\\varphi\\) — angle from the equatorial plane to a line to the centre\nLongitude \\(\\lambda\\) — angle from the prime meridian\n\nOn a sphere, the surface normal passes through the centre — latitude has only one definition.\n\nSource: Wikipedia commons"
+  },
+  {
+    "objectID": "LE02.html#coordinates-on-an-ellipsoid",
+    "href": "LE02.html#coordinates-on-an-ellipsoid",
+    "title": "Coordinates and Reference Systems",
+    "section": "Coordinates on an ellipsoid",
+    "text": "Coordinates on an ellipsoid\nOn an ellipsoid, the surface normal does not pass through the centre.\nThis creates two different definitions of latitude:\n\nGeodetic latitude — angle of the surface normal to the equatorial plane\nGeocentric latitude — angle of the line to the centre to the equatorial plane\n\nThey differ by up to ~11.5 arc-minutes (~21 km) at 45°.\n\nSource: Wikipedia commons"
+  },
+  {
+    "objectID": "LE02.html#ellipsoidal-coordinate-system",
+    "href": "LE02.html#ellipsoidal-coordinate-system",
+    "title": "Coordinates and Reference Systems",
+    "section": "Ellipsoidal coordinate system",
+    "text": "Ellipsoidal coordinate system\n\n\n\nCoordinate\nSymbol\nRange\n\n\n\n\nGeodetic latitude\n\\(\\varphi\\)\n−90° to +90°\n\n\nGeodetic longitude\n\\(\\lambda\\)\n−180° to +180°\n\n\nEllipsoidal height\n\\(h\\)\nmetres above ellipsoid\n\n\n\n\n2D version: \\((\\varphi, \\lambda)\\)\n3D version: \\((\\varphi, \\lambda, h)\\)\n\n\nSource: Wikipedia commons"
+  },
+  {
+    "objectID": "LE02.html#geocentric-cartesian-system",
+    "href": "LE02.html#geocentric-cartesian-system",
+    "title": "Coordinates and Reference Systems",
+    "section": "Geocentric Cartesian system",
+    "text": "Geocentric Cartesian system\nOrigin at Earth’s centre of mass. Three straight-line axes.\n\n\n\nAxis\nPoints toward\n\n\n\n\nX\nEquator ∩ Prime Meridian\n\n\nY\nEquator ∩ 90°E\n\n\nZ\nNorth Pole\n\n\n\nUnits: metres. No ellipsoid needed.\nUsed in GNSS processing and satellite geodesy.\n\nSource: Wikipedia commons"
+  },
+  {
+    "objectID": "LE02.html#conversion-between-ellipsoidal-and-geocentric",
+    "href": "LE02.html#conversion-between-ellipsoidal-and-geocentric",
+    "title": "Coordinates and Reference Systems",
+    "section": "Conversion between ellipsoidal and geocentric",
+    "text": "Conversion between ellipsoidal and geocentric\nThese describe the same point — conversion is exact.\nEllipsoidal → Geocentric: Section 2.2.4 has conversion formulas"
+  },
+  {
+    "objectID": "LE02.html#projected-coordinate-systems",
+    "href": "LE02.html#projected-coordinate-systems",
+    "title": "Coordinates and Reference Systems",
+    "section": "Projected coordinate systems",
+    "text": "Projected coordinate systems\nConvert curved \\((\\varphi, \\lambda)\\) to flat \\((E, N)\\) — Easting and Northing.\n\nUnits: metres\nEnables flat maps, distance/area calculations on a plane\nAlways introduces distortion (shape, area, distance, or direction)\n\nWe cover projections in detail in Lectures 4 and 5.\n\nSource: Wikimedia commons"
+  },
+  {
+    "objectID": "LE02.html#local-engineering-coordinate-systems",
+    "href": "LE02.html#local-engineering-coordinate-systems",
+    "title": "Coordinates and Reference Systems",
+    "section": "Local engineering coordinate systems",
+    "text": "Local engineering coordinate systems\nFor small areas — construction sites, buildings, bridges.\n\nOrigin at a convenient local point\nAxes: typically East, North, Up\nEarth’s curvature ignored (area small enough)\nUnits: metres\n\nMust be connected to a global CRS to integrate with other data."
+  },
+  {
+    "objectID": "LE02.html#gravity-related-height-systems",
+    "href": "LE02.html#gravity-related-height-systems",
+    "title": "Coordinates and Reference Systems",
+    "section": "Gravity-Related Height Systems",
+    "text": "Gravity-Related Height Systems\nGPS gives ellipsoidal height \\(h\\) — height above the ellipsoid.\nWe usually want orthometric height \\(H\\) — height above the geoid (“sea level”).\n\\[h = H + N\\]\nwhere \\(N\\) is the geoid undulation (geoid height above/below the ellipsoid)."
+  },
+  {
+    "objectID": "LE02.html#what-is-a-datum",
+    "href": "LE02.html#what-is-a-datum",
+    "title": "Coordinates and Reference Systems",
+    "section": "What is a datum?",
+    "text": "What is a datum?\nA coordinate system is abstract — floating in mathematical space.\nA datum anchors it to the real Earth.\nIt defines:\n\nWhere the origin is\nHow the axes are oriented\nWhat scale is used"
+  },
+  {
+    "objectID": "LE02.html#without-a-datum",
+    "href": "LE02.html#without-a-datum",
+    "title": "Coordinates and Reference Systems",
+    "section": "Without a datum",
+    "text": "Without a datum\nSame coordinate system, no anchor → coordinates are meaningless.\nWith a datum → every number refers to a specific place on Earth.\n\nSource: Iliffe, Jonathan , and Roger Lott . 2008. Datums and Map Projections for Remote Sensing, GIS, and Surveying. Whittles Pub. CRC Press, Scotland, UK."
+  },
+  {
+    "objectID": "LE02.html#geodetic-datum",
+    "href": "LE02.html#geodetic-datum",
+    "title": "Coordinates and Reference Systems",
+    "section": "Geodetic datum",
+    "text": "Geodetic datum\nA geodetic datum specifically anchors an ellipsoid to the Earth for defining latitude and longitude.\nTwo ingredients:\n\nWhich ellipsoid (shape and size)\nHow it is positioned and oriented relative to the Earth"
+  },
+  {
+    "objectID": "LE02.html#before-satellites-local-datums",
+    "href": "LE02.html#before-satellites-local-datums",
+    "title": "Coordinates and Reference Systems",
+    "section": "Before satellites — local datums",
+    "text": "Before satellites — local datums\nSteps to realise a local datum:\n\nChoose an ellipsoid that fits your region well (e.g., Bessel 1841)\nPick a fundamental point on the surface (e.g., Rauenberg, Germany)\nAlign the ellipsoid so its normal matches gravity direction at that point\nOrient the minor axis parallel to Earth’s rotation axis\nSurvey outward from the fundamental point to build a network"
+  },
+  {
+    "objectID": "LE02.html#local-datums-the-result",
+    "href": "LE02.html#local-datums-the-result",
+    "title": "Coordinates and Reference Systems",
+    "section": "Local datums — the result",
+    "text": "Local datums — the result\n\nFits well near the fundamental point\nGets worse further away\nEvery country built their own → many datums worldwide\n\n\nSource: Kalu, I., Ndehedehe, C. E., Okwuashi, O., & Eyoh, A. E. (2022). A comparison of existing transformation models to improve coordinate conversion between geodetic reference frames in Nigeria. Modeling Earth Systems and Environment, 8(1), 611-624."
+  },
+  {
+    "objectID": "LE02.html#after-satellites-geocentric-datums",
+    "href": "LE02.html#after-satellites-geocentric-datums",
+    "title": "Coordinates and Reference Systems",
+    "section": "After satellites — geocentric datums",
+    "text": "After satellites — geocentric datums\nSatellites see the whole Earth → we can locate the centre of mass.\nSteps to realise a geocentric datum:\n\nDefine the origin (centre of mass), axis directions, and scale\nObserve from a global network using VLBI, SLR, GNSS, DORIS\nCompute station coordinates as (X, Y, Z) in a consistent global frame\nAssign velocities to account for plate tectonics\nOptionally associate an ellipsoid (e.g., GRS 80) when users want lat/lon\n\nResult: consistent worldwide, no regional bias."
+  },
+  {
+    "objectID": "LE02.html#many-ellipsoids-many-datums",
+    "href": "LE02.html#many-ellipsoids-many-datums",
+    "title": "Coordinates and Reference Systems",
+    "section": "Many ellipsoids, many datums",
+    "text": "Many ellipsoids, many datums\n\n\n\nDatum\nEllipsoid\nType\nRegion\n\n\n\n\nDHDN\nBessel 1841\nLocal\nGermany\n\n\nED50\nInternational 1924\nLocal\nEurope\n\n\nNAD27\nClarke 1866\nLocal\nNorth America\n\n\nNAD83\nGRS 80\nGeocentric\nNorth America\n\n\nETRS89\nGRS 80\nGeocentric\nEurope\n\n\nWGS 84\nWGS 84\nGeocentric\nGlobal"
+  },
+  {
+    "objectID": "LE02.html#crs-coordinate-system-datum",
+    "href": "LE02.html#crs-coordinate-system-datum",
+    "title": "Coordinates and Reference Systems",
+    "section": "CRS = Coordinate System + Datum",
+    "text": "CRS = Coordinate System + Datum\n\\[\\boxed{\\text{CRS} = \\text{Coordinate System} + \\text{Datum}}\\]\nThe coordinate system defines how numbers work.\nThe datum defines where they point.\nTogether: unambiguous positions on Earth."
+  },
+  {
+    "objectID": "LE02.html#same-coordinate-system-different-datums",
+    "href": "LE02.html#same-coordinate-system-different-datums",
+    "title": "Coordinates and Reference Systems",
+    "section": "Same coordinate system, different datums",
+    "text": "Same coordinate system, different datums\nAll use ellipsoidal coordinates (latitude °, longitude °) — but different anchors.\n\n\n\nCRS\nDatum\nEPSG\n\n\n\n\nWGS 84 geographic\nWGS 84\n4326\n\n\nETRS89 geographic\nETRS89\n4258\n\n\nED50 geographic\nED50\n4230\n\n\n\nMünster in each:\n\n\n\nCRS\nLatitude\nLongitude\n\n\n\n\nWGS 84\n51.96885°\n7.66508°\n\n\nED50\n51.96961°\n7.666295°\n\n\n\nSame point. Different numbers. Different datum."
+  },
+  {
+    "objectID": "LE02.html#same-datum-different-coordinate-systems",
+    "href": "LE02.html#same-datum-different-coordinate-systems",
+    "title": "Coordinates and Reference Systems",
+    "section": "Same datum, different coordinate systems",
+    "text": "Same datum, different coordinate systems\nAll anchored to WGS 84 — but numbers assigned differently.\n\n\n\nCRS\nCoord. System\nEPSG\n\n\n\n\nWGS 84 geographic\nlat/lon (°)\n4326\n\n\nWGS 84 geocentric\nX, Y, Z (m)\n4978\n\n\nWGS 84 / UTM 32N\nE, N (m)\n32632\n\n\n\nSame point, same datum, different numbers."
+  },
+  {
+    "objectID": "LE02.html#itrs-the-definition",
+    "href": "LE02.html#itrs-the-definition",
+    "title": "Coordinates and Reference Systems",
+    "section": "ITRS — the definition",
+    "text": "ITRS — the definition\nInternational Terrestrial Reference System\n\nOrigin: Earth’s centre of mass\nZ axis: IERS Reference Pole\nX axis: IERS Reference Meridian ∩ Equator\nUnit: SI metre\nMaintained by: IERS\n\nThis is a theoretical definition — a set of conventions on paper."
+  },
+  {
+    "objectID": "LE02.html#itrf-the-realisation",
+    "href": "LE02.html#itrf-the-realisation",
+    "title": "Coordinates and Reference Systems",
+    "section": "ITRF — the realisation",
+    "text": "ITRF — the realisation\nInternational Terrestrial Reference Frame\nThe physical realisation: actual coordinates and velocities of real stations.\nBuilt from four observation techniques: VLBI, SLR, GNSS, DORIS\n\n[Source: https://itrf.ign.fr/en/network/map] {.small}"
+  },
+  {
+    "objectID": "LE02.html#itrf-realisations-over-time",
+    "href": "LE02.html#itrf-realisations-over-time",
+    "title": "Coordinates and Reference Systems",
+    "section": "ITRF realisations over time",
+    "text": "ITRF realisations over time\n\n\n\nRealisation\nReference epoch\nReleased\n\n\n\n\nITRF2000\n1997.0\n2001\n\n\nITRF2005\n2000.0\n2007\n\n\nITRF2008\n2005.0\n2010\n\n\nITRF2014\n2010.0\n2016\n\n\nITRF2020\n2015.0\n2022\n\n\n\nEach includes station velocities — because plates move.\nCoordinates are only valid at the reference epoch."
+  },
+  {
+    "objectID": "LE02.html#etrs89-europes-solution",
+    "href": "LE02.html#etrs89-europes-solution",
+    "title": "Coordinates and Reference Systems",
+    "section": "ETRS89 — Europe’s solution",
+    "text": "ETRS89 — Europe’s solution\nProblem: in ITRF, European stations drift ~2.5 cm/year northeast.\nSolution: ETRS89 — a reference frame that moves with the Eurasian plate.\n\nCoordinates of European stations stay (nearly) constant over time\nCoincided with ITRF at epoch 1989.0\nUsed by all European national mapping agencies"
+  },
+  {
+    "objectID": "LE02.html#wgs-84-1",
+    "href": "LE02.html#wgs-84-1",
+    "title": "Coordinates and Reference Systems",
+    "section": "WGS 84",
+    "text": "WGS 84\n\n\n\nProperty\nValue\n\n\n\n\nEllipsoid\n\\(a\\) = 6,378,137 m, \\(1/f\\) = 298.257223563\n\n\nOrigin\nEarth’s centre of mass\n\n\nMaintained by\nUS NGA (National Geospatial-Intelligence Agency)\n\n\nRealised through\nGPS satellite orbits + ~17 tracking stations"
+  },
+  {
+    "objectID": "LE02.html#wgs-84-realisations",
+    "href": "LE02.html#wgs-84-realisations",
+    "title": "Coordinates and Reference Systems",
+    "section": "WGS 84 Realisations",
+    "text": "WGS 84 Realisations\n\nOriginal (1987) — based on Doppler observations, ~1–2 m accuracy\nG730 (Jan 1994) — aligned to ITRF91\nG873 (Jan 1997) — aligned to ITRF94\nG1150 (Jan 2002) — aligned to ITRF2000\nG1674 (Feb 2012) — aligned to ITRF2008\nG1762 (Oct 2013) — aligned to ITRF2008\nG2139 (Jan 2021) — aligned to ITRF2014\n\nThe “G” number is the GPS week number when the realisation became operational."
+  },
+  {
+    "objectID": "LE02.html#wgs-84-how-it-is-tied-to-itrf",
+    "href": "LE02.html#wgs-84-how-it-is-tied-to-itrf",
+    "title": "Coordinates and Reference Systems",
+    "section": "WGS 84 — how it is tied to ITRF",
+    "text": "WGS 84 — how it is tied to ITRF\nWGS 84 is periodically re-aligned to the latest ITRF:\n\nNGA computes coordinates of its tracking stations in ITRF\nThese become the new WGS 84 station coordinates\nGPS orbits are computed relative to these stations\nYour receiver’s position is effectively in that realisation"
+  },
+  {
+    "objectID": "LE02.html#the-same-latlon-can-mean-different-places",
+    "href": "LE02.html#the-same-latlon-can-mean-different-places",
+    "title": "Coordinates and Reference Systems",
+    "section": "The same lat/lon can mean different places",
+    "text": "The same lat/lon can mean different places\nThe values \\(\\varphi = 51.969°\\), \\(\\lambda = 7.665°\\) are just numbers.\nTheir meaning depends on:\n\nWhich ellipsoid? (Bessel, GRS 80, WGS 84 …)\nWhich datum? (DHDN, ED50, ETRS89, WGS 84 …)\nWhich realisation? (WGS 84 G730 vs. G2139 …)\nWhich epoch? (2010.0 vs. 2025.0 in ITRF …)"
+  },
+  {
+    "objectID": "LE02.html#how-much-can-it-shift",
+    "href": "LE02.html#how-much-can-it-shift",
+    "title": "Coordinates and Reference Systems",
+    "section": "How much can it shift?",
+    "text": "How much can it shift?\nThe same physical point — different lat/lon depending on the datum:\n\n\n\nFrom → To\nshift\n\n\n\n\nED50 → WGS 84 (Münster)\n118.9 m\n\n\nNAD27 → NAD83 (New York)\n36.4 m\n\n\nDHDN → ETRS89 (Münster)\n163 m\n\n\nITRF2014 epoch 2010 → epoch 2025\n40 cm (2.5 cm per year)\n\n\nWGS 84 (1990) → WGS 84 (2024)\n~1–2 m (documented)\n\n\n\nWithout knowing the datum, coordinates are ambiguous."
+  },
+  {
+    "objectID": "LE02.html#summary",
+    "href": "LE02.html#summary",
+    "title": "Coordinates and Reference Systems",
+    "section": "Summary",
+    "text": "Summary\n\nThe Earth is not mathematical → we approximate with geoid and ellipsoid\nA coordinate system defines axes, units, directions — but is abstract\nA datum anchors the coordinate system to the real Earth\nCRS = Coordinate System + Datum — the complete package\nLocal datums (pre-satellite) → geocentric datums (post-satellite)\nITRF is the most accurate global frame; ETRS89 is Europe’s plate-fixed version\nWGS 84 is periodically aligned to ITRF but has multiple realisations\nLatitude and longitude are not unique without specifying the CRS"
+  },
+  {
+    "objectID": "LE02.html#some-videos-explaining-the-concepts",
+    "href": "LE02.html#some-videos-explaining-the-concepts",
+    "title": "Coordinates and Reference Systems",
+    "section": "Some videos explaining the concepts",
+    "text": "Some videos explaining the concepts\nhttps://www.youtube.com/watch?v=kXTHaMY3cVk\nhttps://www.youtube.com/watch?v=ZFe_rZccGOQ"
+  },
+  {
+    "objectID": "LE02.html#for-lecture-3",
+    "href": "LE02.html#for-lecture-3",
+    "title": "Coordinates and Reference Systems",
+    "section": "For Lecture 3",
+    "text": "For Lecture 3\nRead Chapter 3 of “datums and map projection” (1st edition) and sections 2.3.4 to 2.5.2 of the coursebook\nThink about:\n\nAre vertical datums related to horizontal datums? If yes, in which way?\nList two different types of height, and name their differences.\nWhat is the difference between the normal and the vertical?\nWhy could the adoption of a single vertical datum over large distances be problematic for height measurement?\n\nSubmit questions to Learnweb by Wednesday noon."
+  },
+  {
+    "objectID": "LE02_discussions.html#the-earth-geoid-and-ellipsoid",
+    "href": "LE02_discussions.html#the-earth-geoid-and-ellipsoid",
+    "title": "Discussion questions",
+    "section": "The Earth — Geoid and Ellipsoid",
+    "text": "The Earth — Geoid and Ellipsoid\n\nWhat is the difference between the geoid and the ellipsoid, and how much do they differ?\nHow is the difference between the geoid and mean sea level at most around 1–2 m?\nDoes Figure 2.2 depict geoid undulation — the deviation of the geoid from the ellipsoid?\nHow do coordinate definitions differ between a geoid/sphere and an ellipsoid?\nInstead of using slightly flawed models, can’t we just model the whole Earth and make the perfect CRS?"
+  },
+  {
+    "objectID": "LE02_discussions.html#the-earth-geoid-and-ellipsoid-answers",
+    "href": "LE02_discussions.html#the-earth-geoid-and-ellipsoid-answers",
+    "title": "Discussion questions",
+    "section": "The Earth — Geoid and Ellipsoid — Answers",
+    "text": "The Earth — Geoid and Ellipsoid — Answers\n\nGeoid vs. ellipsoid: The geoid is an irregular equipotential surface shaped by Earth’s actual gravity field. The ellipsoid is a smooth mathematical approximation defined by just two parameters. They differ by roughly ±100 m globally — the largest deviation is in the Indian Ocean (~−106 m).\nGeoid vs. MSL (~1–2 m): MSL is the observed average ocean surface, which is affected by permanent currents, temperature, and salinity. The geoid is where water would rest under gravity alone. The permanent deviation between them is called Mean Dynamic Topography — roughly ±1–2 m.\nFigure 2.2: Yes — it shows geoid undulation \\(N\\), the height of the geoid above or below the reference ellipsoid at each location.\nCoordinate definitions on geoid vs. sphere vs. ellipsoid: On a sphere, latitude is simply the angle from the equatorial plane to the centre. On an ellipsoid, geodetic latitude is the angle between the surface normal and the equatorial plane — these are not the same because the normal does not pass through the centre. The geoid is too irregular to define coordinates on directly, which is why we use the ellipsoid.\nWhy not model the whole Earth perfectly? We do — that’s the geoid. But the geoid is too complex for coordinate calculations. The ellipsoid is a deliberate simplification that makes mathematics tractable. The difference between them is handled separately through geoid models."
+  },
+  {
+    "objectID": "LE02_discussions.html#coordinate-systems-attributes-and-conventions",
+    "href": "LE02_discussions.html#coordinate-systems-attributes-and-conventions",
+    "title": "Discussion questions",
+    "section": "Coordinate Systems — Attributes and Conventions",
+    "text": "Coordinate Systems — Attributes and Conventions\n\nCan coordinate systems be reasonably interpreted even if not all attributes are given?\nIs axis order constrained by the order in which coordinates were recorded? What happens if axes are swapped?\nWhat is meant by the “ellipsoidal nominal”?\nIn which country are grads used instead of degrees, and why?"
+  },
+  {
+    "objectID": "LE02_discussions.html#coordinate-systems-attributes-and-conventions-answers",
+    "href": "LE02_discussions.html#coordinate-systems-attributes-and-conventions-answers",
+    "title": "Discussion questions",
+    "section": "Coordinate Systems — Attributes and Conventions — Answers",
+    "text": "Coordinate Systems — Attributes and Conventions — Answers\n\nIncomplete attributes: Sometimes software makes assumptions (e.g., “degrees” and “lat first”), but these assumptions vary between tools. Without explicit documentation of axes, units, and order, interpretation is ambiguous — you might get lucky.\nAxis order: Axis order is defined by the CRS standard, not by how data was recorded. ISO 19111 says geographic CRS axes are (latitude, longitude), but GeoJSON and many tools use (longitude, latitude).\nEllipsoidal normal: This likely refers to the normal to the ellipsoid — the line perpendicular to the ellipsoid surface at a given point. Geodetic latitude is defined as the angle this normal makes with the equatorial plane.\nGrads: France historically used grads (gradians), where a right angle = 100 grad instead of 90°. Some French and Swiss cadastral data still uses grads. A full circle = 400 grad."
+  },
+  {
+    "objectID": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid",
+    "href": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid",
+    "title": "Discussion questions",
+    "section": "Coordinates on the Sphere and Ellipsoid",
+    "text": "Coordinates on the Sphere and Ellipsoid\n\nWhat is the difference between geodetic latitude and geocentric latitude? Why are multiple definitions of latitude needed on an ellipsoid?\nCan all latitudes be classified as parallels and all longitudes as meridians?\nWhen is it more advantageous to use geocentric Cartesian coordinates instead of geographic coordinates?"
+  },
+  {
+    "objectID": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid-answers",
+    "href": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid-answers",
+    "title": "Discussion questions",
+    "section": "Coordinates on the Sphere and Ellipsoid — Answers",
+    "text": "Coordinates on the Sphere and Ellipsoid — Answers\n\nGeodetic vs. geocentric latitude: Geocentric latitude is the angle from the equatorial plane to a line drawn to the Earth’s centre. Geodetic latitude is the angle from the equatorial plane to the normal to the ellipsoid surface. On a sphere they are identical. On an ellipsoid they differ — by up to ~11.5 minutes of arc (~21 km) at 45° latitude. We need multiple definitions because the ellipsoid’s curvature varies, so the surface normal does not point at the centre.\nParallels and meridians: Yes. Lines of constant latitude are called parallels. Lines of constant longitude are called meridians.\nWhen to use geocentric Cartesian: When computing satellite orbits, GNSS processing, or performing datum transformations (e.g., 7-parameter Helmert). These operations involve rotations and translations in 3D space, which are simple matrix operations in Cartesian (X, Y, Z) but extremely messy in latitude/longitude."
+  },
+  {
+    "objectID": "LE02_discussions.html#conversions-and-transformations",
+    "href": "LE02_discussions.html#conversions-and-transformations",
+    "title": "Discussion questions",
+    "section": "Conversions and Transformations",
+    "text": "Conversions and Transformations\n\nWhat is the difference between a coordinate conversion and a coordinate transformation?\nHow does the conversion between ellipsoidal and geocentric Cartesian coordinates work mathematically?\nThe book says conversions and transformations are sometimes “intrinsically bundled together.” Can you give a practical example?"
+  },
+  {
+    "objectID": "LE02_discussions.html#conversions-and-transformations-answers",
+    "href": "LE02_discussions.html#conversions-and-transformations-answers",
+    "title": "Discussion questions",
+    "section": "Conversions and Transformations — Answers",
+    "text": "Conversions and Transformations — Answers\n\nConversion vs. transformation: A conversion changes the coordinate system but stays on the same datum — it is exact and reversible (e.g., geographic ↔︎ geocentric, geographic → projected). A transformation changes the datum — it is empirical, based on observations, and always has some error (e.g., ED50 → WGS 84). Key test: if no datum change is involved, it’s a conversion.\nEllipsoidal → geocentric maths: Section 2.2.4 equations 2.6 till 2.8 and 2.9 till 2.14 for the reverse\nBundled conversion + transformation: When you reproject a dataset from, say, ED50 geographic to WGS 84 / UTM zone 32N, the software internally performs a datum transformation (ED50 → WGS 84) and a coordinate conversion (geographic → projected) in a single pipeline. In QGIS or ArcGIS this appears as one operation, but PROJ internally chains them: ED50 latlon → ED50 XYZ → WGS84 XYZ → WGS84 latlon → UTM."
+  },
+  {
+    "objectID": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights",
+    "href": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights",
+    "title": "Discussion questions",
+    "section": "Engineering Coordinates and Gravity-Related Heights",
+    "text": "Engineering Coordinates and Gravity-Related Heights\n\nWhy would the relationship between two engineering height systems be more complex than a simple offset?\nWhat is the difference between orthometric height, normal height, and geopotential number? -&gt; Leave this for Lecture 3.\nWhat is a vertical coordinate system?\nWhat exactly is the difference between a vertical datum and a geodetic datum?"
+  },
+  {
+    "objectID": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights-answers",
+    "href": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights-answers",
+    "title": "Discussion questions",
+    "section": "Engineering Coordinates and Gravity-Related Heights — Answers",
+    "text": "Engineering Coordinates and Gravity-Related Heights — Answers\n\nMore than a simple offset: Two surveyors may use different control points, different instruments, and accumulate different measurement errors. The result is that the height difference between points A and B in system 1 may not match the difference in system 2.\nThree height types: Leave this for Lecture 3.\nVertical coordinate system: A 1D coordinate system with a single axis: height (upward) or depth (downward), in metres, referenced to a vertical datum.\nVertical vs. geodetic datum: A geodetic datum anchors an ellipsoid to the Earth for horizontal positions (lat/lon). A vertical datum defines a reference surface for heights — typically the geoid or a MSL measurement at a specific tide gauge. They are independent: you can use ETRS89 (geodetic datum) with DHHN2016 (vertical datum)."
+  },
+  {
+    "objectID": "LE02_discussions.html#datums",
+    "href": "LE02_discussions.html#datums",
+    "title": "Discussion questions",
+    "section": "Datums",
+    "text": "Datums\n\nWhat is the practical process of defining and realising a datum? Can you demonstrate how one is built?\nWhat is the purpose of the datum?\nIf coordinate transformations between datums can have errors, how do geospatial systems ensure reliability when integrating datasets from multiple sources?"
+  },
+  {
+    "objectID": "LE02_discussions.html#datums-answers",
+    "href": "LE02_discussions.html#datums-answers",
+    "title": "Discussion questions",
+    "section": "Datums — Answers",
+    "text": "Datums — Answers\n\nBuilding a (local) datum — step by step: (1) Choose an ellipsoid (e.g., Bessel 1841). (2) Pick a fundamental point on Earth’s surface (e.g., Rauenberg for the German DHDN). (3) At that point, fix the ellipsoid so that the surface normal aligns with the local gravity direction (“deflection of the vertical” = 0 at this point). (4) Orient the minor axis parallel to Earth’s rotation axis. (5) Survey outward from this point to build a network of known coordinates. For a geocentric datum (e.g., ITRF): skip the fundamental point — instead, use satellite observations to locate the Earth’s centre of mass and define the origin there.\nPurpose of a datum: It anchors an abstract coordinate system to the physical Earth. Without it, coordinates are just numbers floating in mathematical space with no connection to real locations.\nReliability despite transformation errors: In practice: (1) use the most accurate transformation available; (2) record and propagate accuracy metadata (3) choose transformations appropriate to your area of use; (4) accept and document residual uncertainty. There is no way to eliminate transformation error entirely — the goal is to understand and manage it."
+  },
+  {
+    "objectID": "LE02_discussions.html#itrs-wgs-84-and-time",
+    "href": "LE02_discussions.html#itrs-wgs-84-and-time",
+    "title": "Discussion questions",
+    "section": "ITRS, WGS 84, and Time",
+    "text": "ITRS, WGS 84, and Time\n\nWhy do coordinates in the ITRS require a specific time stamp?\nWhat practical problems could arise when two GIS datasets use the same CRS but were created at different points in time?"
+  },
+  {
+    "objectID": "LE02_discussions.html#itrs-wgs-84-and-time-answers",
+    "href": "LE02_discussions.html#itrs-wgs-84-and-time-answers",
+    "title": "Discussion questions",
+    "section": "ITRS, WGS 84, and Time — Answers",
+    "text": "ITRS, WGS 84, and Time — Answers\n\nWhy ITRF needs a time stamp: The Earth’s tectonic plates move continuously — Europe drifts ~2.5 cm/year northeast relative to Earth’s centre. ITRF station coordinates therefore change over time. An ITRF position is only valid at a specific epoch (e.g., 2015.0).\nSame CRS, different times: If the CRS is a dynamic datum (like ITRF), the coordinates of the same physical point are literally different at different epochs — so two datasets “in ITRF2014” but at epochs 2015.0 and 2025.0 will show a systematic shift."
+  },
+  {
+    "objectID": "LE01.html#overview",
+    "href": "LE01.html#overview",
+    "title": "Reference Systems",
+    "section": "Overview",
+    "text": "Overview\n\nSlido\nLearning objectives of the course\nFundamentals\nWhere/why we need reference systems?\nBook chapters organization\nUp next"
+  },
+  {
+    "objectID": "LE01.html#share-your-thoughts",
+    "href": "LE01.html#share-your-thoughts",
+    "title": "Reference Systems",
+    "section": "1. Share your thoughts",
+    "text": "1. Share your thoughts\nWhat comes to your mind, when you hear “Coordinate reference system”?"
+  },
+  {
+    "objectID": "LE01.html#share-your-thoughts-again",
+    "href": "LE01.html#share-your-thoughts-again",
+    "title": "Reference Systems",
+    "section": "1. Share your thoughts again",
+    "text": "1. Share your thoughts again"
+  },
+  {
+    "objectID": "LE01.html#learning-objectives",
+    "href": "LE01.html#learning-objectives",
+    "title": "Reference Systems",
+    "section": "2. Learning objectives",
+    "text": "2. Learning objectives\nBy the end of the course you will be able to:\n\nIdentify, interpret, and critically evaluate coordinate reference system information in geospatial data and software\nSelect and apply appropriate projections, datums, and transformations for a given task\nDiagnose and fix reference system problems when combining, transforming, or sharing spatial data"
+  },
+  {
+    "objectID": "LE01.html#learning-objectives-1",
+    "href": "LE01.html#learning-objectives-1",
+    "title": "Reference Systems",
+    "section": "2. Learning objectives …",
+    "text": "2. Learning objectives …\nAnd along the way, you’ll be able to explain:\n\nWhy Africa looks the same size as Greenland on many world maps — even though it is 14 times larger -&gt; True size\nWhy Google Maps uses a projection that is mathematically wrong — and why they chose it anyway\nWhy many world maps show Antarctica as an infinitely wide strip at the bottom — or simply cut it off\nWhy your phone’s GPS might say you’re at 8820 m elevation while the official sign at the summit says 8848 m — and both are correct"
+  },
+  {
+    "objectID": "LE01.html#fundamentals",
+    "href": "LE01.html#fundamentals",
+    "title": "Reference Systems",
+    "section": "3. Fundamentals",
+    "text": "3. Fundamentals"
+  },
+  {
+    "objectID": "LE01.html#geographic-information--three-components",
+    "href": "LE01.html#geographic-information--three-components",
+    "title": "Reference Systems",
+    "section": "Geographic Information- three components",
+    "text": "Geographic Information- three components\n\nWhere, When and What\nSpace, Time and Attribute\nMünster, 9am 09.04.2025, Temperature -1°C"
+  },
+  {
+    "objectID": "LE01.html#space-representation",
+    "href": "LE01.html#space-representation",
+    "title": "Reference Systems",
+    "section": "Space representation",
+    "text": "Space representation\n\nSpace as Coordinates\n[51.968°, 7.665°, 62m, 9am, 09.04.2025, Temperature -1°C]\nSpace as place name\n[Münster, 9am 09.04.2025, Temperature -1°C]\nSpace as a spatial description\n[64Km west of Bielfeld, 9am 09.04.2025, Temperature -1°C]"
+  },
+  {
+    "objectID": "LE01.html#coordinates-are-values-in-a-reference-system",
+    "href": "LE01.html#coordinates-are-values-in-a-reference-system",
+    "title": "Reference Systems",
+    "section": "Coordinates are values in a reference system",
+    "text": "Coordinates are values in a reference system\n\n51.968849°,7.6650811°, 62m\n51.968849° degrees East from Longitude 0 (Greenwich)\n7.6650811° degrees North from Latitude 0 (Equator)\n62m above the sea level\nWithout the reference(Greenwich, Equator, Sea level,..) the coordinates are meaningless"
+  },
+  {
+    "objectID": "LE01.html#temporal-descriptions-are-values-in-a-reference-system",
+    "href": "LE01.html#temporal-descriptions-are-values-in-a-reference-system",
+    "title": "Reference Systems",
+    "section": "Temporal descriptions are values in a reference system",
+    "text": "Temporal descriptions are values in a reference system\n\n\n\nTime as a time stamp 09.04.2025 09:00:00\nUniversally? accepted system\n\n\nUTC\nGregorian Calendar https://en.wikipedia.org/wiki/Gregorian_calendar\nNo. of seconds since 01.01.1970 - Epoch time 09.04.2025 10:02:00 GMT = 1744192974"
+  },
+  {
+    "objectID": "LE01.html#attribute-representation",
+    "href": "LE01.html#attribute-representation",
+    "title": "Reference Systems",
+    "section": "Attribute representation",
+    "text": "Attribute representation\n\n\nTemperature, -1°C"
+  },
+  {
+    "objectID": "LE01.html#summary-reference-systems-definition",
+    "href": "LE01.html#summary-reference-systems-definition",
+    "title": "Reference Systems",
+    "section": "Summary: Reference systems-definition",
+    "text": "Summary: Reference systems-definition\n\nKey features of any reference system are:\n\nOrigin\nOrientation\nUnit of Measurement"
+  },
+  {
+    "objectID": "LE01.html#summary",
+    "href": "LE01.html#summary",
+    "title": "Reference Systems",
+    "section": "Summary",
+    "text": "Summary\n\nValues are not meaningful by themselves, their accurate interpretation necessitates knowledge of the reference system(s)\nPut differently: without a documentation of the reference systems, ambiguity is guaranteed\nConversion between values in different reference systems is often desirable, sometimes possible without information loss, sometimes not\nReference systems are not absolute, they are created (and live by) conventions"
+  },
+  {
+    "objectID": "LE01.html#wherewhy-we-need-reference-systems",
+    "href": "LE01.html#wherewhy-we-need-reference-systems",
+    "title": "Reference Systems",
+    "section": "4. Where/why we need reference systems?",
+    "text": "4. Where/why we need reference systems?"
+  },
+  {
+    "objectID": "LE01.html#web-mapping",
+    "href": "LE01.html#web-mapping",
+    "title": "Reference Systems",
+    "section": "Web mapping",
+    "text": "Web mapping\n\n[51.9623, 7.6257]"
+  },
+  {
+    "objectID": "LE01.html#positioning",
+    "href": "LE01.html#positioning",
+    "title": "Reference Systems",
+    "section": "Positioning",
+    "text": "Positioning\n\nGPS uses World Geodetic System 1984 (WGS 84)\nGLONASS uses Parametry Zemli (PZ-90)\nGalileo uses Galile Terestrial Reference Frame (GTRF)\nBeidou uses China Terrestrial Reference Frame (CGCS 2000)\nhttps://gssc.esa.int/navipedia/index.php/Reference_Frames_in_GNSS\nWhich of these system does your smart phone use?"
+  },
+  {
+    "objectID": "LE01.html#positioning-1",
+    "href": "LE01.html#positioning-1",
+    "title": "Reference Systems",
+    "section": "Positioning",
+    "text": "Positioning"
+  },
+  {
+    "objectID": "LE01.html#combining-data-from-different-sources",
+    "href": "LE01.html#combining-data-from-different-sources",
+    "title": "Reference Systems",
+    "section": "Combining data from different sources",
+    "text": "Combining data from different sources\n\nEngineering Oops: The Maelstrom of Lake Peigneur"
+  },
+  {
+    "objectID": "LE01.html#is-earth-flat",
+    "href": "LE01.html#is-earth-flat",
+    "title": "Reference Systems",
+    "section": "Is earth flat??",
+    "text": "Is earth flat??\n\nThe concentric circles map was created by the Economist"
+  },
+  {
+    "objectID": "LE01.html#look-at-more-examples-here-..",
+    "href": "LE01.html#look-at-more-examples-here-..",
+    "title": "Reference Systems",
+    "section": "Look at more examples here ..",
+    "text": "Look at more examples here ..\n\nJavier Jimenez Shaw: WGS 84: I don’t Know I don’t care"
+  },
+  {
+    "objectID": "LE01.html#has-this-ever-happened-to-you",
+    "href": "LE01.html#has-this-ever-happened-to-you",
+    "title": "Reference Systems",
+    "section": "Has this ever happened to you?",
+    "text": "Has this ever happened to you?"
+  },
+  {
+    "objectID": "LE01.html#summary-1",
+    "href": "LE01.html#summary-1",
+    "title": "Reference Systems",
+    "section": "Summary",
+    "text": "Summary\n\nReference systems often go unnoticed, yet they are crucial to our interaction with spatio-temporal information\nThree important questions:\n\nHow to document reference system information?\nHow to find out reference system information when it is not “there”?\nHow to convert values from one reference system to another?"
+  },
+  {
+    "objectID": "LE01.html#about-the-book",
+    "href": "LE01.html#about-the-book",
+    "title": "Reference Systems",
+    "section": "5. About the Book",
+    "text": "5. About the Book"
+  },
+  {
+    "objectID": "LE01.html#up-next",
+    "href": "LE01.html#up-next",
+    "title": "Reference Systems",
+    "section": "6. Up Next",
+    "text": "6. Up Next"
+  },
+  {
+    "objectID": "LE01.html#for-the-next-lecture",
+    "href": "LE01.html#for-the-next-lecture",
+    "title": "Reference Systems",
+    "section": "For the next lecture",
+    "text": "For the next lecture\n\nRead chapters 1 and 2 of the course book (up to Sec. 2.3.3, page 29)\nAnswer (for yourself) the following questions:\n\nWhy is a geographic dataset without coordinate system information ambiguous?\nWhat is a equipotential surface?\nName one similarity and two differences between latitude and longitude\nName four types of datums and their differences\nName one similarity and two differences between WGS84 and ITRF\n\nSubmit your questions to Learnweb by Wednesday noon next week (22.04.2026 12:00:00){.smaller}"
+  },
+  {
+    "objectID": "LE00.html#teachers",
+    "href": "LE00.html#teachers",
+    "title": "Reference Systems",
+    "section": "Teachers",
+    "text": "Teachers\n\n\nPoshan Niraula (Lecture)\n\n\nChristian Knoth (Lab)"
+  },
+  {
+    "objectID": "LE00.html#course-format",
+    "href": "LE00.html#course-format",
+    "title": "Reference Systems",
+    "section": "Course format",
+    "text": "Course format\n\nEach participant studies the course materials by themselves in-depth, core conepts will be revisited in lecture and discussions\nAsk 1 or 2 question (related to the lecture) to be discussed in the class\n\nNo questions from you means everything is understood\nNo question from you means less content for lecture\nThe more questions we have, the more we all learn\nQuestions may concern understanding, or bring up a discussion\n\nLabs repeat and complement the discussion in class, and help understand the theory by using it in practice{.smaller}"
+  },
+  {
+    "objectID": "LE00.html#course-format--why",
+    "href": "LE00.html#course-format--why",
+    "title": "Reference Systems",
+    "section": "Course format- why",
+    "text": "Course format- why\n\nLecture + Flipped classroom style\nThe idea is to read at your own pace, by yourself, and to discuss in group setting"
+  },
+  {
+    "objectID": "LE00.html#lecture-format-..",
+    "href": "LE00.html#lecture-format-..",
+    "title": "Reference Systems",
+    "section": "Lecture format ..",
+    "text": "Lecture format ..\n\nThursdays (Check schedules)\n10:00 = 10:15 up until ~12:00\n\n\n\nDiscussion\nOverview of next week’s reading (short lecture)"
+  },
+  {
+    "objectID": "LE00.html#labs",
+    "href": "LE00.html#labs",
+    "title": "Reference Systems",
+    "section": "Labs",
+    "text": "Labs\n12:00 = 12:15 up until ~14:00\n\nSchedule of labs: will be distributed in lab class today\n5 labs in total\n2 weeks time to work on them independently\nLab slots for Thursdays are intended to provide assistance\nSubmission deadline - Christian will communicate later today"
+  },
+  {
+    "objectID": "LE00.html#workload",
+    "href": "LE00.html#workload",
+    "title": "Reference Systems",
+    "section": "Workload",
+    "text": "Workload\n\n5 CP, 12 weeks (this week included)\n5*30/12 ≈ 12.5 - 3 = 9.5 hours per week\nNote that this would sum to a study load of 60 hrs /week; since most of the work here concerns reading, consider doing most of it during the first half of the semester. The second half will be more demanding for all other courses."
+  },
+  {
+    "objectID": "LE00.html#participation",
+    "href": "LE00.html#participation",
+    "title": "Reference Systems",
+    "section": "Participation",
+    "text": "Participation\nJoin the course in Learnweb\n\nQuestions for the Thursday lecture should be uploaded by Wednesday, noon"
+  },
+  {
+    "objectID": "LE00.html#grading",
+    "href": "LE00.html#grading",
+    "title": "Reference Systems",
+    "section": "Grading",
+    "text": "Grading\n\nLabs: Pass/Fail\nExam: 100% on July 23, 2026\n\nEntry to exams: at least 3 labs passed by July 10, 2026\n\nDiscussions: Bonus points for active participation"
+  },
+  {
+    "objectID": "LE00.html#materials",
+    "href": "LE00.html#materials",
+    "title": "Reference Systems",
+    "section": "Materials",
+    "text": "Materials"
+  },
+  {
+    "objectID": "LE00.html#wkt2",
+    "href": "LE00.html#wkt2",
+    "title": "Reference Systems",
+    "section": "WKT2",
+    "text": "WKT2\nhttps://docs.ogc.org/is/18-010r11/18-010r11.pdf"
+  },
+  {
+    "objectID": "LE00.html#course-schedule",
+    "href": "LE00.html#course-schedule",
+    "title": "Reference Systems",
+    "section": "Course Schedule",
+    "text": "Course Schedule\nSee this link\n\nCourse contents could change slightly"
+  },
+  {
+    "objectID": "LE00.html#part-i-spatial-reference-systems",
+    "href": "LE00.html#part-i-spatial-reference-systems",
+    "title": "Reference Systems",
+    "section": "Part I: Spatial Reference Systems",
+    "text": "Part I: Spatial Reference Systems"
+  },
+  {
+    "objectID": "LE00.html#part-ii-temporal-and-measurement-scale",
+    "href": "LE00.html#part-ii-temporal-and-measurement-scale",
+    "title": "Reference Systems",
+    "section": "Part II: Temporal and Measurement Scale",
+    "text": "Part II: Temporal and Measurement Scale"
+  }
+]

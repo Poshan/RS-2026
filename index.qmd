@@ -1,0 +1,5 @@
+---
+title: "Reference Systems-2026"
+---
+
+Welcome to the Reference Systems-2026 course page. THis course is based on Iliffe, Jonathan , and Roger Lott . 2008. Datums and Map Projections for Remote Sensing, GIS, and Surveying. Whittles Pub. CRC Press, Scotland, UK.

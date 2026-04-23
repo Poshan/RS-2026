@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "RS-2026"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: LE00.qmd
+        text: LE00
+      - href: LE01.qmd
+        text: LE01
+      - href: LE02.qmd
+        text: LE02
+      - href: LE02_discussions.qmd
+        text: LE02 Discussions
+
+format:
+  html:
+    theme: cosmo
+    toc: true
