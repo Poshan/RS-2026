@@ -1,0 +1,164 @@
+---
+title: "Discussion questions"
+subtitle: "From the Reading — Chapters 1 & 2"
+author: ""
+date: 2026-04-23
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    center: false
+    transition: fade
+    width: 1600
+    height: 900
+---
+
+## The Earth — Geoid and Ellipsoid
+
+- What is the difference between the geoid and the ellipsoid, and how much do they differ?
+
+- How is the difference between the geoid and mean sea level at most around 1–2 m?
+
+- Does Figure 2.2 depict geoid undulation — the deviation of the geoid from the ellipsoid?
+
+- How do coordinate definitions differ between a geoid/sphere and an ellipsoid?
+
+- Instead of using slightly flawed models, can't we just model the whole Earth and make the perfect CRS?
+
+---
+
+## The Earth — Geoid and Ellipsoid — Answers {.smaller}
+
+- **Geoid vs. ellipsoid:** The geoid is an irregular equipotential surface shaped by Earth's actual gravity field. The ellipsoid is a smooth mathematical approximation defined by just two parameters. They differ by roughly ±100 m globally — the largest deviation is in the Indian Ocean (~−106 m).
+
+- **Geoid vs. MSL (~1–2 m):** MSL is the *observed* average ocean surface, which is affected by permanent currents, temperature, and salinity. The geoid is where water *would* rest under gravity alone. The permanent deviation between them is called Mean Dynamic Topography — roughly ±1–2 m.
+
+- **Figure 2.2:** Yes — it shows geoid undulation $N$, the height of the geoid above or below the reference ellipsoid at each location.
+
+- **Coordinate definitions on geoid vs. sphere vs. ellipsoid:** On a sphere, latitude is simply the angle from the equatorial plane to the centre. On an ellipsoid, geodetic latitude is the angle between the surface normal and the equatorial plane — these are not the same because the normal does not pass through the centre. The geoid is too irregular to define coordinates on directly, which is why we use the ellipsoid.
+
+- **Why not model the whole Earth perfectly?** We do — that's the geoid. But the geoid is too complex for coordinate calculations. The ellipsoid is a deliberate simplification that makes mathematics tractable. The difference between them is handled separately through geoid models.
+
+---
+
+## Coordinate Systems — Attributes and Conventions
+
+- Can coordinate systems be reasonably interpreted even if not all attributes are given?
+
+- Is axis order constrained by the order in which coordinates were recorded? What happens if axes are swapped?
+
+- What is meant by the "ellipsoidal nominal"?
+
+- In which country are grads used instead of degrees, and why?
+
+---
+
+## Coordinate Systems — Attributes and Conventions — Answers {.smaller}
+
+- **Incomplete attributes:** Sometimes software makes assumptions (e.g., "degrees" and "lat first"), but these assumptions vary between tools. Without explicit documentation of axes, units, and order, interpretation is ambiguous — you might get lucky.
+
+- **Axis order:** Axis order is defined by the CRS standard, not by how data was recorded. ISO 19111 says geographic CRS axes are (latitude, longitude), but GeoJSON and many tools use (longitude, latitude).
+
+- **Ellipsoidal normal:** This likely refers to the *normal to the ellipsoid* — the line perpendicular to the ellipsoid surface at a given point. Geodetic latitude is defined as the angle this normal makes with the equatorial plane.
+
+- **Grads:** France historically used grads (gradians), where a right angle = 100 grad instead of 90°. Some French and Swiss cadastral data still uses grads. A full circle = 400 grad.
+
+---
+
+## Coordinates on the Sphere and Ellipsoid
+
+- What is the difference between geodetic latitude and geocentric latitude? Why are multiple definitions of latitude needed on an ellipsoid?
+
+- Can all latitudes be classified as parallels and all longitudes as meridians?
+
+- When is it more advantageous to use geocentric Cartesian coordinates instead of geographic coordinates?
+
+---
+
+## Coordinates on the Sphere and Ellipsoid — Answers {.smaller}
+
+- **Geodetic vs. geocentric latitude:** Geocentric latitude is the angle from the equatorial plane to a line drawn to the Earth's centre. Geodetic latitude is the angle from the equatorial plane to the *normal to the ellipsoid surface*. On a sphere they are identical. On an ellipsoid they differ — by up to ~11.5 minutes of arc (~21 km) at 45° latitude. We need multiple definitions because the ellipsoid's curvature varies, so the surface normal does not point at the centre.
+
+- **Parallels and meridians:** Yes. Lines of constant latitude are called *parallels*. Lines of constant longitude are called *meridians*.
+
+- **When to use geocentric Cartesian:** When computing satellite orbits, GNSS processing, or performing datum transformations (e.g., 7-parameter Helmert). These operations involve rotations and translations in 3D space, which are simple matrix operations in Cartesian (X, Y, Z) but extremely messy in latitude/longitude. 
+
+---
+
+## Conversions and Transformations
+
+- What is the difference between a coordinate conversion and a coordinate transformation?
+
+- How does the conversion between ellipsoidal and geocentric Cartesian coordinates work mathematically?
+
+- The book says conversions and transformations are sometimes "intrinsically bundled together." Can you give a practical example?
+
+---
+
+## Conversions and Transformations — Answers {.smaller}
+
+- **Conversion vs. transformation:** A *conversion* changes the coordinate system but stays on the same datum — it is exact and reversible (e.g., geographic ↔ geocentric, geographic → projected). A *transformation* changes the datum — it is empirical, based on observations, and always has some error (e.g., ED50 → WGS 84). Key test: if no datum change is involved, it's a conversion.
+
+- **Ellipsoidal → geocentric maths:** Section 2.2.4 equations 2.6 till 2.8 and 2.9 till 2.14 for the reverse
+
+- **Bundled conversion + transformation:** When you reproject a dataset from, say, ED50 geographic to WGS 84 / UTM zone 32N, the software internally performs a datum *transformation* (ED50 → WGS 84) and a coordinate *conversion* (geographic → projected) in a single pipeline. In QGIS or ArcGIS this appears as one operation, but PROJ internally chains them: `ED50 latlon → ED50 XYZ → WGS84 XYZ → WGS84 latlon → UTM`.
+
+---
+
+## Engineering Coordinates and Gravity-Related Heights
+
+- Why would the relationship between two engineering height systems be more complex than a simple offset?
+
+- What is the difference between orthometric height, normal height, and geopotential number? -> Leave this for Lecture 3.
+
+- What is a vertical coordinate system?
+
+- What exactly is the difference between a vertical datum and a geodetic datum?
+
+---
+
+## Engineering Coordinates and Gravity-Related Heights — Answers {.smaller}
+
+- **More than a simple offset:** Two surveyors may use different control points, different instruments, and accumulate different measurement errors. The result is that the height difference between points A and B in system 1 may not match the difference in system 2. 
+
+- **Three height types:** Leave this for Lecture 3.
+
+- **Vertical coordinate system:** A 1D coordinate system with a single axis: height (upward) or depth (downward), in metres, referenced to a vertical datum.
+
+- **Vertical vs. geodetic datum:** A geodetic datum anchors an ellipsoid to the Earth for horizontal positions (lat/lon). A vertical datum defines a reference surface for heights — typically the geoid or a MSL measurement at a specific tide gauge. They are independent: you can use ETRS89 (geodetic datum) with DHHN2016 (vertical datum).
+
+---
+
+## Datums
+
+- What is the practical process of defining and realising a datum? Can you demonstrate how one is built?
+
+- What is the purpose of the datum?
+
+- If coordinate transformations between datums can have errors, how do geospatial systems ensure reliability when integrating datasets from multiple sources?
+
+---
+
+## Datums — Answers {.smaller}
+
+- **Building a (local) datum — step by step:** (1) Choose an ellipsoid (e.g., Bessel 1841). (2) Pick a *fundamental point* on Earth's surface (e.g., Rauenberg for the German DHDN). (3) At that point, fix the ellipsoid so that the surface normal aligns with the local gravity direction ("deflection of the vertical" = 0 at this point). (4) Orient the minor axis parallel to Earth's rotation axis. (5) Survey outward from this point to build a network of known coordinates. For a *geocentric* datum (e.g., ITRF): skip the fundamental point — instead, use satellite observations to locate the Earth's centre of mass and define the origin there.
+
+- **Purpose of a datum:** It anchors an abstract coordinate system to the physical Earth. Without it, coordinates are just numbers floating in mathematical space with no connection to real locations.
+
+- **Reliability despite transformation errors:** In practice: (1) use the most accurate transformation available; (2) record and propagate accuracy metadata (3) choose transformations appropriate to your area of use; (4) accept and document residual uncertainty. There is no way to eliminate transformation error entirely — the goal is to understand and manage it.
+
+---
+
+## ITRS, WGS 84, and Time
+
+- Why do coordinates in the ITRS require a specific time stamp?
+
+- What practical problems could arise when two GIS datasets use the same CRS but were created at different points in time?
+
+---
+
+## ITRS, WGS 84, and Time — Answers {.smaller}
+
+- **Why ITRF needs a time stamp:** The Earth's tectonic plates move continuously — Europe drifts ~2.5 cm/year northeast relative to Earth's centre. ITRF station coordinates therefore change over time. An ITRF position is only valid at a specific *epoch* (e.g., 2015.0). 
+
+- **Same CRS, different times:** If the CRS is a *dynamic* datum (like ITRF), the coordinates of the same physical point are literally different at different epochs — so two datasets "in ITRF2014" but at epochs 2015.0 and 2025.0 will show a systematic shift. 

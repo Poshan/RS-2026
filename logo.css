@@ -1,6 +1,9 @@
 .center h2 {
   text-align: center;
 }
+.centering{
+  text-align: center;
+}
 .{
   margin: 0;
 }
@@ -20,4 +23,7 @@
 }
 .red{
   color: red;
+}
+.left{
+  text-align: left;
 }
