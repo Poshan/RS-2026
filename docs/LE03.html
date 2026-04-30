@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.32">
+
+  <meta name="author" content="Poshan Niraula">
+  <title>RS-2026 – Reference Systems - Vertical</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
+  <link rel="stylesheet" href="logo.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Reference Systems - Vertical</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Poshan Niraula 
+</div>
+</div>
+</div>
+
+</section>
+<section id="reading-guides" class="slide level2">
+<h2>Reading Guides</h2>
+<ul>
+<li>Chapter 2 2.3.4 onwards and 1st edition book Chapter 3
+<ul>
+<li><span class="smaller">Are vertical datums related to horizontal datums? If yes, in which way?</span></li>
+<li><span class="smaller">List two different types of height, and name their differences.</span></li>
+<li><span class="smaller">What is the difference between the normal and the vertical?</span></li>
+<li><span class="smaller">What is a tide gauge?</span></li>
+<li><span class="smaller">Why could the adoption of a single vertical datum over large distances be problematic for height measurement?</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="geoid" class="slide level2">
+<h2>Geoid</h2>
+<ul>
+<li>The <strong>true shape</strong> of the Earth is called the <strong>geoid</strong></li>
+<li>Defined as: <em>that equipotential surface that most closely corresponds to mean sea level</em></li>
+<li>The geoid is a real physical surface dictated by gravity — we approximate it using gravitational models (e.g., EGM2008), but the geoid itself exists independently of our models</li>
+<li>The spheroid/ellipsoid is the simplified mathematical approximation</li>
+<li>Spheroid approximates the geoid to within ±100 m (RMS ~30 m)</li>
+</ul>
+</section>
+<section id="geoid-as-an-equipotential-surface" class="slide level2">
+<h2>Geoid as an Equipotential Surface</h2>
+<ul>
+<li>Equipotential surface: A surface everywhere <strong>perpendicular to the direction of gravity</strong></li>
+<li>Gravity is affected by irregularities in density of Earth’s crust and mantle</li>
+<li>Therefore the equipotential surface is <strong>somewhat irregular</strong></li>
+</ul>
+</section>
+<section id="discussion-questions-geoid-concepts" class="slide level2">
+<h2>Discussion Questions: Geoid Concepts</h2>
+<ul>
+<li><p><span class="smaller"><em>“Is the geoid a model or the name of the actual shape of the Earth? Is there any difference between actual and true shape?”</em></span></p></li>
+<li><p><span class="smaller"><em>“In my understanding, equipotential describes a vector at each position that points towards the center. How does it follow that there are different heights?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Why must every diagram of the geoid greatly exaggerate its deviation from the spheroid?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-geoid-concepts" class="slide level2">
+<h2>Answers: Geoid Concepts</h2>
+<ul>
+<li><p><strong>Model or actual shape?</strong> Both — “geoid” is the name for the real shape; “equipotential surface” describes what kind of surface it physically is.</p></li>
+<li><p><strong>Equipotential doesnot mean pointing to centre.</strong> Gravity doesn’t point exactly to the centre because of mass irregularities. Equipotential means same gravitional potential, not same direction.</p></li>
+<li><p><strong>Why exaggerate diagrams?</strong> Deviation is less than 100 m over a body of ~6400 km radius. At true scale, geoid and spheroid would be <strong>indistinguishable</strong>.</p></li>
+</ul>
+</section>
+<section id="vertical-and-normal" class="slide level2">
+<h2>Vertical and Normal</h2>
+<ul>
+<li><strong>Vertical</strong>: direction of gravity at a point (what plumb line shows); perpendicular to the geoid; <strong>natural direction</strong></li>
+<li><strong>Normal</strong>: Geometric perpendicular to the spheroid/ellipsoid, <strong>Mathematical direction</strong> computed from an equation.</li>
+<li>The angle between them = <strong>deviation of the vertical</strong> (ξ, η)</li>
+<li>Typically a few <strong>seconds of arc</strong></li>
+</ul>
+</section>
+<section id="discussion-questions-vertical-vs-normal" class="slide level2">
+<h2>Discussion Questions: Vertical vs Normal</h2>
+<ul>
+<li><p><span class="smaller"><em>“Why is the term vertical used for geoid and normal for spheroid? Does the difference lie in shape, definitions, or both?”</em></span></p></li>
+<li><p><span class="smaller"><em>“What is meant by the deviation of the vertical and why does it exist?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Please discuss: astronomical coordinates are always unique (it is impossible for two points to have the same latitude)”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-vertical-vs-normal" class="slide level2">
+<h2>Answers: Vertical vs Normal</h2>
+<ul>
+<li><p><strong>Different terms because different concepts.</strong> “Vertical” = physics (gravity defines it). “Normal” = geometry (maths defines it).</p></li>
+<li><p><strong>Deviation of the vertical</strong> = the small angle between the two directions. Exists because local mass anomalies pull gravity slightly away from the geometric normal. Typically just a few arcseconds.</p></li>
+</ul>
+</section>
+<section id="spherical-harmonic-expansion" class="slide level2">
+<h2>Spherical Harmonic Expansion</h2>
+<ul>
+<li>The geoid globally is expressed as a <strong>spherical harmonic expansion</strong></li>
+<li>Like a <strong>Fourier series on a sphere</strong> — sum of functions of increasing spatial frequency</li>
+<li>Low-degree terms → broad, continent-scale features</li>
+<li>High-degree terms → fine, local details</li>
+<li>Smallest wavelength: <strong>λ = 180° / N<sub>MAX</sub></strong></li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>N<sub>MAX</sub></th>
+<th>Wavelength</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>36</td>
+<td>5°</td>
+<td>~500 km</td>
+</tr>
+<tr class="even">
+<td>360</td>
+<td>0.5°</td>
+<td>~50 km</td>
+</tr>
+<tr class="odd">
+<td>2190</td>
+<td>0.08°</td>
+<td>~9 km</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="spherical-harmonic-expansion-1" class="slide level2">
+<h2>Spherical Harmonic Expansion</h2>
+
+<img data-src="images/clipboard-884085219.png" class="r-stretch"><p><span class="gray smaller">Ince, E. S., et al.&nbsp;(2019). ICGEM–15 years of successful collection and distribution of global gravitational models. Earth system science data, 11(2), 647-674.</span></p>
+</section>
+<section id="discussion-questions-spherical-harmonics" class="slide level2">
+<h2>Discussion Questions: Spherical Harmonics</h2>
+<ul>
+<li><p><span class="smaller"><em>“How much do we need to know about the coefficients of a spherical harmonic expansion?”</em></span></p></li>
+<li><p><span class="smaller"><em>“What is the wavelength, as in ‘the global Earth model expresses the geoid in terms of functions of increasingly small wavelength’ — how can one imagine it?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-spherical-harmonics" class="slide level2">
+<h2>Answers: Spherical Harmonics</h2>
+<ul>
+<li><p><strong>How much to know?</strong> Conceptual understanding is sufficient: it’s a Fourier series on a sphere. Higher degree = finer detail. N<sub>MAX</sub> sets the resolution limit at 180°/N<sub>MAX</sub>.</p></li>
+<li><p><strong>Wavelength:</strong> visualizations are <a href="https://icgem.gfz.de/vis3d/tutorial">here</a></p></li>
+</ul>
+</section>
+<section id="heights-ellipsoidal-vs-orthometric" class="slide level2">
+<h2>Heights: Ellipsoidal vs Orthometric</h2>
+
+<img data-src="images/clipboard-2589485769.png" class="r-stretch"><p><span class="gray small"><a href="https://canadiangis.com/canadian-geodetic-vertical-datum-cgvd2013-is-now-available.php" class="uri">https://canadiangis.com/canadian-geodetic-vertical-datum-cgvd2013-is-now-available.php</a></span></p>
+</section>
+<section id="heights-the-relationship" class="slide level2">
+<h2>Heights: The Relationship</h2>
+<ul>
+<li><strong>Ellipsoidal height (h):</strong> distance from the ellipsoid — what <strong>GPS gives</strong></li>
+<li><strong>Orthometric height (H):</strong> distance from the geoid — “<strong>height above sea level</strong>”</li>
+<li>Relationship: <strong>h = H + N</strong></li>
+<li>Or in relative terms: <strong>Δh = ΔH + ΔN</strong> -&gt; mostly used in practice in this form</li>
+</ul>
+</section>
+<section id="why-gps-gives-ellipsoidal-height" class="slide level2">
+<h2>Why GPS Gives Ellipsoidal Height</h2>
+<ul>
+<li>GPS measures <strong>distances from satellites</strong> → computes 3D position (X, Y, Z)</li>
+<li>These Cartesian coordinates are projected onto the <strong>WGS84 ellipsoid</strong> → gives h</li>
+<li>GPS is purely <strong>geometric</strong> — it measures distances, not gravity</li>
+<li>The geoid is a <strong>physical/gravity-based</strong> surface — GPS cannot “see” it</li>
+<li>To convert: <strong>H = h − N</strong> → we must know the separation N</li>
+</ul>
+</section>
+<section id="how-orthometric-height-is-obtained" class="slide level2">
+<h2>How Orthometric Height Is Obtained</h2>
+<ul>
+<li>Orthometric height is obtained by <strong>levelling</strong>. <a href="https://youtu.be/SPCewaAfqPA?t=225">see this video for basics of levelling</a></li>
+<li>Start at a <strong>tide gauge</strong> — H = 0</li>
+<li>Measure height differences step-by-step with a level instrument and calibrated staffs</li>
+<li>Establish <strong>bench marks</strong> with known H values across the country</li>
+<li>For precise applications: corrections needed for convergence of equipotential surfaces</li>
+</ul>
+</section>
+<section id="discussion-questions-heights" class="slide level2">
+<h2>Discussion Questions: Heights</h2>
+<ul>
+<li><p><span class="smaller"><em>“Why does geoid-spheroid separation need to be used to correct heights from GPS? Why do satellites observe height from the spheroid?”</em></span></p></li>
+<li><p><span class="smaller"><em>“How do you get height above geoid or mean sea level in reality?”</em></span></p></li>
+<li><p><span class="smaller"><em>“How can you measure the orthometric height H which is required to calculate the ellipsoidal height h?”</em></span></p></li>
+<li><p><span class="smaller"><em>“For accurate 3D measurements, is it required to take N for every point separately? How does modern surveying equipment handle this?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-heights" class="slide level2">
+<h2>Answers: Heights</h2>
+<ul>
+<li><p><strong>Why GPS gives spheroidal height:</strong> GPS is geometry-based (satellite distances). Computes cartesian 3D coordinates X,Y,Z that are transformed to an elliposidal coordinate — so it can only reference the ellipsoid, not the geoid.</p></li>
+<li><p><strong>How to get H in reality:</strong> By <strong>levelling</strong> from a tide gauge (H=0) outward through a network of bench marks.</p></li>
+<li><p><strong>N for every point?</strong> Ideally yes. Modern equipment uses <strong>built-in geoid models</strong> (e.g., EGM2008) to automatically compute N and convert h → H in real-time. Accuracy depends on the geoid model quality at that location.</p></li>
+</ul>
+</section>
+<section id="local-vs-global-datums-and-n" class="slide level2">
+<h2>Local vs Global Datums and N</h2>
+<ul>
+<li><strong>WGS84 (global):</strong> one spheroid best-fitting the entire Earth — may be offset locally</li>
+<li><strong>Local datum:</strong> spheroid positioned to fit the geoid closely in a specific region</li>
+<li>With a local datum, the <strong>slope of the geoid is less severe</strong> — N varies less</li>
+<li>“Slope” = how quickly N changes as you move horizontally</li>
+<li>UK example: N ranges only 0–5 m with respect to British datum (not true w.r.t. WGS84)</li>
+</ul>
+</section>
+<section id="can-n-be-considered-constant-section-3.1.1" class="slide level2">
+<h2>Can N Be Considered Constant? (Section 3.1.1)</h2>
+<ul>
+<li><strong>cm-level accuracy:</strong> not safe to assume constant beyond ~200 m</li>
+<li><strong>2 m accuracy:</strong> constant over ~30–50 km</li>
+<li>But in some regions, N changes by 10 m over just 50 km</li>
+<li>Local datums ease this — geoid slope is gentler</li>
+<li>But short-wavelength undulations persist regardless</li>
+</ul>
+</section>
+<section id="geoid-as-a-uniform-slope-section-3.1.2" class="slide level2">
+<h2>Geoid as a Uniform Slope (Section 3.1.2)</h2>
+<ul>
+<li>Critical for <strong>GPS applications</strong>: if the geoid approximates a <strong>sloping plane</strong>, the slope is absorbed by <strong>similarity transformations</strong> when tying to local control points</li>
+<li>Only <strong>non-linear bumps</strong> (undulations) remain as residual errors</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Section length</th>
+<th>Precision of slope model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>~50 km</td>
+<td>~50 cm</td>
+</tr>
+<tr class="even">
+<td>~20 km</td>
+<td>~10–15 cm</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Results from fairly rugged terrain (heights up to 1000 m); flatter terrain → better</li>
+</ul>
+</section>
+<section id="discussion-questions-separation-and-gps" class="slide level2">
+<h2>Discussion Questions: Separation and GPS</h2>
+<ul>
+<li><p><span class="smaller"><em>“When modeling N as a uniform slope, do shorter distances always result in more accurate representations?”</em></span></p></li>
+<li><p><span class="smaller"><em>“How does the acceptable error (50 cm over 50 km, 10–15 cm over 20 km) influence decisions in precise GPS applications?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-separation-and-gps" class="slide level2">
+<h2>Answers: Separation and GPS</h2>
+<ul>
+<li><p><strong>Shorter = always better?</strong> It depends on <strong>terrain roughness</strong>. A 20 km section over mountains may be worse than 50 km over flat land. Shorter distances just reduce the chance of encountering undulations.</p></li>
+<li><p><strong>Influence on GPS decisions:</strong> These errors set <strong>project size limits</strong>. For cm-level work, GPS baselines should be short and tied to dense control. For 0.5 m tolerance, ~50 km baselines are acceptable. The transformation absorbs the linear slope — only the residual undulations limit accuracy.</p></li>
+</ul>
+</section>
+<section id="advantages-of-ellipsoidal-heights" class="slide level2">
+<h2>Advantages of Ellipsoidal Heights</h2>
+<ul>
+<li>Not all applications need a gravity-based height reference</li>
+<li><strong>Volcano monitoring:</strong>
+<ul>
+<li>Only need <strong>change</strong> in height over time → Δh = ΔH</li>
+<li>N is constant at the same point</li>
+<li>Avoids false changes from improved geoid models in future</li>
+</ul></li>
+<li><strong>Aircraft landing:</strong>
+<ul>
+<li>Aircraft (GPS) and obstacles both surveyed in ellipsoidal height</li>
+<li>Height clearance = h<sub>aircraft</sub> − h<sub>obstacle</sub> → N cancels out</li>
+</ul></li>
+</ul>
+</section>
+<section id="discussion-questions-height-applications" class="slide level2">
+<h2>Discussion Questions: Height Applications</h2>
+<ul>
+<li><p><span class="smaller"><em>“In what situations would using ellipsoidal heights be more advantageous than gravity-related heights?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Why is the orthometric height generally preferred in construction and engineering?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-height-applications" class="slide level2">
+<h2>Answers: Height Applications</h2>
+<ul>
+<li><p><strong>Ellipsoidal preferred when:</strong> monitoring change over time, comparing GPS-surveyed objects to each other, or when gravity direction is irrelevant.</p></li>
+<li><p><strong>Orthometric preferred in construction because:</strong> water flows downhill relative to the <strong>geoid</strong>, not the ellipsoid. Construction needs a physically meaningful height tied to gravity.</p></li>
+</ul>
+</section>
+<section id="mean-sea-level" class="slide level2">
+<h2>Mean Sea Level</h2>
+<ul>
+<li>MSL is measured over a long period</li>
+<li>This covers all major tidal constituents (moon, sun, resonance effects)</li>
+<li>MSL ≈ geoid, but not exactly — permanent ocean currents cause up to ~1 m difference</li>
+<li><a href="https://www.youtube.com/watch?v=q65O3qA0-n4" class="uri">https://www.youtube.com/watch?v=q65O3qA0-n4</a></li>
+</ul>
+</section>
+<section id="discussion-questions-mean-sea-level" class="slide level2">
+<h2>Discussion Questions: Mean Sea Level</h2>
+<ul>
+<li><p><span class="smaller"><em>“What is the significance of 18.9 years in measuring mean sea level?”</em></span></p></li>
+<li><p><span class="smaller"><em>“What is the purpose of tide gauges for the vertical ellipsoid height?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-mean-sea-level" class="slide level2">
+<h2>Answers: Mean Sea Level</h2>
+<ul>
+<li><p><strong>18.6 years (lunar nodal cycle):</strong> related to moon’s cycle, so to average all the tidal effects.</p></li>
+<li><p><strong>Tide gauges and ellipsoidal height:</strong> Tide gauges define H=0 (the starting point for orthometric heights). If one puts the GPS there and measures the ellipsoidal height, then the link can be established.</p></li>
+</ul>
+</section>
+<section id="national-datum-offsets-rapp-1994" class="slide level2">
+<h2>National Datum Offsets (Rapp, 1994)</h2>
+<ul>
+<li>Each country’s tide gauge sits on a <strong>slightly different equipotential surface</strong></li>
+<li>Rapp compared N from two independent methods:
+<ol type="1">
+<li><strong>N = h − H</strong> (GPS minus levelling) → tied to <strong>local</strong> tide gauge</li>
+<li><strong>N from global model</strong> → tied to the <strong>ideal</strong> geoid</li>
+</ol></li>
+<li>The mismatch = country’s <strong>datum offset</strong> from the ideal geoid</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Offset</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Germany</td>
+<td>+4 cm</td>
+</tr>
+<tr class="even">
+<td>USA (NGVD29)</td>
+<td>−26 cm</td>
+</tr>
+<tr class="odd">
+<td>Great Britain (Newlyn)</td>
+<td>−87 cm</td>
+</tr>
+<tr class="even">
+<td>Australia (Mainland)</td>
+<td>−68 cm</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="multiple-tide-gauges-problem" class="slide level2">
+<h2>Multiple Tide Gauges Problem</h2>
+<ul>
+<li>Australia AHD71: <strong>30 tide gauges</strong> around the coast</li>
+<li>Each establishes the datum at a different equipotential surface</li>
+<li>The reference surface <strong>changes gradually</strong> from place to place</li>
+</ul>
+</section>
+<section id="discussion-questions-vertical-datums" class="slide level2">
+<h2>Discussion Questions: Vertical Datums</h2>
+<ul>
+<li><p><span class="smaller"><em>“Why could the adoption of a single vertical datum over large distances be problematic?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Is there a good rule of thumb for how many vertical datums you’d need over larger distances?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Why do we define vertical datums using MSL? Why not use Mt. Everest as reference?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Does cut-and-fill of large areas affect the geoid?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Can you clarify Figure 3.6 (1st edition) and how it relates to vertical datums?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-vertical-datums" class="slide level2">
+<h2>Answers: Vertical Datums</h2>
+<ul>
+<li><p><strong>Single datum problematic because:</strong> MSL differs at different tide gauges (different equipotential surfaces). Over large distances, these offsets accumulate. Channel Tunnel example: UK–France offset was ~30 cm.</p></li>
+<li><p><strong>Rule of thumb?</strong> No fixed rule. Depends on required accuracy and the variability of MSL along the coast.</p></li>
+<li><p><strong>Why not Mt. Everest?</strong> MSL is physically meaningful — tied to gravity, accessible globally via tide gauges, and water/engineering applications reference it naturally. A mountain peak is local, inaccessible, and has no physical connection to gravity equipotential.</p></li>
+<li><p><strong>Cut-and-fill affecting geoid?</strong> Negligibly. The geoid responds to <strong>larger scale mass distribution</strong>, not surface-level earthworks.</p></li>
+<li><p><strong>Figure 3.6:</strong> Shows how tying a datum to multiple tide gauges creates a reference surface that <strong>warps between different equipotential surfaces</strong></p></li>
+</ul>
+</section>
+<section id="vertical-datums-for-marine-applications" class="slide level2">
+<h2>Vertical Datums for Marine Applications</h2>
+<ul>
+<li>MSL is <strong>inappropriate</strong> for nautical charts in tidal areas</li>
+<li>At low tide, actual depth available <strong>&lt; depth shown relative to MSL</strong></li>
+<li><strong>Chart Datum</strong> is used instead — typically set at <strong>Lowest Astronomical Tide (LAT)</strong></li>
+<li>Charted depths represent the <strong>minimum</strong> available</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Datum</th>
+<th>Used for</th>
+<th>Reference level</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LAT / Chart Datum</td>
+<td>Depth below water</td>
+<td>Lowest expected water</td>
+</tr>
+<tr class="even">
+<td>MSL</td>
+<td>General heights</td>
+<td>Average water level</td>
+</tr>
+<tr class="odd">
+<td>MHWS</td>
+<td>Bridge clearance</td>
+<td>High water level</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="marine-datums-key-details" class="slide level2">
+<h2>Marine Datums: Key Details</h2>
+<ul>
+<li>Chart Datum is defined <strong>locally</strong> at discrete tide gauge points</li>
+<li>LAT is not an equipotential surface — it varies with tidal range and coastal topography</li>
+<li>Along south coast of England, LAT differs from ODN by:
+<ul>
+<li>Newlyn: −3.05 m | Portsmouth: −2.73 m | Dover: −3.67 m | Bristol: −6.50 m</li>
+</ul></li>
+<li>Between gauges, interpolation uses <strong>co-tidal</strong> and <strong>co-range</strong> charts</li>
+<li>For <strong>offshore engineering</strong>, Chart Datum is inappropriate — MSL (equipotential) is needed for correct relative seafloor depths</li>
+</ul>
+</section>
+<section id="discussion-questions-marine-datums" class="slide level2">
+<h2>Discussion Questions: Marine Datums</h2>
+<ul>
+<li><p><span class="smaller"><em>“What are co-tidal and co-range charts?”</em></span></p></li>
+<li><p><span class="smaller"><em>“How do vertical CRS based on water level datums differ from onshore systems?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Wouldn’t it be easier to have an internationally usable height standard for marine applications connected to GPS?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-marine-datums" class="slide level2">
+<h2>Answers: Marine Datums</h2>
+<ul>
+<li><p><strong>Co-tidal charts</strong>:</p></li>
+<li><p><strong>Water level datums differ from onshore in two ways:</strong> (1) they use <strong>depths</strong> not heights, and (2) they are <strong>not equipotential surfaces</strong> — LAT varies with local tidal range and marine topography.</p></li>
+<li><p><strong>GPS-based marine standard?</strong></p></li>
+</ul>
+</section>
+<section id="engineering-datums-and-crs" class="slide level2">
+<h2>Engineering Datums and CRS</h2>
+<ul>
+<li>Used for local projects: construction sites, offshore, moving platforms</li>
+<li><strong>Datum point:</strong> a physical mark with assigned coordinates</li>
+<li>Coordinates chosen to <strong>avoid negative values</strong> in project area eg. 1000m</li>
+<li><strong>Plant north:</strong> a direction aligned with the site — may differ from geographic north</li>
+<li>Height may be loosely related to actual height above sea level or arbitrary</li>
+<li>Moving platforms (ships, aircraft): datum origin on the object or virtual intersection of axes</li>
+</ul>
+</section>
+<section id="compound-coordinate-reference-systems" class="slide level2">
+<h2>Compound Coordinate Reference Systems</h2>
+<ul>
+<li>Often need 3D positions: easting, northing <strong>+ gravity-related height</strong></li>
+<li>Two <strong>independent</strong> CRS are combined:
+<ul>
+<li>Horizontal (projected or geographic CRS)</li>
+<li>Vertical (vertical CRS)</li>
+</ul></li>
+<li>Examples:
+<ul>
+<li>British National Grid + Ordnance Datum Newlyn</li>
+<li>Map Grid of Australia + AHD height</li>
+<li>NAD83 + NAVD88</li>
+</ul></li>
+<li>A compound CRS is <strong>not</strong> a true 3D geodetic system</li>
+</ul>
+</section>
+<section id="registers-of-coordinate-reference-systems" class="slide level2">
+<h2>Registers of Coordinate Reference Systems</h2>
+<ul>
+<li>Rather than specifying all CRS details, use a <strong>registry identifier</strong></li>
+<li>Examples: BKG, EPSG Geodetic Parameter Dataset</li>
+<li>Each CRS gets a unique code (e.g., EPSG:4954 for NAD83 geocentric)</li>
+<li>Care needed: ensure registry definition <strong>exactly matches</strong> your requirements</li>
+<li>Repositories retain erroneous records (marked invalid) for <strong>historic purposes</strong></li>
+</ul>
+</section>
+<section id="discussion-questions-datums-and-crs" class="slide level2">
+<h2>Discussion Questions: Datums and CRS</h2>
+<ul>
+<li><p><span class="smaller"><em>“Are vertical datums related to horizontal datums? If yes, in which way?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Why can’t we combine a 3D geodetic system and gravity-related vertical system as a compound CRS?”</em></span></p></li>
+<li><p><span class="smaller"><em>“Is the unit of measurement standardized, or is conversion between units still widespread?”</em></span></p></li>
+</ul>
+</section>
+<section id="answers-datums-and-crs" class="slide level2">
+<h2>Answers: Datums and CRS</h2>
+<ul>
+<li><p><strong>Vertical related to horizontal?</strong> Defined independently, but linked through <strong>h = H + N</strong>. Combined in practice as compound CRS. Changing one doesn’t change the other — but we need both for 3D positioning.</p></li>
+<li><p><strong>Why not 3D geodetic + gravity vertical?</strong> Because they use fundamentally different reference surfaces (ellipsoid vs geoid). A compound CRS acknowledges they are separate systems. A true 3D system would need a single consistent surface.</p></li>
+<li><p><strong>Unit standardization?</strong></p></li>
+</ul>
+</section>
+<section id="next-lecture" class="slide level2">
+<h2>Next Lecture</h2>
+<ul>
+<li><strong>07.05.2026 - Chapter 3</strong></li>
+<li>Read Chapter 3.1 - 3.5 on Map Projections</li>
+</ul>
+<h3 id="reading-guide">Reading Guide</h3>
+<ul>
+<li>Answer <strong>(for yourself) </strong> the following questions:</li>
+</ul>
+<ol type="1">
+<li>Name a key difference between the grid and the graticule</li>
+<li>Does a map projection have one or many scale factors?</li>
+<li>What are false easting and northing, and what is their purpose?</li>
+<li>Name two properties of a “good” map projection</li>
+<li>What is UTM?</li>
+</ol>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="2021-logo-ifgi-text-de.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

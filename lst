@@ -1,0 +1,156 @@
+docs/2021-logo-ifgi-text-de.png
+docs/index.html
+docs/LE00.html
+docs/LE01.html
+docs/LE02_discussions.html
+docs/LE02.html
+docs/logo.css
+docs/search.json
+images/book_coverpage.png
+images/clipboard-1092950956-01.png
+images/clipboard-1489087789.png
+images/clipboard-1636994761.png
+images/clipboard-2589485769.png
+images/clipboard-2734475188.png
+images/clipboard-3273668881.png
+images/clipboard-3614695792.png
+images/clipboard-4280795680.png
+images/clipboard-558234815.png
+images/coordinate-system-axes.png
+images/datum-concept.png
+images/earth-physical-surface.jpg
+images/earth-surfaces-comparison.png
+images/ellipsoid-cross-section.png
+images/equipotential-surfaces.png
+images/foto_866_Knoth.jpg
+images/geocentric-cartesian.png
+images/geodetic-latitude-longitude.png
+images/geodetic-vs-geocentric-latitude.png
+images/geoid-earth.png
+images/gis_layers.png
+images/itrf-stations.png
+images/local-datum-step1.png
+images/local-datum-step2.png
+images/local-datum-step3.png
+images/local-datum-step4.png
+images/local-datum-steps.png
+images/local-vs-geocentric-ellipsoid.png
+images/NGF_8117.jpg
+images/ogc_wkt_Specification.png
+images/paste-11.png
+images/paste-12.png
+images/paste-14.png
+images/paste-1.png
+images/paste-6.png
+images/paste-7.png
+images/paste-8.png
+images/projection-types-preview.jpg
+images/projection-types-preview.png
+images/qrcode.png
+images/schedule_RS_2026.png
+images/spherical-coordinates.png
+images/three-surfaces.png
+images/tide-gauge.jpg
+images/total-station-surveying.jpg
+Questions/randomize.R
+Questions/RS-L-2026_1-Questions on CRS(Book chapters 1 and 2 upto 2.3.4)-4050608.zip
+Questions/RS-L-2026_1-Questions on Verticle reference system-4050616.zip
+
+docs/images:
+book_coverpage.png
+clipboard-1092950956-01.png
+clipboard-1489087789.png
+clipboard-1636994761.png
+clipboard-2734475188.png
+clipboard-3273668881.png
+clipboard-3614695792.png
+clipboard-4280795680.png
+clipboard-558234815.png
+coordinate-system-axes.png
+datum-concept.png
+earth-physical-surface.jpg
+earth-surfaces-comparison.png
+ellipsoid-cross-section.png
+foto_866_Knoth.jpg
+geocentric-cartesian.png
+geodetic-latitude-longitude.png
+geodetic-vs-geocentric-latitude.png
+geoid-earth.png
+itrf-stations.png
+local-vs-geocentric-ellipsoid.png
+NGF_8117.jpg
+ogc_wkt_Specification.png
+paste-11.png
+paste-12.png
+paste-14.png
+paste-1.png
+paste-6.png
+paste-7.png
+paste-8.png
+projection-types-preview.png
+qrcode.png
+schedule_RS_2026.png
+spherical-coordinates.png
+three-surfaces.png
+
+docs/site_libs:
+bootstrap
+clipboard
+quarto-html
+quarto-nav
+quarto-search
+revealjs
+
+Questions/LE2:
+Abdelrahman Ahmed Amer_8240364_assignsubmission_onlinetext
+Alexander Großmann_8240373_assignsubmission_onlinetext
+all.html
+Aymen Makhkhas_8240377_assignsubmission_onlinetext
+Bennet Harms_8240360_assignsubmission_onlinetext
+Brenda Kemunto Ontita_8240365_assignsubmission_onlinetext
+Dhanush Bandi_8240351_assignsubmission_onlinetext
+Emily Nguyen_8240379_assignsubmission_onlinetext
+Esther Wilfrid Fernandes_8240342_assignsubmission_onlinetext
+Finja Johanna Außendorf_8240341_assignsubmission_onlinetext
+Georgia Avrami_8240376_assignsubmission_onlinetext
+Gero Gerke_8240343_assignsubmission_onlinetext
+Hridayashree Burla_8240347_assignsubmission_onlinetext
+Isabel Schaeper_8240359_assignsubmission_onlinetext
+Jaden Padraig Becker_8240372_assignsubmission_onlinetext
+Jan-Philipp Wegmeyer_8240355_assignsubmission_onlinetext
+Lauren Elizabeth Fissel_8240368_assignsubmission_onlinetext
+Lotta Josefine Wistinghausen_8240378_assignsubmission_onlinetext
+lst
+Lukas Hölscher_8240380_assignsubmission_onlinetext
+Lukas Muckel_8240384_assignsubmission_onlinetext
+Niklas Leopold Ernst Heinrich Pinkernell_8240371_assignsubmission_onlinetext
+Nimesh Akalanka Herath Mudiyanselage_8240375_assignsubmission_onlinetext
+Paul Kromm_8240357_assignsubmission_onlinetext
+Racheal Attafuah_8240369_assignsubmission_onlinetext
+Ronald Ntila_8240381_assignsubmission_onlinetext
+Saad Shahid Khan_8240387_assignsubmission_onlinetext
+Seyda Nur Yilmaz_8240345_assignsubmission_onlinetext
+Shiyar Murad_8240346_assignsubmission_onlinetext
+Sijan Rijal_8240366_assignsubmission_onlinetext
+Theresa Conze_8240382_assignsubmission_onlinetext
+Timo Linus Finn Duffhauß_8240350_assignsubmission_onlinetext
+
+Questions/LE3:
+Adil Waris_8249683_assignsubmission_onlinetext
+Dhanush Bandi_8249673_assignsubmission_onlinetext
+Emily Nguyen_8249672_assignsubmission_onlinetext
+Esther Wilfrid Fernandes_8249686_assignsubmission_onlinetext
+Georgia Avrami_8249678_assignsubmission_onlinetext
+Gero Gerke_8249663_assignsubmission_onlinetext
+Hassam Ali_8249644_assignsubmission_onlinetext
+Hector Valdes Hurtado_8249651_assignsubmission_onlinetext
+Hridayashree Burla_8249666_assignsubmission_onlinetext
+Isabel Schaeper_8249655_assignsubmission_onlinetext
+Jaden Padraig Becker_8249645_assignsubmission_onlinetext
+Jan-Philipp Wegmeyer_8249669_assignsubmission_onlinetext
+Lauren Elizabeth Fissel_8249654_assignsubmission_onlinetext
+Paul Kromm_8249652_assignsubmission_onlinetext
+Racheal Attafuah_8249674_assignsubmission_onlinetext
+Randolph William Flores_8249664_assignsubmission_onlinetext
+Seyda Nur Yilmaz_8249653_assignsubmission_onlinetext
+Timo Linus Finn Duffhauß_8249667_assignsubmission_onlinetext

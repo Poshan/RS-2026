@@ -628,5 +628,404 @@
     "title": "Reference Systems",
     "section": "Part II: Temporal and Measurement Scale",
     "text": "Part II: Temporal and Measurement Scale"
+  },
+  {
+    "objectID": "LE03.html#reading-guides",
+    "href": "LE03.html#reading-guides",
+    "title": "Reference Systems - Vertical",
+    "section": "Reading Guides",
+    "text": "Reading Guides\n\nChapter 2 2.3.4 onwards and 1st edition book Chapter 3\n\nAre vertical datums related to horizontal datums? If yes, in which way?\nList two different types of height, and name their differences.\nWhat is the difference between the normal and the vertical?\nWhat is a tide gauge?\nWhy could the adoption of a single vertical datum over large distances be problematic for height measurement?"
+  },
+  {
+    "objectID": "LE03.html#geoid-what-is-it",
+    "href": "LE03.html#geoid-what-is-it",
+    "title": "Reference Systems - Vertical",
+    "section": "Geoid: What Is It?",
+    "text": "Geoid: What Is It?\n\nThe true shape of the Earth is called the geoid\nDefined as: that equipotential surface that most closely corresponds to mean sea level\nThe geoid is a real physical surface dictated by gravity — we approximate it using gravitational models (e.g., EGM2008), but the geoid itself exists independently of our models\nThe spheroid/ellipsoid is the simplified mathematical approximation\nSpheroid approximates the geoid to within ±100 m (RMS ~30 m)"
+  },
+  {
+    "objectID": "LE03.html#geoid-as-an-equipotential-surface",
+    "href": "LE03.html#geoid-as-an-equipotential-surface",
+    "title": "Reference Systems - Vertical",
+    "section": "Geoid as an Equipotential Surface",
+    "text": "Geoid as an Equipotential Surface\n\nEquipotential surface: A surface everywhere perpendicular to the direction of gravity\nGravity is affected by irregularities in density of Earth’s crust and mantle\nTherefore the equipotential surface is somewhat irregular"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-geoid-concepts",
+    "href": "LE03.html#student-discussion-geoid-concepts",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Geoid Concepts",
+    "text": "💬 Student Discussion: Geoid Concepts\n\n“Is the geoid a model or the name of the actual shape of the Earth? Is there any difference between actual and true shape?”\n“In my understanding, equipotential describes a vector at each position that points towards the center. How does it follow that there are different heights?”\n“Why must every diagram of the geoid greatly exaggerate its deviation from the spheroid?”"
+  },
+  {
+    "objectID": "LE03.html#vertical-vs-normal",
+    "href": "LE03.html#vertical-vs-normal",
+    "title": "Reference Systems - Vertical",
+    "section": "Vertical vs Normal",
+    "text": "Vertical vs Normal\n\n\n\n\nVertical\nNormal\n\n\n\n\nSurface\nGeoid (physical)\nSpheroid (mathematical)\n\n\nDetermined by\nGravity (nature)\nGeometry (maths)\n\n\nTool\nPlumb line\nEllipsoid equation\n\n\nBehaviour\nIrregular\nSmooth, predictable\n\n\n\n\nThe angle between them = deviation of the vertical (ξ, η)\nTypically a few seconds of arc"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-vertical-vs-normal",
+    "href": "LE03.html#student-discussion-vertical-vs-normal",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Vertical vs Normal",
+    "text": "💬 Student Discussion: Vertical vs Normal\n\n“Why is the term vertical used for geoid and normal for spheroid? Does the difference lie in shape, definitions, or both?”\n“What is meant by the deviation of the vertical and why does it exist?”\n“Please discuss: astronomical coordinates are always unique (it is impossible for two points to have the same latitude)”"
+  },
+  {
+    "objectID": "LE03.html#spherical-harmonic-expansion",
+    "href": "LE03.html#spherical-harmonic-expansion",
+    "title": "Reference Systems - Vertical",
+    "section": "Spherical Harmonic Expansion",
+    "text": "Spherical Harmonic Expansion\n\nThe geoid globally is expressed as a spherical harmonic expansion\nLike a Fourier series on a sphere — sum of functions of increasing spatial frequency\nLow-degree terms → broad, continent-scale features\nHigh-degree terms → fine, local details\nSmallest wavelength: λ = 180° / NMAX\n\n\n\n\nNMAX\nWavelength\nResolution\n\n\n\n\n36\n5°\n~500 km\n\n\n360\n0.5°\n~50 km\n\n\n2190\n0.08°\n~9 km"
+  },
+  {
+    "objectID": "LE03.html#spherical-harmonic-expansion-1",
+    "href": "LE03.html#spherical-harmonic-expansion-1",
+    "title": "Reference Systems - Vertical",
+    "section": "Spherical Harmonic Expansion",
+    "text": "Spherical Harmonic Expansion\n\nInce, E. S., et al. (2019). ICGEM–15 years of successful collection and distribution of global gravitational models. Earth system science data, 11(2), 647-674."
+  },
+  {
+    "objectID": "LE03.html#local-gravity-models",
+    "href": "LE03.html#local-gravity-models",
+    "title": "Reference Systems - Vertical",
+    "section": "Local Gravity Models",
+    "text": "Local Gravity Models\n\nSpherical harmonics are global basis functions — inefficient for small regions\nLocal/regional geoid models use a remove-compute-restore approach:\n\nRemove: subtract global spherical harmonic model from local gravity data\nCompute: model the residual using local techniques (Stokes’ integral, FFT, least-squares collocation)\nRestore: add the global model back\n\nSpherical harmonics = base layer; local methods = fine detail"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-spherical-harmonics",
+    "href": "LE03.html#student-discussion-spherical-harmonics",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Spherical Harmonics",
+    "text": "💬 Student Discussion: Spherical Harmonics\n\n“How much do we need to know about the coefficients of a spherical harmonic expansion?”\n“What is the wavelength, as in ‘the global Earth model expresses the geoid in terms of functions of increasingly small wavelength’ — how can one imagine it?”"
+  },
+  {
+    "objectID": "LE03.html#heights-ellipsoidal-vs-orthometric",
+    "href": "LE03.html#heights-ellipsoidal-vs-orthometric",
+    "title": "Reference Systems - Vertical",
+    "section": "Heights: Ellipsoidal vs Orthometric",
+    "text": "Heights: Ellipsoidal vs Orthometric\n\nhttps://canadiangis.com/canadian-geodetic-vertical-datum-cgvd2013-is-now-available.php"
+  },
+  {
+    "objectID": "LE03.html#heights-the-relationship",
+    "href": "LE03.html#heights-the-relationship",
+    "title": "Reference Systems - Vertical",
+    "section": "Heights: The Relationship",
+    "text": "Heights: The Relationship\n\nEllipsoidal height (h): distance from the ellipsoid — what GPS gives\nOrthometric height (H): distance from the geoid — “height above sea level”\nRelationship: h = H + N\nOr in relative terms: Δh = ΔH + ΔN -&gt; mostly used in practice in this form"
+  },
+  {
+    "objectID": "LE03.html#why-gps-gives-ellipsoidal-height",
+    "href": "LE03.html#why-gps-gives-ellipsoidal-height",
+    "title": "Reference Systems - Vertical",
+    "section": "Why GPS Gives Ellipsoidal Height",
+    "text": "Why GPS Gives Ellipsoidal Height\n\nGPS measures distances from satellites → computes 3D position (X, Y, Z)\nThese Cartesian coordinates are projected onto the WGS84 ellipsoid → gives h\nGPS is purely geometric — it measures distances, not gravity\nThe geoid is a physical/gravity-based surface — GPS cannot “see” it\nTo convert: H = h − N → we must know the separation N"
+  },
+  {
+    "objectID": "LE03.html#how-orthometric-height-is-obtained",
+    "href": "LE03.html#how-orthometric-height-is-obtained",
+    "title": "Reference Systems - Vertical",
+    "section": "How Orthometric Height Is Obtained",
+    "text": "How Orthometric Height Is Obtained\n\nOrthometric height is obtained by levelling. see this video for basics of levelling\nStart at a tide gauge — H = 0\nMeasure height differences step-by-step with a level instrument and calibrated staffs\nEstablish bench marks with known H values across the country\nFor precise applications: corrections needed for convergence of equipotential surfaces"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-heights",
+    "href": "LE03.html#student-discussion-heights",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Heights",
+    "text": "💬 Student Discussion: Heights\n\n“Why does geoid-spheroid separation need to be used to correct heights from GPS? Why do satellites observe height from the spheroid?”\n“How do you get height above geoid or mean sea level in reality?”\n“How can you measure the orthometric height H which is required to calculate the ellipsoidal height h?”\n“For accurate 3D measurements, is it required to take N for every point separately? How does modern surveying equipment handle this?”"
+  },
+  {
+    "objectID": "LE03.html#local-vs-global-datums-and-n",
+    "href": "LE03.html#local-vs-global-datums-and-n",
+    "title": "Reference Systems - Vertical",
+    "section": "Local vs Global Datums and N",
+    "text": "Local vs Global Datums and N\n\nWGS84 (global): one spheroid best-fitting the entire Earth — may be offset locally\nLocal datum: spheroid positioned to fit the geoid closely in a specific region\nWith a local datum, the slope of the geoid is less severe — N varies less\n“Slope” = how quickly N changes as you move horizontally\nUK example: N ranges only 0–5 m with respect to British datum (not true w.r.t. WGS84)"
+  },
+  {
+    "objectID": "LE03.html#can-n-be-considered-constant-section-3.1.1",
+    "href": "LE03.html#can-n-be-considered-constant-section-3.1.1",
+    "title": "Reference Systems - Vertical",
+    "section": "Can N Be Considered Constant? (Section 3.1.1)",
+    "text": "Can N Be Considered Constant? (Section 3.1.1)\n\ncm-level accuracy: not safe to assume constant beyond ~200 m\n2 m accuracy: constant over ~30–50 km\nBut in some regions, N changes by 10 m over just 50 km\nLocal datums ease this — geoid slope is gentler\nBut short-wavelength undulations persist regardless"
+  },
+  {
+    "objectID": "LE03.html#geoid-as-a-uniform-slope-section-3.1.2",
+    "href": "LE03.html#geoid-as-a-uniform-slope-section-3.1.2",
+    "title": "Reference Systems - Vertical",
+    "section": "Geoid as a Uniform Slope (Section 3.1.2)",
+    "text": "Geoid as a Uniform Slope (Section 3.1.2)\n\nCritical for GPS applications: if the geoid approximates a sloping plane, the slope is absorbed by similarity transformations when tying to local control points\nOnly non-linear bumps (undulations) remain as residual errors\n\n\n\n\nSection length\nPrecision of slope model\n\n\n\n\n~50 km\n~50 cm\n\n\n~20 km\n~10–15 cm\n\n\n\n\nResults from fairly rugged terrain (heights up to 1000 m); flatter terrain → better"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-separation-and-gps",
+    "href": "LE03.html#student-discussion-separation-and-gps",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Separation and GPS",
+    "text": "💬 Student Discussion: Separation and GPS\n\n“When modeling N as a uniform slope, do shorter distances always result in more accurate representations?”\n“How does the acceptable error (50 cm over 50 km, 10–15 cm over 20 km) influence decisions in precise GPS applications?”"
+  },
+  {
+    "objectID": "LE03.html#advantages-of-ellipsoidal-heights",
+    "href": "LE03.html#advantages-of-ellipsoidal-heights",
+    "title": "Reference Systems - Vertical",
+    "section": "Advantages of Ellipsoidal Heights",
+    "text": "Advantages of Ellipsoidal Heights\n\nNot all applications need a gravity-based height reference\nVolcano monitoring:\n\nOnly need change in height over time → Δh = ΔH\nN is constant at the same point\nAvoids false changes from improved geoid models in future\n\nAircraft landing:\n\nAircraft (GPS) and obstacles both surveyed in ellipsoidal height\nHeight clearance = haircraft − hobstacle → N cancels out"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-height-applications",
+    "href": "LE03.html#student-discussion-height-applications",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Height Applications",
+    "text": "💬 Student Discussion: Height Applications\n\n“In what situations would using ellipsoidal heights be more advantageous than gravity-related heights?”\n“Why is the orthometric height generally preferred in construction and engineering?”"
+  },
+  {
+    "objectID": "LE03.html#national-datum-offsets-rapp-1994",
+    "href": "LE03.html#national-datum-offsets-rapp-1994",
+    "title": "Reference Systems - Vertical",
+    "section": "National Datum Offsets (Rapp, 1994)",
+    "text": "National Datum Offsets (Rapp, 1994)\n\nEach country’s tide gauge sits on a slightly different equipotential surface\nRapp compared N from two independent methods:\n\nN = h − H (GPS minus levelling) → tied to local tide gauge\nN from global model → tied to the ideal geoid\n\nThe mismatch = country’s datum offset from the ideal geoid\n\n\n\n\nCountry\nOffset\n\n\n\n\nGermany\n+4 cm\n\n\nUSA (NGVD29)\n−26 cm\n\n\nGreat Britain (Newlyn)\n−87 cm\n\n\nAustralia (Mainland)\n−68 cm"
+  },
+  {
+    "objectID": "LE03.html#multiple-tide-gauges-problem",
+    "href": "LE03.html#multiple-tide-gauges-problem",
+    "title": "Reference Systems - Vertical",
+    "section": "Multiple Tide Gauges Problem",
+    "text": "Multiple Tide Gauges Problem\n\nAustralia AHD71: 30 tide gauges around the coast\nEach establishes the datum at a different equipotential surface\nThe reference surface changes gradually from place to place"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-vertical-datums",
+    "href": "LE03.html#student-discussion-vertical-datums",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Vertical Datums",
+    "text": "💬 Student Discussion: Vertical Datums\n\n“Why could the adoption of a single vertical datum over large distances be problematic?”\n“Is there a good rule of thumb for how many vertical datums you’d need over larger distances?”\n“Why do we define vertical datums using MSL? Why not use Mt. Everest as reference?”\n“Does cut-and-fill of large areas affect the geoid?”"
+  },
+  {
+    "objectID": "LE03.html#mean-sea-level",
+    "href": "LE03.html#mean-sea-level",
+    "title": "Reference Systems - Vertical",
+    "section": "Mean Sea Level",
+    "text": "Mean Sea Level\n\nMSL is measured over a long period\nThis covers all major tidal constituents (moon, sun, resonance effects)\nMSL ≈ geoid, but not exactly — permanent ocean currents cause up to ~1 m difference\nhttps://www.youtube.com/watch?v=q65O3qA0-n4"
+  },
+  {
+    "objectID": "LE03.html#vertical-datums-for-marine-applications",
+    "href": "LE03.html#vertical-datums-for-marine-applications",
+    "title": "Reference Systems - Vertical",
+    "section": "Vertical Datums for Marine Applications",
+    "text": "Vertical Datums for Marine Applications\n\nMSL is inappropriate for nautical charts in tidal areas\nAt low tide, actual depth available &lt; depth shown relative to MSL\nChart Datum is used instead — typically set at Lowest Astronomical Tide (LAT)\nCharted depths represent the minimum available\n\n\n\n\nDatum\nUsed for\nReference level\n\n\n\n\nLAT / Chart Datum\nDepth below water\nLowest expected water\n\n\nMSL\nGeneral heights\nAverage water level\n\n\nMHWS\nBridge clearance\nHigh water level"
+  },
+  {
+    "objectID": "LE03.html#marine-datums-key-details",
+    "href": "LE03.html#marine-datums-key-details",
+    "title": "Reference Systems - Vertical",
+    "section": "Marine Datums: Key Details",
+    "text": "Marine Datums: Key Details\n\nChart Datum is defined locally at discrete tide gauge points\nLAT is not an equipotential surface — it varies with tidal range and coastal topography\nAlong south coast of England, LAT differs from ODN by:\n\nNewlyn: −3.05 m | Portsmouth: −2.73 m | Dover: −3.67 m | Bristol: −6.50 m\n\nBetween gauges, interpolation uses co-tidal and co-range charts\nFor offshore engineering, Chart Datum is inappropriate — MSL (equipotential) is needed for correct relative seafloor depths"
+  },
+  {
+    "objectID": "LE03.html#engineering-datums-and-crs",
+    "href": "LE03.html#engineering-datums-and-crs",
+    "title": "Reference Systems - Vertical",
+    "section": "Engineering Datums and CRS",
+    "text": "Engineering Datums and CRS\n\nUsed for local projects: construction sites, offshore, moving platforms\nDatum point: a physical mark with assigned coordinates\nCoordinates chosen to avoid negative values in project area eg. 1000m\nPlant north: a direction aligned with the site — may differ from geographic north\nHeight may be loosely related to actual height above sea level or arbitrary\nMoving platforms (ships, aircraft): datum origin on the object or virtual intersection of axes"
+  },
+  {
+    "objectID": "LE03.html#compound-coordinate-reference-systems",
+    "href": "LE03.html#compound-coordinate-reference-systems",
+    "title": "Reference Systems - Vertical",
+    "section": "Compound Coordinate Reference Systems",
+    "text": "Compound Coordinate Reference Systems\n\nOften need 3D positions: easting, northing + gravity-related height\nTwo independent CRS are combined:\n\nHorizontal (projected or geographic CRS)\nVertical (vertical CRS)\n\nExamples:\n\nBritish National Grid + Ordnance Datum Newlyn\nMap Grid of Australia + AHD height\nNAD83 + NAVD88\n\nA compound CRS is not a true 3D geodetic system"
+  },
+  {
+    "objectID": "LE03.html#registers-of-coordinate-reference-systems",
+    "href": "LE03.html#registers-of-coordinate-reference-systems",
+    "title": "Reference Systems - Vertical",
+    "section": "Registers of Coordinate Reference Systems",
+    "text": "Registers of Coordinate Reference Systems\n\nRather than specifying all CRS details, use a registry identifier\nExamples: BKG, EPSG Geodetic Parameter Dataset\nEach CRS gets a unique code (e.g., EPSG:4954 for NAD83 geocentric)\nCare needed: ensure registry definition exactly matches your requirements\nRepositories retain erroneous records (marked invalid) for historic purposes"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-datums-and-crs",
+    "href": "LE03.html#student-discussion-datums-and-crs",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Datums and CRS",
+    "text": "💬 Student Discussion: Datums and CRS\n\n“Are vertical datums related to horizontal datums? If yes, in which way?”\n“Why can’t we combine a 3D geodetic system and gravity-related vertical system as a compound CRS?”\n“Is the unit of measurement standardized, or is conversion between units still widespread?”\n“Can you clarify Figure 3.6 (1st edition) and how it relates to vertical datums?”"
+  },
+  {
+    "objectID": "LE03.html#next-lecture",
+    "href": "LE03.html#next-lecture",
+    "title": "Reference Systems - Vertical",
+    "section": "Next Lecture",
+    "text": "Next Lecture\n\n07.05.2026 - Chapter 3\nRead Chapter 3.1 - 3.5 on Map Projections\n\nReading Guide\n\nAnswer (for yourself)  the following questions:\n\n\nName a key difference between the grid and the graticule\nDoes a map projection have one or many scale factors?\nWhat are false easting and northing, and what is their purpose?\nName two properties of a “good” map projection\nWhat is UTM?"
+  },
+  {
+    "objectID": "LE03.html#reading-guide",
+    "href": "LE03.html#reading-guide",
+    "title": "Reference Systems - Vertical",
+    "section": "Reading Guide",
+    "text": "Reading Guide\n\nAnswer (for yourself)  the following questions:\n\n\nName a key difference between the grid and the graticule\nDoes a map projection have one or many scale factors?\nWhat are false easting and northing, and what is their purpose?\nName two properties of a “good” map projection\nWhat is UTM?"
+  },
+  {
+    "objectID": "LE03.html#answers-geoid-concepts",
+    "href": "LE03.html#answers-geoid-concepts",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Geoid Concepts",
+    "text": "Answers: Geoid Concepts\n\nModel or actual shape? Both — “geoid” is the name for the real shape; “equipotential surface” describes what kind of surface it physically is.\nEquipotential doesnot mean pointing to centre. Gravity doesn’t point exactly to the centre because of mass irregularities. Equipotential means same gravitional potential, not same direction.\nWhy exaggerate diagrams? Deviation is less than 100 m over a body of ~6400 km radius. At true scale, geoid and spheroid would be indistinguishable."
+  },
+  {
+    "objectID": "LE03.html#answers-vertical-vs-normal",
+    "href": "LE03.html#answers-vertical-vs-normal",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Vertical vs Normal",
+    "text": "Answers: Vertical vs Normal\n\nDifferent terms because different concepts. “Vertical” = physics (gravity defines it). “Normal” = geometry (maths defines it).\nDeviation of the vertical = the small angle between the two directions. Exists because local mass anomalies pull gravity slightly away from the geometric normal. Typically just a few arcseconds."
+  },
+  {
+    "objectID": "LE03.html#answers-spherical-harmonics",
+    "href": "LE03.html#answers-spherical-harmonics",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Spherical Harmonics",
+    "text": "Answers: Spherical Harmonics\n\nHow much to know? Conceptual understanding is sufficient: it’s a Fourier series on a sphere. Higher degree = finer detail. NMAX sets the resolution limit at 180°/NMAX.\nWavelength: visualizations are here"
+  },
+  {
+    "objectID": "LE03.html#answers-heights",
+    "href": "LE03.html#answers-heights",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Heights",
+    "text": "Answers: Heights\n\nWhy GPS gives spheroidal height: GPS is geometry-based (satellite distances). Computes cartesian 3D coordinates X,Y,Z that are transformed to an elliposidal coordinate — so it can only reference the ellipsoid, not the geoid.\nHow to get H in reality: By levelling from a tide gauge (H=0) outward through a network of bench marks.\nN for every point? Ideally yes. Modern equipment uses built-in geoid models (e.g., EGM2008) to automatically compute N and convert h → H in real-time. Accuracy depends on the geoid model quality at that location."
+  },
+  {
+    "objectID": "LE03.html#answers-separation-and-gps",
+    "href": "LE03.html#answers-separation-and-gps",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Separation and GPS",
+    "text": "Answers: Separation and GPS\n\nShorter = always better? It depends on terrain roughness. A 20 km section over mountains may be worse than 50 km over flat land. Shorter distances just reduce the chance of encountering undulations.\nInfluence on GPS decisions: These errors set project size limits. For cm-level work, GPS baselines should be short and tied to dense control. For 0.5 m tolerance, ~50 km baselines are acceptable. The transformation absorbs the linear slope — only the residual undulations limit accuracy."
+  },
+  {
+    "objectID": "LE03.html#answers-height-applications",
+    "href": "LE03.html#answers-height-applications",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Height Applications",
+    "text": "Answers: Height Applications\n\nEllipsoidal preferred when: monitoring change over time, comparing GPS-surveyed objects to each other, or when gravity direction is irrelevant.\nOrthometric preferred in construction because: water flows downhill relative to the geoid, not the ellipsoid. Construction needs a physically meaningful height tied to gravity."
+  },
+  {
+    "objectID": "LE03.html#answers-vertical-datums",
+    "href": "LE03.html#answers-vertical-datums",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Vertical Datums",
+    "text": "Answers: Vertical Datums\n\nSingle datum problematic because: MSL differs at different tide gauges (different equipotential surfaces). Over large distances, these offsets accumulate. Channel Tunnel example: UK–France offset was ~30 cm.\nRule of thumb? No fixed rule. Depends on required accuracy and the variability of MSL along the coast.\nWhy not Mt. Everest? MSL is physically meaningful — tied to gravity, accessible globally via tide gauges, and water/engineering applications reference it naturally. A mountain peak is local, inaccessible, and has no physical connection to gravity equipotential.\nCut-and-fill affecting geoid? Negligibly. The geoid responds to larger scale mass distribution, not surface-level earthworks.\nFigure 3.6: Shows how tying a datum to multiple tide gauges creates a reference surface that warps between different equipotential surfaces"
+  },
+  {
+    "objectID": "LE03.html#student-discussion-mean-sea-level",
+    "href": "LE03.html#student-discussion-mean-sea-level",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Mean Sea Level",
+    "text": "💬 Student Discussion: Mean Sea Level\n\n“What is the significance of 18.9 years in measuring mean sea level?”\n“What is the purpose of tide gauges for the vertical ellipsoid height?”"
+  },
+  {
+    "objectID": "LE03.html#answers-mean-sea-level",
+    "href": "LE03.html#answers-mean-sea-level",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Mean Sea Level",
+    "text": "Answers: Mean Sea Level\n\n18.6 years (lunar nodal cycle): related to moon’s cycle, so to average all the tidal effects.\nTide gauges and ellipsoidal height: Tide gauges define H=0 (the starting point for orthometric heights). If one puts the GPS there and measures the ellipsoidal height, then the link can be established."
+  },
+  {
+    "objectID": "LE03.html#student-discussion-marine-datums",
+    "href": "LE03.html#student-discussion-marine-datums",
+    "title": "Reference Systems - Vertical",
+    "section": "💬 Student Discussion: Marine Datums",
+    "text": "💬 Student Discussion: Marine Datums\n\n“What are co-tidal and co-range charts?”\n“How do vertical CRS based on water level datums differ from onshore systems?”\n“Wouldn’t it be easier to have an internationally usable height standard for marine applications connected to GPS?”"
+  },
+  {
+    "objectID": "LE03.html#answers-marine-datums",
+    "href": "LE03.html#answers-marine-datums",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Marine Datums",
+    "text": "Answers: Marine Datums\n\nCo-tidal charts:\nWater level datums differ from onshore in two ways: (1) they use depths not heights, and (2) they are not equipotential surfaces — LAT varies with local tidal range and marine topography.\nGPS-based marine standard?"
+  },
+  {
+    "objectID": "LE03.html#answers-datums-and-crs",
+    "href": "LE03.html#answers-datums-and-crs",
+    "title": "Reference Systems - Vertical",
+    "section": "Answers: Datums and CRS",
+    "text": "Answers: Datums and CRS\n\nVertical related to horizontal? Defined independently, but linked through h = H + N. Combined in practice as compound CRS. Changing one doesn’t change the other — but we need both for 3D positioning.\nWhy not 3D geodetic + gravity vertical? Because they use fundamentally different reference surfaces (ellipsoid vs geoid). A compound CRS acknowledges they are separate systems. A true 3D system would need a single consistent surface.\nUnit standardization?"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-geoid-concepts",
+    "href": "LE03.html#discussion-questions-geoid-concepts",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Geoid Concepts",
+    "text": "Discussion Questions: Geoid Concepts\n\n“Is the geoid a model or the name of the actual shape of the Earth? Is there any difference between actual and true shape?”\n“In my understanding, equipotential describes a vector at each position that points towards the center. How does it follow that there are different heights?”\n“Why must every diagram of the geoid greatly exaggerate its deviation from the spheroid?”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-vertical-vs-normal",
+    "href": "LE03.html#discussion-questions-vertical-vs-normal",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Vertical vs Normal",
+    "text": "Discussion Questions: Vertical vs Normal\n\n“Why is the term vertical used for geoid and normal for spheroid? Does the difference lie in shape, definitions, or both?”\n“What is meant by the deviation of the vertical and why does it exist?”\n“Please discuss: astronomical coordinates are always unique (it is impossible for two points to have the same latitude)”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-spherical-harmonics",
+    "href": "LE03.html#discussion-questions-spherical-harmonics",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Spherical Harmonics",
+    "text": "Discussion Questions: Spherical Harmonics\n\n“How much do we need to know about the coefficients of a spherical harmonic expansion?”\n“What is the wavelength, as in ‘the global Earth model expresses the geoid in terms of functions of increasingly small wavelength’ — how can one imagine it?”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-heights",
+    "href": "LE03.html#discussion-questions-heights",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Heights",
+    "text": "Discussion Questions: Heights\n\n“Why does geoid-spheroid separation need to be used to correct heights from GPS? Why do satellites observe height from the spheroid?”\n“How do you get height above geoid or mean sea level in reality?”\n“How can you measure the orthometric height H which is required to calculate the ellipsoidal height h?”\n“For accurate 3D measurements, is it required to take N for every point separately? How does modern surveying equipment handle this?”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-separation-and-gps",
+    "href": "LE03.html#discussion-questions-separation-and-gps",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Separation and GPS",
+    "text": "Discussion Questions: Separation and GPS\n\n“When modeling N as a uniform slope, do shorter distances always result in more accurate representations?”\n“How does the acceptable error (50 cm over 50 km, 10–15 cm over 20 km) influence decisions in precise GPS applications?”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-height-applications",
+    "href": "LE03.html#discussion-questions-height-applications",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Height Applications",
+    "text": "Discussion Questions: Height Applications\n\n“In what situations would using ellipsoidal heights be more advantageous than gravity-related heights?”\n“Why is the orthometric height generally preferred in construction and engineering?”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-vertical-datums",
+    "href": "LE03.html#discussion-questions-vertical-datums",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Vertical Datums",
+    "text": "Discussion Questions: Vertical Datums\n\n“Why could the adoption of a single vertical datum over large distances be problematic?”\n“Is there a good rule of thumb for how many vertical datums you’d need over larger distances?”\n“Why do we define vertical datums using MSL? Why not use Mt. Everest as reference?”\n“Does cut-and-fill of large areas affect the geoid?”\n“Can you clarify Figure 3.6 (1st edition) and how it relates to vertical datums?”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-mean-sea-level",
+    "href": "LE03.html#discussion-questions-mean-sea-level",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Mean Sea Level",
+    "text": "Discussion Questions: Mean Sea Level\n\n“What is the significance of 18.9 years in measuring mean sea level?”\n“What is the purpose of tide gauges for the vertical ellipsoid height?”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-marine-datums",
+    "href": "LE03.html#discussion-questions-marine-datums",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Marine Datums",
+    "text": "Discussion Questions: Marine Datums\n\n“What are co-tidal and co-range charts?”\n“How do vertical CRS based on water level datums differ from onshore systems?”\n“Wouldn’t it be easier to have an internationally usable height standard for marine applications connected to GPS?”"
+  },
+  {
+    "objectID": "LE03.html#discussion-questions-datums-and-crs",
+    "href": "LE03.html#discussion-questions-datums-and-crs",
+    "title": "Reference Systems - Vertical",
+    "section": "Discussion Questions: Datums and CRS",
+    "text": "Discussion Questions: Datums and CRS\n\n“Are vertical datums related to horizontal datums? If yes, in which way?”\n“Why can’t we combine a 3D geodetic system and gravity-related vertical system as a compound CRS?”\n“Is the unit of measurement standardized, or is conversion between units still widespread?”"
+  },
+  {
+    "objectID": "LE03.html#geoid",
+    "href": "LE03.html#geoid",
+    "title": "Reference Systems - Vertical",
+    "section": "Geoid",
+    "text": "Geoid\n\nThe true shape of the Earth is called the geoid\nDefined as: that equipotential surface that most closely corresponds to mean sea level\nThe geoid is a real physical surface dictated by gravity — we approximate it using gravitational models (e.g., EGM2008), but the geoid itself exists independently of our models\nThe spheroid/ellipsoid is the simplified mathematical approximation\nSpheroid approximates the geoid to within ±100 m (RMS ~30 m)"
+  },
+  {
+    "objectID": "LE03.html#vertical-and-normal",
+    "href": "LE03.html#vertical-and-normal",
+    "title": "Reference Systems - Vertical",
+    "section": "Vertical and Normal",
+    "text": "Vertical and Normal\n\nVertical: direction of gravity at a point (what plumb line shows); perpendicular to the geoid; natural direction\nNormal: Geometric perpendicular to the spheroid/ellipsoid, Mathematical direction computed from an equation.\nThe angle between them = deviation of the vertical (ξ, η)\nTypically a few seconds of arc"
   }
 ]

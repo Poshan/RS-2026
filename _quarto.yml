@@ -16,7 +16,8 @@ website:
         text: LE02
       - href: LE02_discussions.qmd
         text: LE02 Discussions
-
+      - href: LE03.qmd
+        text: LE03
 format:
   html:
     theme: cosmo
