@@ -18,6 +18,8 @@ website:
         text: LE02 Discussions
       - href: LE03.qmd
         text: LE03
+      - href: LE04.qmd
+        text: LE04
 format:
   html:
     theme: cosmo

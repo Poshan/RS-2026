@@ -1,0 +1,69 @@
+---
+title: "Reference Systems - Map Projections part 1"
+author: "Poshan Niraula"
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    logo: 2021-logo-ifgi-text-de.png
+    incremental: false
+    css: logo.css
+    width: 1600
+    height: 900
+editor: visual
+---
+
+## Reading Guides
+
+Reading: Chapter 3.1 - 3.5 on Map Projections
+
+1.  Name a key difference between the grid and the graticule
+2.  Does a map projection have one or many scale factors?
+3.  What are false easting and northing, and what is their purpose?
+4.  Name two properties of a "good" map projection
+5.  What is UTM?
+
+## Why Projection?
+
+- Presentational purposes
+- Computational purposes
+
+## Distortion while projecting
+ [very old video](https://www.nfb.ca/film/impossible_map/)
+
+
+## Projection methods, Map Projections and Projected coordinate reference system
+- Projection methods: Transverse Mercator, Polar stereographic
+- Map Projection: Projection methods + values of the parameters eg. UTM or British national grids
+- Projected coordinate system: has datum information -> complete information
+
+## How is projection done?
+- mathematically 
+- equation E, N = f($\phi$, $\lambda$)
+
+## Meme of Projection
+[link](https://xkcd.com/977/)
+
+## Fundamentals
+- grids and graticules
+- Scale factors
+- Sphere or ellipsoid
+- Developable surfaces
+
+
+## Fundamentals: Grids and graticules
+- **Graticules**: meridians and parallels that appear on the maps 
+- Their appearance depends on type of projection
+- Doesn't constitute the basis of crsthat is suitable for computational purposes or for placing features on map
+- Instead recrtangular crs = **grids** is superimposed on the grids
+- Grids have coordinates labelled as x, y or E, N 
+
+![](images/grids-graticules.png){fig-align="center" width="600"}
+
+
+## Fundamentals: Scale factors
+- Distortions are inevitable when flattening 
+- **Scale factors** help in quantification of the amount fo distortion
+- formula
+- in meridian and parallel
+- figures
