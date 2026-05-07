@@ -749,6 +749,111 @@
     "text": "ITRS, WGS 84, and Time — Answers\n\nWhy ITRF needs a time stamp: The Earth’s tectonic plates move continuously — Europe drifts ~2.5 cm/year northeast relative to Earth’s centre. ITRF station coordinates therefore change over time. An ITRF position is only valid at a specific epoch (e.g., 2015.0).\nSame CRS, different times: If the CRS is a dynamic datum (like ITRF), the coordinates of the same physical point are literally different at different epochs — so two datasets “in ITRF2014” but at epochs 2015.0 and 2025.0 will show a systematic shift."
   },
   {
+    "objectID": "LE05.html#reading-guides",
+    "href": "LE05.html#reading-guides",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Reading Guides",
+    "text": "Reading Guides\nRead section 3.6-3.9 and try answer the following questions for yourself:\n\nWhat parameters are required to define different classes of projection?\nWhat is role of scale factor in computing within map projections?\nWhat factors should be considered while designing a map projection?"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections",
+    "href": "LE05.html#azimuthal-projections",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nGeneral Azimuthal\n\nFormed by bringing a plane into contact with sphere or ellipsoid\nScale factor distortion will be circularly symmetric\nSpecial case is Polar projection, where plane touches Poles"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections-1",
+    "href": "LE05.html#azimuthal-projections-1",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nAzimuthal equidistant\n\nKept scale factor = 1, in the direction radial from the center of the projection.\nPolar equidistant - scale factor along meridian is \\(k_m\\) = 1\nDistances from center will be correct"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections-2",
+    "href": "LE05.html#azimuthal-projections-2",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nAzimuthal equal area"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections-3",
+    "href": "LE05.html#azimuthal-projections-3",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nStereographic/conformal\n\nConformal version of Azimuthal\nViewing Point on the opposite side of the Earth from the center of projection\nPolar stereographic used in complement the UTM in beyond latitude 84 degrees N and 80 degrees South = UPS\nUPS: scale factor of pole = 0.994"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections-4",
+    "href": "LE05.html#azimuthal-projections-4",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nDiscussion questions:\n\nWhy does the UPS projection use a standard parallel at 81 degrees?"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections-5",
+    "href": "LE05.html#azimuthal-projections-5",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nAzimuthal orthographic\n\nformed by projecting all points on teh ellipsoid onto a plane, along lines that are normal to the plane.\nViewing height is infinity"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections-6",
+    "href": "LE05.html#azimuthal-projections-6",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nAzimuthal perspective projection\n\nSimilar to the Azimuthal orthographic but with finite view point\nused by Google Earth- not purely perspective as it accounts for height of the terrain"
+  },
+  {
+    "objectID": "LE05.html#conic",
+    "href": "LE05.html#conic",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Conic",
+    "text": "Conic\nGeneral Conic\n\nFormed by bringing a cone into contact with the sphere/ellipsoid\nTouches the sphere/ellipsoid along a parallel of latitude -&gt; standard parallel\ndifferent shapes of cones can be selected\n\nequivalent of overall scaling achieved by using two standard parallels"
+  },
+  {
+    "objectID": "LE05.html#conic-1",
+    "href": "LE05.html#conic-1",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Conic",
+    "text": "Conic\nConic equidistant"
+  },
+  {
+    "objectID": "LE05.html#conic-2",
+    "href": "LE05.html#conic-2",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Conic",
+    "text": "Conic\nAlbers equal area"
+  },
+  {
+    "objectID": "LE05.html#conic-3",
+    "href": "LE05.html#conic-3",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Conic",
+    "text": "Conic\nLCC"
+  },
+  {
+    "objectID": "LE05.html#conic-4",
+    "href": "LE05.html#conic-4",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Conic",
+    "text": "Conic\nOblique conic"
+  },
+  {
+    "objectID": "LE05.html#web-mercator",
+    "href": "LE05.html#web-mercator",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Web Mercator",
+    "text": "Web Mercator"
+  },
+  {
+    "objectID": "LE05.html#next-lecture",
+    "href": "LE05.html#next-lecture",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Next Lecture",
+    "text": "Next Lecture"
+  },
+  {
     "objectID": "LE01.html#overview",
     "href": "LE01.html#overview",
     "title": "Reference Systems",
@@ -931,6 +1036,13 @@
     "text": "Reading Guides\nReading: Chapter 3.1 - 3.5 on Map Projections\n\nName a key difference between the grid and the graticule\nDoes a map projection have one or many scale factors?\nWhat are false easting and northing, and what is their purpose?\nName two properties of a “good” map projection\nWhat is UTM?"
   },
   {
+    "objectID": "LE04.html#true-size---web-mercator",
+    "href": "LE04.html#true-size---web-mercator",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "True size - web mercator",
+    "text": "True size - web mercator\nTrue size"
+  },
+  {
     "objectID": "LE04.html#why-projection",
     "href": "LE04.html#why-projection",
     "title": "Reference Systems - Map Projections part 1",
@@ -943,27 +1055,6 @@
     "title": "Reference Systems - Map Projections part 1",
     "section": "Distortion while projecting",
     "text": "Distortion while projecting\nvery old video"
-  },
-  {
-    "objectID": "LE04.html#projection-methods-map-projections-and-projected-coordinate-reference-system",
-    "href": "LE04.html#projection-methods-map-projections-and-projected-coordinate-reference-system",
-    "title": "Reference Systems - Map Projections part 1",
-    "section": "Projection methods, Map Projections and Projected coordinate reference system",
-    "text": "Projection methods, Map Projections and Projected coordinate reference system\n\nProjection methods: Transverse Mercator, Polar stereographic\nMap Projection: Projection methods + values of the parameters eg. UTM or British national grids\nProjected coordinate system: has datum information -&gt; complete information"
-  },
-  {
-    "objectID": "LE04.html#how-is-projection-done",
-    "href": "LE04.html#how-is-projection-done",
-    "title": "Reference Systems - Map Projections part 1",
-    "section": "How is projection done?",
-    "text": "How is projection done?\n\nmathematically\nequation E, N = f(\\(\\phi\\), \\(\\lambda\\))"
-  },
-  {
-    "objectID": "LE04.html#meme-of-projection",
-    "href": "LE04.html#meme-of-projection",
-    "title": "Reference Systems - Map Projections part 1",
-    "section": "Meme of Projection",
-    "text": "Meme of Projection\nlink"
   },
   {
     "objectID": "LE04.html#fundamentals",
@@ -984,7 +1075,266 @@
     "href": "LE04.html#fundamentals-scale-factors",
     "title": "Reference Systems - Map Projections part 1",
     "section": "Fundamentals: Scale factors",
-    "text": "Fundamentals: Scale factors\n\nDistortions are inevitable when flattening\nScale factors help in quantification of the amount fo distortion\nformula\nin meridian and parallel\nfigures"
+    "text": "Fundamentals: Scale factors\n\nDistortions are inevitable when flattening\nScale factors help in quantification of the amount fo distortion\nideal value is 1 -&gt; meaning no distortion at that point\nscale factor is different in each point in the projection and in cases each direction has different values\nso the formula for computation is computed at an infintisemaly short distances and\nfor longer lines this parameter is the mean of point scale factors along the whole length."
+  },
+  {
+    "objectID": "LE04.html#fundamentals-scale-factors-1",
+    "href": "LE04.html#fundamentals-scale-factors-1",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Fundamentals: Scale factors",
+    "text": "Fundamentals: Scale factors\n\nScale factors shown in direction of meridian and parallel\nunrelated to the scale of the map 1:1000\nnot to be associated with the error -&gt; as true coordinates will always be recovered if the values fo the parameters of the projections are known."
+  },
+  {
+    "objectID": "LE04.html#developable-surfaces",
+    "href": "LE04.html#developable-surfaces",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Developable surfaces",
+    "text": "Developable surfaces\n\nIntermediate surfaces of a nature that can be unravelled wihtout distortion\nCones, Cylinders and plane\nthey are brought to the contact of the Ellipsoid\n\nIn the region arond the point or line of contact between the two surfaces the scale factor distrotion will be minimal"
+  },
+  {
+    "objectID": "LE04.html#choice-of-developable-surface",
+    "href": "LE04.html#choice-of-developable-surface",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Choice of developable surface",
+    "text": "Choice of developable surface\n\nWhen projecting the whole Earth, which developable surfaces are better in which geographical extent?\nCylindrical: ?\nConic: ?\nPlanar: ?"
+  },
+  {
+    "objectID": "LE04.html#choice-of-developable-surface-1",
+    "href": "LE04.html#choice-of-developable-surface-1",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Choice of developable surface",
+    "text": "Choice of developable surface\n\nWhen projecting the whole Earth, which developable surfaces are better in which geographical extent?\nCylindrical: equatorial region\nConic: Mid-latitude\nPlanar: poles"
+  },
+  {
+    "objectID": "LE04.html#how-is-projection-done",
+    "href": "LE04.html#how-is-projection-done",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "How is projection done?",
+    "text": "How is projection done?\n\nMathematically\nE, N = \\(f\\)(\\(\\phi\\), \\(\\lambda\\))\nSo, without mentioning the developable surfaces projection is possible if we know the \\(f\\)\nSoftwares do it the same way"
+  },
+  {
+    "objectID": "LE04.html#preserved-features",
+    "href": "LE04.html#preserved-features",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Preserved features",
+    "text": "Preserved features\n\nTransferring coordinates from sphere/ellipsoid needs some rules\nChoice needs to made on these rules depending on the purpose\nIt is not possible to devise a projection without introducing distortions.\nGenerally either shape, area or size of the feature will be different after projection\nUsual approach is to preserve one of these properties at expense of others"
+  },
+  {
+    "objectID": "LE04.html#preserved-features--distance",
+    "href": "LE04.html#preserved-features--distance",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Preserved features- distance",
+    "text": "Preserved features- distance\n\ndistance measured on the sphere undistorted when shown on the projection\nit is not possible to preserve all the distances\nso instead could be preserving along all meridians i.e. \\(k_m\\) = 1\nAlso known as equidistant projection"
+  },
+  {
+    "objectID": "LE04.html#preserved-features---area",
+    "href": "LE04.html#preserved-features---area",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Preserved features - Area",
+    "text": "Preserved features - Area\n\nEqual area projection"
+  },
+  {
+    "objectID": "LE04.html#preserved-features---shapeangles",
+    "href": "LE04.html#preserved-features---shapeangles",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Preserved features - Shape/Angles",
+    "text": "Preserved features - Shape/Angles\n\nConformal\nSignificant in land surveying"
+  },
+  {
+    "objectID": "LE04.html#projection-systems",
+    "href": "LE04.html#projection-systems",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Projection systems",
+    "text": "Projection systems\nvideo link"
+  },
+  {
+    "objectID": "LE04.html#spehers-and-ellipsoids",
+    "href": "LE04.html#spehers-and-ellipsoids",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Spehers and ellipsoids",
+    "text": "Spehers and ellipsoids\n\nMost ellipsoids have a flattening of approximately 1 part in 300.\nWhile subtle, ignoring this leads to significant coordinate discrepancies."
+  },
+  {
+    "objectID": "LE04.html#discussion-questions",
+    "href": "LE04.html#discussion-questions",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Discussion questions",
+    "text": "Discussion questions\n\nIn the last paragraph of the section 3.2.5 the author wrote that the ellispoid is not a conformable surface. Therfore, the ellipsoidal systems first convert from the ellipsoid to sphere. The question is which approach is better or would induce more distortion, directly assuming the shape as sphere or, converting from ellipsoid to sphere."
+  },
+  {
+    "objectID": "LE04.html#answers",
+    "href": "LE04.html#answers",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Answers",
+    "text": "Answers\n\nDirect sphere assumption: Treats Earth as a perfect sphere from the start. Simple math, but ignores the ~1/300 flattening — causes positional errors of hundreds of meters at mid-latitudes.\nEllipsoid → Sphere → Plane (Conformal sphere approach): Mathematically maps the ellipsoid onto an auxiliary “conformal sphere” first, then projects. Errors are vastly smaller (sub-meter level).\nConclusion: Converting from ellipsoid to sphere first is the better approach — it preserves geodetic accuracy.\n\nDirectly assuming a sphere is only acceptable for low-precision/visualization tasks (e.g., Web Mercator)."
+  },
+  {
+    "objectID": "LE04.html#natural-and-false-origin",
+    "href": "LE04.html#natural-and-false-origin",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Natural and false origin",
+    "text": "Natural and false origin\n\nNatural origin : point on equator (0 latitude) and free to choose longitude\nFalse origin: Startign at different latitude\nGeographic coordinates of natural or false origin are essential part of definition of projected referene system."
+  },
+  {
+    "objectID": "LE04.html#false-easting-and-false-northing",
+    "href": "LE04.html#false-easting-and-false-northing",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "False Easting and False Northing",
+    "text": "False Easting and False Northing\n\norigins are given some coordinates eg 500,000 to avoid negative coordinates"
+  },
+  {
+    "objectID": "LE04.html#discussion-questions-1",
+    "href": "LE04.html#discussion-questions-1",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Discussion questions",
+    "text": "Discussion questions\n\nClarify why False Northings and Eastings are necessary…..its already clear that they help to avoid -ve coordinates. But why still avoid -ve coordinates in the current world of high computation capability\nWhy are non-natural origins often preferred over natural origins when defining coordinate systems in map projections?"
+  },
+  {
+    "objectID": "LE04.html#answers-1",
+    "href": "LE04.html#answers-1",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Answers",
+    "text": "Answers\n\nWhy avoid negative coordinates (even today):\n\nReduces human errors — surveyors, planners often drop signs, causing mirrored mistakes.\nSimplifies sorting, indexing, and storage in databases (positive values only).\nMaintains backward compatibility with legacy maps and tools.\nVisual/printed grids are easier to read with all positive values.\n\nWhy non-natural origins are preferred:\n\nNatural origins (Equator + central meridian) often lie far from the map’s region of interest, producing huge coordinate values.\nShifting the origin closer to the area of interest keeps numbers manageable and intuitive."
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections",
+    "href": "LE04.html#cylindrical-projections",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nEquidistant\n\n\\(k_m\\) = 1\ndistances along meridian are undistroted\nparallels are same size as latitude"
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-1",
+    "href": "LE04.html#cylindrical-projections-1",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nEqual area\n\nCompensate the distortion on parallels (\\(\\sec\\phi\\)) by setting \\(k_m\\) = \\(\\cos\\phi\\)\ndistances are distroted in meridian and function of latitude\nPeters projection: apply further scaling of 0.5 along parallels and 2 along meridians\nUsed to show correct relative size -read more here"
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-2",
+    "href": "LE04.html#cylindrical-projections-2",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nConformal/Mercator\n\n\\(k_m\\) = \\(k_p\\) = \\(\\sec\\phi\\)\nPoles can’t be represented as they are infinite size and infinite distance from equator\nmeridians are parallel to each other and angles are preserved\nideal for navigation"
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-3",
+    "href": "LE04.html#cylindrical-projections-3",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nConformal/Mercator\n\nDifferent scales at different latitudes (\\(\\sec\\phi\\))\nbetween 49 degrees and 51 degress 1.52 and 1.59\noverall scaling is applied, so that scale factor on average is closer to 1\nin example overall scaling of 0.645 is used to reduce the scale factor to 0.98 to 1.03 and scale on equator will be 0.645"
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-4",
+    "href": "LE04.html#cylindrical-projections-4",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nTransverse Mercator\n\n\ncylinder contacts not equator but a Meridian (central meridian)\n\\(k = \\sec\\theta\\), \\(\\theta\\), analogous to \\(\\phi\\), angular distance from central meridian\nmeridians are not parallel to each other and not straight lines\nonly central meridian is straight line"
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-5",
+    "href": "LE04.html#cylindrical-projections-5",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nTransverse Mercator\n\ncommonly used for narrow band of 6 degrees (+-3 degrees from CM)\nScale factor at CM = 1, at 1.0014 on edges\noverall scaling is done by choosing scale factor at nautral orgin (usually 0.9996)"
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-6",
+    "href": "LE04.html#cylindrical-projections-6",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nUniversal Transverse Mercator\n\nZoned TMs\n60 zones\nGermany lies zone 31, 32, 33"
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-7",
+    "href": "LE04.html#cylindrical-projections-7",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nSouth oriented Transverse Mercator\n\ncentral meridian oriented towards South Pole\nGrid values increase towards the west and south."
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-8",
+    "href": "LE04.html#cylindrical-projections-8",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections\nOblique Transverse Mercator\n\nwhen region/country doesnot align along a meridian or parallel\neg Peninsular Malaysia, Alaska Panhandle"
+  },
+  {
+    "objectID": "LE04.html#cylindrical-projections-9",
+    "href": "LE04.html#cylindrical-projections-9",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Cylindrical Projections",
+    "text": "Cylindrical Projections"
+  },
+  {
+    "objectID": "LE04.html#discussion-questions-2",
+    "href": "LE04.html#discussion-questions-2",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Discussion questions:",
+    "text": "Discussion questions:\n\nWhy is the Transverse Mercator projection method more suitable for regions with a large extent north-south but little extent east-west?\nShould map projections such as the Mercator projection be avoided in education because they can create misleading perceptions of the size of countries and continents? For example, Greenland often appears almost as large as Africa on Mercator maps, even though Africa is actually about 14 times larger than Greenland.\nIf a loxodrome is not the shortest path between points, why is it the preferred method instead of for example the great circle route? video link"
+  },
+  {
+    "objectID": "LE04.html#answers-pointers",
+    "href": "LE04.html#answers-pointers",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Answers / Pointers",
+    "text": "Answers / Pointers\n\nWhy Transverse Mercator suits N–S regions:\n\nThe cylinder touches the Earth along a central meridian (a N–S line).\nScale factor = 1 along the CM and stays close to 1 within ±3° E–W.\nDistortion grows rapidly E–W → ideal for narrow N–S strips (Chile, UK, Norway).\n\nShould Mercator be avoided in education?\nWhy use loxodromes (rhumb lines) over great circles?\n\nGreat circles are shortest, but require continuously changing compass bearing.\nLoxodromes maintain a constant compass bearing — easy to navigate manually.\nOn a Mercator map, loxodromes are straight lines → quick plotting.\nTrade-off: longer path for navigational simplicity"
+  },
+  {
+    "objectID": "LE04.html#definitions",
+    "href": "LE04.html#definitions",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Definitions",
+    "text": "Definitions\n\nProjection methods: Transverse Mercator, Polar stereographic\nMap Projection: Projection methods + values of the parameters eg. UTM or British national grids\nProjected coordinate system: has datum information -&gt; complete information"
+  },
+  {
+    "objectID": "LE04.html#projection-summary",
+    "href": "LE04.html#projection-summary",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Projection Summary",
+    "text": "Projection Summary\nCategories\n\nClass: Cylindrical, Conic, Azimuthal (Planar)\nAspect: Normal (polar axis), Transverse (90° rotated), Oblique (angled)\nProperty: Conformal (preserves angles), Equal Area (preserves size), Equidistant (preserves distance), compromise\nContact: Tangent, Secant (intersects surface)"
+  },
+  {
+    "objectID": "LE04.html#projection-summary-1",
+    "href": "LE04.html#projection-summary-1",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Projection Summary",
+    "text": "Projection Summary\nWhen to use which?\n\nBy Location:\n\nEquator: Cylindrical\nMid-latitudes: Conic\nPoles: Azimuthal\n\nBy Shape:\n\nNarrow North-South: Transverse Cylindrical (e.g., UTM)\nDiagonal/Skewed: Oblique\n\nBy Purpose:\n\nNavigation / Topography: Conformal\nComparing regions / Thematic: Equal Area\nDistance from a center point: Azimuthal Equidistant"
+  },
+  {
+    "objectID": "LE04.html#choice-of-map-projection",
+    "href": "LE04.html#choice-of-map-projection",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Choice of map projection",
+    "text": "Choice of map projection\nhttps://projectionwizard.org/"
+  },
+  {
+    "objectID": "LE04.html#tissots-indicatrix",
+    "href": "LE04.html#tissots-indicatrix",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Tissot’s indicatrix",
+    "text": "Tissot’s indicatrix\n\nvisualize characterize local distortions due to map projection.\n\nhttps://en.wikipedia.org/wiki/Tissot%27s_indicatrix"
+  },
+  {
+    "objectID": "LE04.html#question",
+    "href": "LE04.html#question",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Question?",
+    "text": "Question?\nIn this scenarios which map projection would you chose and why?\n\n\n\nMid Latitude country with signicant East-West Extent (USA)\n\n\n\n\nMapping a long narrow country (Chile)"
+  },
+  {
+    "objectID": "LE04.html#next-lecture",
+    "href": "LE04.html#next-lecture",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "Next Lecture",
+    "text": "Next Lecture\nRead section 3.6-3.9 and try answer the following questions for yourself:\n\nWhat parameters are required to define different classes of projection?\nWhat is role of scale factor in computing within map projections?\nWhat factors should be considered while designing a map projection?"
+  },
+  {
+    "objectID": "LE04.html#references",
+    "href": "LE04.html#references",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "References",
+    "text": "References\nAll figures are from: - Source: Iliffe, Jonathan , and Roger Lott . 2008. Datums and Map Projections for Remote Sensing, GIS, and Surveying. Whittles Pub. CRC Press, Scotland, UK."
   },
   {
     "objectID": "index.html",

@@ -1,0 +1,129 @@
+---
+title: "Reference Systems - Map Projections part 1"
+author: "Poshan Niraula"
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    logo: 2021-logo-ifgi-text-de.png
+    incremental: false
+    css: logo.css
+    width: 1600
+    height: 900
+editor: visual
+---
+
+## Reading Guides
+
+Read section 3.6-3.9 and try answer the following questions for yourself:
+
+1.  What parameters are required to define different classes of projection?
+2.  What is role of scale factor in computing within map projections?
+3.  What factors should be considered while designing a map projection?
+
+
+## Azimuthal Projections
+
+### General Azimuthal 
+
+- Formed by bringing a plane into contact with sphere or ellipsoid
+- Scale factor distortion will be circularly symmetric
+- Special case is Polar projection, where plane touches Poles
+
+## Azimuthal Projections
+
+### Azimuthal equidistant
+
+- Kept scale factor = 1, in the direction radial from the center of the projection.
+- Polar equidistant - scale factor along meridian is $k_m$ = 1
+- Distances from center will be correct
+
+## Azimuthal Projections
+
+### Azimuthal equal area
+
+- 
+
+## Azimuthal Projections
+
+### Stereographic/conformal
+
+- Conformal version of Azimuthal
+- Viewing Point on the opposite side of the Earth from the center of projection
+- Polar stereographic used in complement the UTM in beyond latitude 84 degrees N and 80 degrees South = UPS
+- UPS: scale factor of pole = 0.994
+
+- ![](images/figure327.png)
+<!-- ## Azimuthal Projections
+
+### Gnomonic
+
+- formed by projecting all the points from center of earth
+- seldomly used
+- Only advantage: GReat circles are straight liens  -->
+
+## Azimuthal Projections
+### Discussion questions:
+- Why does the UPS projection use a standard parallel at 81 degrees?
+
+
+## Azimuthal Projections
+
+### Azimuthal orthographic
+
+- formed by projecting all points on teh ellipsoid onto a plane, along lines that are normal to the plane.
+- Viewing height is infinity
+
+![](images/figure332.png)
+
+## Azimuthal Projections
+
+### Azimuthal perspective projection
+
+- Similar to the Azimuthal orthographic but with finite view point
+- used by Google Earth- not purely perspective as it accounts for height of the terrain
+- ![](images/figure334.png)
+
+
+## Conic
+
+### General Conic
+
+-   Formed by bringing a cone into contact with the sphere/ellipsoid
+-   Touches the sphere/ellipsoid along a parallel of latitude -\> standard parallel
+-   different shapes of cones can be selected
+-   ![](images/figure335.png)
+-   equivalent of overall scaling achieved by using **two standard parallels**
+
+
+
+
+## Conic
+
+### Conic equidistant
+
+-
+
+## Conic
+
+### Albers equal area
+
+-
+
+## Conic
+
+### LCC
+
+-
+
+## Conic
+
+### Oblique conic 
+
+
+## Web Mercator
+
+##
+
+
+## Next Lecture

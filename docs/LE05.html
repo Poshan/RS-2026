@@ -141,417 +141,6 @@ Poshan Niraula
 </section>
 <section id="reading-guides" class="slide level2">
 <h2>Reading Guides</h2>
-<p>Reading: Chapter 3.1 - 3.5 on Map Projections</p>
-<ol type="1">
-<li>Name a key difference between the grid and the graticule</li>
-<li>Does a map projection have one or many scale factors?</li>
-<li>What are false easting and northing, and what is their purpose?</li>
-<li>Name two properties of a “good” map projection</li>
-<li>What is UTM?</li>
-</ol>
-</section>
-<section id="true-size---web-mercator" class="slide level2">
-<h2>True size - web mercator</h2>
-<p><a href="https://thetruesize.com/">True size</a></p>
-</section>
-<section id="why-projection" class="slide level2">
-<h2>Why Projection?</h2>
-<ul>
-<li>Presentational purposes</li>
-<li>Computational purposes</li>
-</ul>
-</section>
-<section id="distortion-while-projecting" class="slide level2">
-<h2>Distortion while projecting</h2>
-<p><a href="https://www.nfb.ca/film/impossible_map/">very old video</a></p>
-</section>
-<section id="fundamentals" class="slide level2">
-<h2>Fundamentals</h2>
-<ul>
-<li>grids and graticules</li>
-<li>Scale factors</li>
-<li>Sphere or ellipsoid</li>
-<li>Developable surfaces</li>
-</ul>
-</section>
-<section id="fundamentals-grids-and-graticules" class="slide level2">
-<h2>Fundamentals: Grids and graticules</h2>
-<ul>
-<li><strong>Graticules</strong>: meridians and parallels that appear on the maps</li>
-<li>Their appearance depends on type of projection</li>
-<li>Doesn’t constitute the basis of crsthat is suitable for computational purposes or for placing features on map</li>
-<li>Instead recrtangular crs = <strong>grids</strong> is superimposed on the grids</li>
-<li>Grids have coordinates labelled as x, y or E, N</li>
-</ul>
-
-<img data-src="images/grids-graticules.png" class="quarto-figure quarto-figure-center r-stretch" width="600"></section>
-<section id="fundamentals-scale-factors" class="slide level2">
-<h2>Fundamentals: Scale factors</h2>
-<ul>
-<li>Distortions are inevitable when flattening</li>
-<li><strong>Scale factors</strong> help in quantification of the amount fo distortion</li>
-<li>ideal value is 1 -&gt; meaning no distortion at that point</li>
-<li>scale factor is different in each point in the projection and in cases each direction has different values</li>
-<li>so the formula for computation is computed at an infintisemaly short distances and</li>
-<li>for longer lines this parameter is the mean of point scale factors along the whole length.</li>
-</ul>
-</section>
-<section id="fundamentals-scale-factors-1" class="slide level2">
-<h2>Fundamentals: Scale factors</h2>
-<ul>
-<li>Scale factors shown in direction of meridian and parallel</li>
-<li>unrelated to the scale of the map 1:1000</li>
-<li>not to be associated with the error -&gt; as true coordinates will always be recovered if the values fo the parameters of the projections are known.</li>
-</ul>
-
-<img data-src="images/figure33.png" class="r-stretch"></section>
-<section id="developable-surfaces" class="slide level2">
-<h2>Developable surfaces</h2>
-<ul>
-<li><p>Intermediate surfaces of a nature that can be unravelled wihtout distortion</p></li>
-<li><p>Cones, Cylinders and plane</p></li>
-<li><p>they are brought to the contact of the Ellipsoid</p></li>
-<li><p><img data-src="images/figure34.png"></p></li>
-<li><p>In the region arond the point or line of contact between the two surfaces the scale factor distrotion will be minimal</p></li>
-</ul>
-</section>
-<section id="choice-of-developable-surface" class="slide level2">
-<h2>Choice of developable surface</h2>
-<ul>
-<li>When projecting the whole Earth, which developable surfaces are better in which geographical extent?</li>
-<li>Cylindrical: ?</li>
-<li>Conic: ?</li>
-<li>Planar: ?</li>
-</ul>
-</section>
-<section id="choice-of-developable-surface-1" class="slide level2">
-<h2>Choice of developable surface</h2>
-<ul>
-<li>When projecting the whole Earth, which developable surfaces are better in which geographical extent?</li>
-<li>Cylindrical: equatorial region</li>
-<li>Conic: Mid-latitude</li>
-<li>Planar: poles</li>
-</ul>
-</section>
-<section id="how-is-projection-done" class="slide level2">
-<h2>How is projection done?</h2>
-<ul>
-<li>Mathematically</li>
-<li>E, N = <span class="math inline">\(f\)</span>(<span class="math inline">\(\phi\)</span>, <span class="math inline">\(\lambda\)</span>)</li>
-<li>So, without mentioning the developable surfaces projection is possible if we know the <span class="math inline">\(f\)</span></li>
-<li>Softwares do it the same way</li>
-</ul>
-</section>
-<section id="preserved-features" class="slide level2">
-<h2>Preserved features</h2>
-<ul>
-<li>Transferring coordinates from sphere/ellipsoid needs some rules</li>
-<li>Choice needs to made on these rules depending on the purpose</li>
-<li>It is not possible to devise a projection without introducing distortions.</li>
-<li>Generally either shape, area or size of the feature will be different after projection</li>
-<li>Usual approach is to preserve one of these properties at expense of others</li>
-</ul>
-</section>
-<section id="preserved-features--distance" class="slide level2">
-<h2>Preserved features- distance</h2>
-<ul>
-<li>distance measured on the sphere undistorted when shown on the projection</li>
-<li>it is not possible to preserve all the distances</li>
-<li>so instead could be preserving along all meridians i.e.&nbsp;<span class="math inline">\(k_m\)</span> = 1</li>
-<li>Also known as equidistant projection</li>
-<li><img data-src="images/figure35.png"></li>
-</ul>
-</section>
-<section id="preserved-features---area" class="slide level2">
-<h2>Preserved features - Area</h2>
-<ul>
-<li>Equal area projection</li>
-<li><img data-src="images/figure36.png"></li>
-</ul>
-</section>
-<section id="preserved-features---shapeangles" class="slide level2">
-<h2>Preserved features - Shape/Angles</h2>
-<ul>
-<li>Conformal</li>
-<li>Significant in land surveying</li>
-<li><img data-src="images/figure37.png"></li>
-</ul>
-</section>
-<section id="projection-systems" class="slide level2">
-<h2>Projection systems</h2>
-<p><a href="https://www.youtube.com/watch?v=kIID5FDi2JQ">video link</a></p>
-</section>
-<section id="spehers-and-ellipsoids" class="slide level2">
-<h2>Spehers and ellipsoids</h2>
-<ul>
-<li>Most ellipsoids have a flattening of approximately 1 part in 300.</li>
-<li>While subtle, ignoring this leads to significant coordinate discrepancies.</li>
-</ul>
-
-<img data-src="images/figure38.png" class="r-stretch"></section>
-<section id="discussion-questions" class="slide level2">
-<h2>Discussion questions</h2>
-<ul>
-<li>In the last paragraph of the section 3.2.5 the author wrote that the ellispoid is not a conformable surface. Therfore, the ellipsoidal systems first convert from the ellipsoid to sphere. The question is which approach is better or would induce more distortion, directly assuming the shape as sphere or, converting from ellipsoid to sphere.</li>
-</ul>
-</section>
-<section id="answers" class="slide level2">
-<h2>Answers</h2>
-<ul>
-<li><strong>Direct sphere assumption:</strong> Treats Earth as a perfect sphere from the start. Simple math, but ignores the ~1/300 flattening — causes positional errors of hundreds of meters at mid-latitudes.</li>
-<li><strong>Ellipsoid → Sphere → Plane (Conformal sphere approach):</strong> Mathematically maps the ellipsoid onto an auxiliary “conformal sphere” first, then projects. Errors are vastly smaller (sub-meter level).</li>
-<li><strong>Conclusion:</strong> Converting from ellipsoid to sphere first is the better approach — it preserves geodetic accuracy.<br>
-</li>
-<li>Directly assuming a sphere is only acceptable for low-precision/visualization tasks (e.g., Web Mercator).</li>
-</ul>
-</section>
-<section id="natural-and-false-origin" class="slide level2">
-<h2>Natural and false origin</h2>
-<ul>
-<li>Natural origin : point on equator (0 latitude) and free to choose longitude</li>
-<li>False origin: Startign at different latitude</li>
-<li>Geographic coordinates of natural or false origin are essential part of definition of projected referene system.</li>
-</ul>
-</section>
-<section id="false-easting-and-false-northing" class="slide level2">
-<h2>False Easting and False Northing</h2>
-<ul>
-<li>origins are given some coordinates eg 500,000 to avoid negative coordinates</li>
-</ul>
-</section>
-<section id="discussion-questions-1" class="slide level2">
-<h2>Discussion questions</h2>
-<ul>
-<li>Clarify why False Northings and Eastings are necessary…..its already clear that they help to avoid -ve coordinates. But why still avoid -ve coordinates in the current world of high computation capability</li>
-<li>Why are non-natural origins often preferred over natural origins when defining coordinate systems in map projections?</li>
-</ul>
-</section>
-<section id="answers-1" class="slide level2">
-<h2>Answers</h2>
-<ul>
-<li><strong>Why avoid negative coordinates (even today):</strong>
-<ul>
-<li>Reduces <em>human</em> errors — surveyors, planners often drop signs, causing mirrored mistakes.</li>
-<li>Simplifies sorting, indexing, and storage in databases (positive values only).</li>
-<li>Maintains backward compatibility with legacy maps and tools.</li>
-<li>Visual/printed grids are easier to read with all positive values.</li>
-</ul></li>
-<li><strong>Why non-natural origins are preferred:</strong>
-<ul>
-<li>Natural origins (Equator + central meridian) often lie far from the map’s region of interest, producing huge coordinate values.</li>
-<li>Shifting the origin closer to the area of interest keeps numbers manageable and intuitive.</li>
-</ul></li>
-</ul>
-</section>
-<section id="cylindrical-projections" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="equidistant">Equidistant</h3>
-<ul>
-<li><span class="math inline">\(k_m\)</span> = 1</li>
-<li>distances along meridian are undistroted</li>
-<li>parallels are same size as latitude</li>
-</ul>
-</section>
-<section id="cylindrical-projections-1" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="equal-area">Equal area</h3>
-<ul>
-<li>Compensate the distortion on parallels (<span class="math inline">\(\sec\phi\)</span>) by setting <span class="math inline">\(k_m\)</span> = <span class="math inline">\(\cos\phi\)</span></li>
-<li>distances are distroted in meridian and function of latitude</li>
-<li><strong>Peters projection</strong>: apply further scaling of 0.5 along parallels and 2 along meridians</li>
-<li>Used to show correct relative size -<a href="https://en.wikipedia.org/wiki/Gall%E2%80%93Peters_projection">read more here</a></li>
-</ul>
-</section>
-<section id="cylindrical-projections-2" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="conformalmercator">Conformal/Mercator</h3>
-<ul>
-<li><span class="math inline">\(k_m\)</span> = <span class="math inline">\(k_p\)</span> = <span class="math inline">\(\sec\phi\)</span></li>
-<li>Poles can’t be represented as they are infinite size and infinite distance from equator</li>
-<li>meridians are parallel to each other and angles are preserved</li>
-<li>ideal for navigation</li>
-</ul>
-</section>
-<section id="cylindrical-projections-3" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="conformalmercator-1">Conformal/Mercator</h3>
-<ul>
-<li>Different scales at different latitudes (<span class="math inline">\(\sec\phi\)</span>)</li>
-<li>between 49 degrees and 51 degress 1.52 and 1.59</li>
-<li><strong>overall scaling</strong> is applied, so that scale factor on average is closer to 1</li>
-<li>in example overall scaling of 0.645 is used to reduce the scale factor to 0.98 to 1.03 and scale on equator will be 0.645</li>
-</ul>
-</section>
-<section id="cylindrical-projections-4" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="transverse-mercator">Transverse Mercator</h3>
-<ul>
-<li><img data-src="images/figure315.png"></li>
-<li>cylinder contacts <strong>not equator</strong> but a Meridian (central meridian)</li>
-<li><span class="math inline">\(k = \sec\theta\)</span>, <span class="math inline">\(\theta\)</span>, analogous to <span class="math inline">\(\phi\)</span>, angular distance from central meridian</li>
-<li>meridians are <strong>not parallel</strong> to each other and <strong>not straight lines</strong></li>
-<li>only central meridian is straight line</li>
-</ul>
-</section>
-<section id="cylindrical-projections-5" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="transverse-mercator-1">Transverse Mercator</h3>
-<ul>
-<li><p>commonly used for narrow band of 6 degrees (+-3 degrees from CM)</p></li>
-<li><p>Scale factor at CM = 1, at 1.0014 on edges</p></li>
-<li><p>overall scaling is done by choosing scale factor at nautral orgin (usually 0.9996)</p></li>
-<li><p><img data-src="images/figure318.png"></p></li>
-</ul>
-</section>
-<section id="cylindrical-projections-6" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="universal-transverse-mercator">Universal Transverse Mercator</h3>
-<ul>
-<li><p>Zoned TMs</p></li>
-<li><p>60 zones</p></li>
-<li><p>Germany lies zone 31, 32, 33</p></li>
-<li><p><img data-src="images/figure321.png"></p></li>
-</ul>
-</section>
-<section id="cylindrical-projections-7" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="south-oriented-transverse-mercator">South oriented Transverse Mercator</h3>
-<ul>
-<li>central meridian oriented towards South Pole</li>
-<li>Grid values increase towards the west and south.</li>
-</ul>
-</section>
-<section id="cylindrical-projections-8" class="slide level2">
-<h2>Cylindrical Projections</h2>
-<h3 id="oblique-transverse-mercator">Oblique Transverse Mercator</h3>
-<ul>
-<li>when region/country doesnot align along a meridian or parallel</li>
-<li>eg Peninsular Malaysia, Alaska Panhandle</li>
-</ul>
-</section>
-<section id="cylindrical-projections-9" class="slide level2">
-<h2>Cylindrical Projections</h2>
-</section>
-<section id="discussion-questions-2" class="slide level2">
-<h2>Discussion questions:</h2>
-<ul>
-<li><p>Why is the Transverse Mercator projection method more suitable for regions with a large extent north-south but little extent east-west?</p></li>
-<li><p>Should map projections such as the Mercator projection be avoided in education because they can create misleading perceptions of the size of countries and continents? For example, Greenland often appears almost as large as Africa on Mercator maps, even though Africa is actually about 14 times larger than Greenland.</p></li>
-<li><p>If a loxodrome is not the shortest path between points, why is it the preferred method instead of for example the great circle route? <a href="https://www.youtube.com/watch?v=3BF_ZKfJiso">video link</a></p></li>
-</ul>
-</section>
-<section id="answers-pointers" class="slide level2">
-<h2>Answers / Pointers</h2>
-<ul>
-<li><p><strong>Why Transverse Mercator suits N–S regions:</strong></p>
-<ul>
-<li>The cylinder touches the Earth along a <em>central meridian</em> (a N–S line).</li>
-<li>Scale factor = 1 along the CM and stays close to 1 within ±3° E–W.</li>
-<li>Distortion grows rapidly E–W → ideal for narrow N–S strips (Chile, UK, Norway).</li>
-</ul></li>
-<li><p><strong>Should Mercator be avoided in education?</strong></p></li>
-<li><p><strong>Why use loxodromes (rhumb lines) over great circles?</strong></p>
-<ul>
-<li>Great circles are shortest, but require continuously changing compass bearing.</li>
-<li>Loxodromes maintain a <em>constant compass bearing</em> — easy to navigate manually.</li>
-<li>On a Mercator map, loxodromes are straight lines → quick plotting.</li>
-<li>Trade-off: longer path for navigational simplicity</li>
-</ul></li>
-</ul>
-<!-- 
-
-## Conic
-
-### Conic equidistant
-
--
-
-## Conic
-
-### Albers equal area
-
--
-
-## Conic
-
-### LCC
-
--
-
-## Conic
-
-### Oblique conic -->
-</section>
-<section id="definitions" class="slide level2">
-<h2>Definitions</h2>
-<ul>
-<li>Projection methods: Transverse Mercator, Polar stereographic</li>
-<li>Map Projection: Projection methods + values of the parameters eg. UTM or British national grids</li>
-<li>Projected coordinate system: has datum information -&gt; complete information</li>
-</ul>
-</section>
-<section id="projection-summary" class="slide level2">
-<h2>Projection Summary</h2>
-<h3 id="categories">Categories</h3>
-<ul>
-<li><strong>Class:</strong> Cylindrical, Conic, Azimuthal (Planar)</li>
-<li><strong>Aspect:</strong> Normal (polar axis), Transverse (90° rotated), Oblique (angled)</li>
-<li><strong>Property:</strong> Conformal (preserves angles), Equal Area (preserves size), Equidistant (preserves distance), compromise</li>
-<li><strong>Contact:</strong> Tangent, Secant (intersects surface)</li>
-</ul>
-</section>
-<section id="projection-summary-1" class="slide level2">
-<h2>Projection Summary</h2>
-<h3 id="when-to-use-which">When to use which?</h3>
-<ul>
-<li><strong>By Location:</strong>
-<ul>
-<li><em>Equator:</em> Cylindrical</li>
-<li><em>Mid-latitudes:</em> Conic</li>
-<li><em>Poles:</em> Azimuthal</li>
-</ul></li>
-<li><strong>By Shape:</strong>
-<ul>
-<li><em>Narrow North-South:</em> Transverse Cylindrical (e.g., UTM)</li>
-<li><em>Diagonal/Skewed:</em> Oblique</li>
-</ul></li>
-<li><strong>By Purpose:</strong>
-<ul>
-<li><em>Navigation / Topography:</em> Conformal</li>
-<li><em>Comparing regions / Thematic:</em> Equal Area</li>
-<li><em>Distance from a center point:</em> Azimuthal Equidistant</li>
-</ul></li>
-</ul>
-</section>
-<section id="choice-of-map-projection" class="slide level2">
-<h2>Choice of map projection</h2>
-<p>https://projectionwizard.org/</p>
-</section>
-<section id="tissots-indicatrix" class="slide level2">
-<h2>Tissot’s indicatrix</h2>
-<ul>
-<li>visualize characterize local distortions due to map projection.</li>
-</ul>
-<p>https://en.wikipedia.org/wiki/Tissot%27s_indicatrix</p>
-</section>
-<section id="question" class="slide level2">
-<h2>Question?</h2>
-<p>In this scenarios which map projection would you chose and why?</p>
-<div class="columns">
-<div class="column">
-<ol type="1">
-<li>Mid Latitude country with signicant East-West Extent (USA)</li>
-</ol>
-<p><img data-src="images/usa_map.png"></p>
-</div><div class="column">
-<ol start="2" type="1">
-<li>Mapping a long narrow country (Chile)</li>
-</ol>
-<p><img data-src="images/chile_map.png"></p>
-</div></div>
-</section>
-<section id="next-lecture" class="slide level2">
-<h2>Next Lecture</h2>
 <p>Read section 3.6-3.9 and try answer the following questions for yourself:</p>
 <ol type="1">
 <li>What parameters are required to define different classes of projection?</li>
@@ -559,9 +148,117 @@ Poshan Niraula
 <li>What factors should be considered while designing a map projection?</li>
 </ol>
 </section>
-<section id="references" class="slide level2">
-<h2>References</h2>
-<p>All figures are from: - <span class="small">Source: Iliffe, Jonathan , and Roger Lott . 2008. Datums and Map Projections for Remote Sensing, GIS, and Surveying. Whittles Pub. CRC Press, Scotland, UK.</span></p>
+<section id="azimuthal-projections" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="general-azimuthal">General Azimuthal</h3>
+<ul>
+<li>Formed by bringing a plane into contact with sphere or ellipsoid</li>
+<li>Scale factor distortion will be circularly symmetric</li>
+<li>Special case is Polar projection, where plane touches Poles</li>
+</ul>
+</section>
+<section id="azimuthal-projections-1" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="azimuthal-equidistant">Azimuthal equidistant</h3>
+<ul>
+<li>Kept scale factor = 1, in the direction radial from the center of the projection.</li>
+<li>Polar equidistant - scale factor along meridian is <span class="math inline">\(k_m\)</span> = 1</li>
+<li>Distances from center will be correct</li>
+</ul>
+</section>
+<section id="azimuthal-projections-2" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="azimuthal-equal-area">Azimuthal equal area</h3>
+<ul>
+<li></li>
+</ul>
+</section>
+<section id="azimuthal-projections-3" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="stereographicconformal">Stereographic/conformal</h3>
+<ul>
+<li><p>Conformal version of Azimuthal</p></li>
+<li><p>Viewing Point on the opposite side of the Earth from the center of projection</p></li>
+<li><p>Polar stereographic used in complement the UTM in beyond latitude 84 degrees N and 80 degrees South = UPS</p></li>
+<li><p>UPS: scale factor of pole = 0.994</p></li>
+<li><p><img data-src="images/figure327.png"> <!-- ## Azimuthal Projections
+
+### Gnomonic
+
+- formed by projecting all the points from center of earth
+- seldomly used
+- Only advantage: GReat circles are straight liens  --></p></li>
+</ul>
+</section>
+<section id="azimuthal-projections-4" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="discussion-questions">Discussion questions:</h3>
+<ul>
+<li>Why does the UPS projection use a standard parallel at 81 degrees?</li>
+</ul>
+</section>
+<section id="azimuthal-projections-5" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="azimuthal-orthographic">Azimuthal orthographic</h3>
+<ul>
+<li>formed by projecting all points on teh ellipsoid onto a plane, along lines that are normal to the plane.</li>
+<li>Viewing height is infinity</li>
+</ul>
+
+<img data-src="images/figure332.png" class="r-stretch"></section>
+<section id="azimuthal-projections-6" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="azimuthal-perspective-projection">Azimuthal perspective projection</h3>
+<ul>
+<li>Similar to the Azimuthal orthographic but with finite view point</li>
+<li>used by Google Earth- not purely perspective as it accounts for height of the terrain</li>
+<li><img data-src="images/figure334.png"></li>
+</ul>
+</section>
+<section id="conic" class="slide level2">
+<h2>Conic</h2>
+<h3 id="general-conic">General Conic</h3>
+<ul>
+<li>Formed by bringing a cone into contact with the sphere/ellipsoid</li>
+<li>Touches the sphere/ellipsoid along a parallel of latitude -&gt; standard parallel</li>
+<li>different shapes of cones can be selected</li>
+<li><img data-src="images/figure335.png"></li>
+<li>equivalent of overall scaling achieved by using <strong>two standard parallels</strong></li>
+</ul>
+</section>
+<section id="conic-1" class="slide level2">
+<h2>Conic</h2>
+<h3 id="conic-equidistant">Conic equidistant</h3>
+<ul>
+<li></li>
+</ul>
+</section>
+<section id="conic-2" class="slide level2">
+<h2>Conic</h2>
+<h3 id="albers-equal-area">Albers equal area</h3>
+<ul>
+<li></li>
+</ul>
+</section>
+<section id="conic-3" class="slide level2">
+<h2>Conic</h2>
+<h3 id="lcc">LCC</h3>
+<ul>
+<li></li>
+</ul>
+</section>
+<section id="conic-4" class="slide level2">
+<h2>Conic</h2>
+<h3 id="oblique-conic">Oblique conic</h3>
+</section>
+<section id="web-mercator" class="slide level2">
+<h2>Web Mercator</h2>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+</section>
+<section id="next-lecture" class="slide level2">
+<h2>Next Lecture</h2>
 
 
 </section>
