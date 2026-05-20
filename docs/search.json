@@ -751,107 +751,107 @@
   {
     "objectID": "LE05.html#reading-guides",
     "href": "LE05.html#reading-guides",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Reading Guides",
     "text": "Reading Guides\nRead section 3.6-3.9 and try answer the following questions for yourself:\n\nWhat parameters are required to define different classes of projection?\nWhat is role of scale factor in computing within map projections?\nWhat factors should be considered while designing a map projection?"
   },
   {
     "objectID": "LE05.html#azimuthal-projections",
     "href": "LE05.html#azimuthal-projections",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Azimuthal Projections",
-    "text": "Azimuthal Projections\nGeneral Azimuthal\n\nFormed by bringing a plane into contact with sphere or ellipsoid\nScale factor distortion will be circularly symmetric\nSpecial case is Polar projection, where plane touches Poles"
+    "text": "Azimuthal Projections\nGeneral Azimuthal\n\nFormed by bringing a plane into contact with sphere or ellipsoid\nScale factor distortion will be circularly symmetric\nSpecial case is Polar projection, where plane touches Poles\nOverall scaling possible such that the scale factor at the center is less than 1"
   },
   {
     "objectID": "LE05.html#azimuthal-projections-1",
     "href": "LE05.html#azimuthal-projections-1",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Azimuthal Projections",
     "text": "Azimuthal Projections\nAzimuthal equidistant\n\nKept scale factor = 1, in the direction radial from the center of the projection.\nPolar equidistant - scale factor along meridian is \\(k_m\\) = 1\nDistances from center will be correct"
   },
   {
     "objectID": "LE05.html#azimuthal-projections-2",
     "href": "LE05.html#azimuthal-projections-2",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Azimuthal Projections",
-    "text": "Azimuthal Projections\nAzimuthal equal area"
+    "text": "Azimuthal Projections\nAzimuthal equal area\n\nFormed similar to Azimuthal equidistant but changing the scale factors such that:\n\nscale factor of lines radial along the centre are inverse of scale fator in the perpendicular direction\n\nExample: Lambert Equal area 2001 used by European statistical mapping"
   },
   {
     "objectID": "LE05.html#azimuthal-projections-3",
     "href": "LE05.html#azimuthal-projections-3",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Azimuthal Projections",
-    "text": "Azimuthal Projections\nStereographic/conformal\n\nConformal version of Azimuthal\nViewing Point on the opposite side of the Earth from the center of projection\nPolar stereographic used in complement the UTM in beyond latitude 84 degrees N and 80 degrees South = UPS\nUPS: scale factor of pole = 0.994"
+    "text": "Azimuthal Projections\nStereographic/conformal\n\nConformal version of Azimuthal\nGraphical can be constructed by setting viewing Point on the opposite side of the Earth from the center of projection\nPolar stereographic used in complement the UTM in beyond latitude 84 degrees N and 80 degrees South = UPS\nUPS: scale factor of pole = 0.994 -&gt; overall scaling"
   },
   {
     "objectID": "LE05.html#azimuthal-projections-4",
     "href": "LE05.html#azimuthal-projections-4",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Azimuthal Projections",
-    "text": "Azimuthal Projections\nDiscussion questions:\n\nWhy does the UPS projection use a standard parallel at 81 degrees?"
+    "text": "Azimuthal Projections\nStereographic/conformal - oblique\n\nOblique aspect is tangential to chosen point(origin)\nOr if oveall scaling applied scale factor is true at the small circle centred at the origin\nUsed in ellipsoidal forms in places where the range of latitude is similar to range of longitude\nEg. Netherlands RD, Romania Stereo 70, Prince Edward Island Stereographic"
   },
   {
     "objectID": "LE05.html#azimuthal-projections-5",
     "href": "LE05.html#azimuthal-projections-5",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Azimuthal Projections",
-    "text": "Azimuthal Projections\nAzimuthal orthographic\n\nformed by projecting all points on teh ellipsoid onto a plane, along lines that are normal to the plane.\nViewing height is infinity"
+    "text": "Azimuthal Projections\nStereographic/conformal- Double Stereographic\n\nIn ellipsoidal case, steps taken are :\n\n\nEllipsoidal coordinates are transformed to spherical\nProject the spherical coordinates onto the grids\n\nOn step 1, two approaces are possible\n\nConvert the ellipsoidal coordinates to a conformal sphere with a radius based on the ellipsoidal radii at the projection origin or\nuse radius based on the ellipsoidal radii at each point\n\nThis second method is sometimes also called “Double stereographic”"
   },
   {
     "objectID": "LE05.html#azimuthal-projections-6",
     "href": "LE05.html#azimuthal-projections-6",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Azimuthal Projections",
-    "text": "Azimuthal Projections\nAzimuthal perspective projection\n\nSimilar to the Azimuthal orthographic but with finite view point\nused by Google Earth- not purely perspective as it accounts for height of the terrain"
+    "text": "Azimuthal Projections\nDiscussion questions:\n\nWhy does the UPS projection use a standard parallel at 81 degrees?"
   },
   {
     "objectID": "LE05.html#conic",
     "href": "LE05.html#conic",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Conic",
-    "text": "Conic\nGeneral Conic\n\nFormed by bringing a cone into contact with the sphere/ellipsoid\nTouches the sphere/ellipsoid along a parallel of latitude -&gt; standard parallel\ndifferent shapes of cones can be selected\n\nequivalent of overall scaling achieved by using two standard parallels"
+    "text": "Conic\nGeneral Conic\n\nFormed by bringing a cone into contact with the sphere/ellipsoid\nTouches the sphere/ellipsoid along a parallel of latitude -&gt; standard parallel\ndifferent shapes of cones can be selected\n\nequivalent of overall scaling achieved by using two standard parallels\napplicable when the region of interest is broad extent in longitude and regions that are in mid-latitude"
   },
   {
     "objectID": "LE05.html#conic-1",
     "href": "LE05.html#conic-1",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Conic",
-    "text": "Conic\nConic equidistant"
+    "text": "Conic\nConic equidistant\n\npreserves scale factor along the meridian (\\(k_m\\) = 1)"
   },
   {
     "objectID": "LE05.html#conic-2",
     "href": "LE05.html#conic-2",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Conic",
-    "text": "Conic\nAlbers equal area"
+    "text": "Conic\nAlbers equal area/ Conic equal area projection\n\n\nPole becomes a circular arc -&gt; shape has been compromised to keep area undistorted\nCompare wiht the cylindrical equal area the distortion is less because of mid-latitude and large east-west extent of Europe."
   },
   {
     "objectID": "LE05.html#conic-3",
     "href": "LE05.html#conic-3",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Conic",
-    "text": "Conic\nLCC"
+    "text": "Conic\nLambert Conformal Conic (LCC)\n\nwidely used projection\n\nMeridian meet at pole\nif standard parallel set at equator the meridians meet at infinity (they are parallel) same as Mercator\nand if standard parallel set at 90 degrees would be same as polar stereographic\nnot to be used at extreme cases"
   },
   {
     "objectID": "LE05.html#conic-4",
     "href": "LE05.html#conic-4",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Conic",
-    "text": "Conic\nOblique conic"
+    "text": "Conic\nLambert Conformal Conic (LCC)\n\nZoned LCC: example France Lambert\nZones are tiered North to South\nZone boundaries are set midway between the parallels of origin for adjacency zones\nOther examples of LCC are Europe conformal 2001 (std parallel 1 at 65\\(^\\circ\\) N and 2 at 35 \\(^\\circ\\) N), Tennessee state plane CS83, Geoscience Australia Lambert"
   },
   {
     "objectID": "LE05.html#web-mercator",
     "href": "LE05.html#web-mercator",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Web Mercator",
-    "text": "Web Mercator"
+    "text": "Web Mercator\n\nMajor problem:\n\nellipsoidal model of earth + Mercator projection formula for sphere\n\nhttps://www.youtube.com/watch?v=R-ENwz5u7pE"
   },
   {
     "objectID": "LE05.html#next-lecture",
     "href": "LE05.html#next-lecture",
-    "title": "Reference Systems - Map Projections part 1",
+    "title": "Reference Systems - Map Projections part 2",
     "section": "Next Lecture",
-    "text": "Next Lecture"
+    "text": "Next Lecture\nDate: 11.06.2026\n\nReading: Chapter 4.1 - 4.4 of the coursebook\nReading guides:\n\n\nWhat are two key differences between a conversion and a transformation?\nWhat is the rst step common to any transformation endeavor?\nWhat does a grid interpolation do (and why is it needed)?\nWhat are similarities and differences between an Helmert transformation and a Molodensky transformation?"
   },
   {
     "objectID": "LE01.html#overview",
@@ -1342,5 +1342,173 @@
     "title": "Reference Systems-2026",
     "section": "",
     "text": "Welcome to the Reference Systems-2026 course page. THis course is based on Iliffe, Jonathan , and Roger Lott . 2008. Datums and Map Projections for Remote Sensing, GIS, and Surveying. Whittles Pub. CRC Press, Scotland, UK."
+  },
+  {
+    "objectID": "assignment-1.html",
+    "href": "assignment-1.html",
+    "title": "Assignment 1: Package Concept, Function",
+    "section": "",
+    "text": "Write a short proposal (½–1 page) describing:\nPackage theme: software tool, data analysis?\nTarget users: who would use this?\nIf software-focused: sketch of the two classes you plan to design\nIf data-focused: which dataset, where it comes from, what analysis you envision"
+  },
+  {
+    "objectID": "assignment-1.html#task-1",
+    "href": "assignment-1.html#task-1",
+    "title": "Assignment 1: Package Concept, Function",
+    "section": "",
+    "text": "Write a short proposal (½–1 page) describing:\nPackage theme: software tool, data analysis?\nTarget users: who would use this?\nIf software-focused: sketch of the two classes you plan to design\nIf data-focused: which dataset, where it comes from, what analysis you envision"
+  },
+  {
+    "objectID": "assignment-1.html#task-2",
+    "href": "assignment-1.html#task-2",
+    "title": "Assignment 1: Package Concept, Function",
+    "section": "Task 2:",
+    "text": "Task 2:\n\nWriting functions\n\nWrite at least 3 standalone R functions that:\n\nSolve a coherent problem (related to the theme of the package)\nfunctions should relate to each other thematically\nInclude input validation (check argument types, lengths, etc.)\nHave meaningful return values\nInclude inline comments explaining logic"
+  },
+  {
+    "objectID": "assignment-1.html#guidelines-for-using-ai--",
+    "href": "assignment-1.html#guidelines-for-using-ai--",
+    "title": "Assignment 1: Package Concept, Function",
+    "section": "Guidelines for using AI -",
+    "text": "Guidelines for using AI -\n\nUse to support learning\nSelf-reporting\nRefer to the following guideline:\nhttps://www.uni-muenster.de/Geoinformatics/en/sparc/theses/index.php\napplicable for all subsequent submissions"
+  },
+  {
+    "objectID": "LE04.html",
+    "href": "LE04.html",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "",
+    "text": "Reading: Chapter 3.1 - 3.5 on Map Projections\n\nName a key difference between the grid and the graticule\nDoes a map projection have one or many scale factors?\nWhat are false easting and northing, and what is their purpose?\nName two properties of a “good” map projection\nWhat is UTM?"
+  },
+  {
+    "objectID": "LE05.html",
+    "href": "LE05.html",
+    "title": "Reference Systems - Map Projections part 1",
+    "section": "",
+    "text": "Read section 3.6-3.9 and try answer the following questions for yourself:\n\nWhat parameters are required to define different classes of projection?\nWhat is role of scale factor in computing within map projections?\nWhat factors should be considered while designing a map projection?"
+  },
+  {
+    "objectID": "LE05.html#ensembles-of-many-datums---meaning",
+    "href": "LE05.html#ensembles-of-many-datums---meaning",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Ensembles of many datums - meaning",
+    "text": "Ensembles of many datums - meaning"
+  },
+  {
+    "objectID": "LE05.html#show-them-crs-definitions-in-proj",
+    "href": "LE05.html#show-them-crs-definitions-in-proj",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "show them crs definitions in proj",
+    "text": "show them crs definitions in proj\nst_crs()"
+  },
+  {
+    "objectID": "assignment-1.html#examples",
+    "href": "assignment-1.html#examples",
+    "title": "Assignment 1: Package Concept, Function",
+    "section": "Examples",
+    "text": "Examples"
+  },
+  {
+    "objectID": "assignment-1.html#examples-of-packages",
+    "href": "assignment-1.html#examples-of-packages",
+    "title": "Assignment 1: Package Concept, Function",
+    "section": "Examples of packages",
+    "text": "Examples of packages\n\nhttps://github.com/luukvdmeer/sfnetworks\nhttps://github.com/UrbanAnalyst/gtfsrouter\nhttps://github.com/richpauloo/calwaterquality\nhttps://github.com/hypertidy/geodist"
+  },
+  {
+    "objectID": "assignment-1.html#submission",
+    "href": "assignment-1.html#submission",
+    "title": "Assignment 1: Package Concept, Function",
+    "section": "Submission",
+    "text": "Submission\n\nSubmit a .qmd file with the project concept description and the function\nDeadline: 29.05.2026"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections-7",
+    "href": "LE05.html#azimuthal-projections-7",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nAzimuthal orthographic\n\nformed by projecting all points on teh ellipsoid onto a plane, along lines that are normal to the plane.\nViewing height is infinity\nResulting in view of Earth analogous to how it would look from deep space using a telescope"
+  },
+  {
+    "objectID": "LE05.html#azimuthal-projections-8",
+    "href": "LE05.html#azimuthal-projections-8",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Azimuthal Projections",
+    "text": "Azimuthal Projections\nAzimuthal perspective projection\n\nSimilar to the Azimuthal orthographic but with finite view point\nused by Google Earth- not purely perspective as it accounts for height of the terrain"
+  },
+  {
+    "objectID": "LE05.html#adaptive-projection",
+    "href": "LE05.html#adaptive-projection",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Adaptive projection",
+    "text": "Adaptive projection"
+  },
+  {
+    "objectID": "LE05.html#conic-5",
+    "href": "LE05.html#conic-5",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Conic",
+    "text": "Conic\nOblique conic\n\n\nExample of conformal case is Krovak projection used in Czech Republic and Slovakia"
+  },
+  {
+    "objectID": "LE05.html#adaptive-composite-projection",
+    "href": "LE05.html#adaptive-composite-projection",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Adaptive composite projection",
+    "text": "Adaptive composite projection\nhttps://berniejenny.info/demos/AdaptiveCompositeMapProjections/"
+  },
+  {
+    "objectID": "LE05.html#non-geometric-projection-method",
+    "href": "LE05.html#non-geometric-projection-method",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Non-geometric projection method",
+    "text": "Non-geometric projection method\n\nwith advanced technologies, it is possible to create the projections in which the central line follows feature of interest, not just meridians or parallels\nFormula \\((E, N) = f(\\phi, \\lambda)\\), here \\(f\\) gets more complicated\nExample: NewZealand (to fit the shape of country), Space oblique Mercator (to follow the satellite ground track), Snake projection"
+  },
+  {
+    "objectID": "LE05.html#choice-of-projection-system",
+    "href": "LE05.html#choice-of-projection-system",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Choice of Projection system",
+    "text": "Choice of Projection system\nhttps://www.explainxkcd.com/wiki/index.php/977:_Map_Projections"
+  },
+  {
+    "objectID": "LE05.html#role-of-scale-factor-in-computing-wihtin-map-projections",
+    "href": "LE05.html#role-of-scale-factor-in-computing-wihtin-map-projections",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Role of scale factor in computing wihtin map projections",
+    "text": "Role of scale factor in computing wihtin map projections"
+  },
+  {
+    "objectID": "LE05.html#whole-earth-case",
+    "href": "LE05.html#whole-earth-case",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Whole earth case",
+    "text": "Whole earth case"
+  },
+  {
+    "objectID": "LE05.html#designing-custom-map-projections",
+    "href": "LE05.html#designing-custom-map-projections",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Designing custom map projections",
+    "text": "Designing custom map projections"
+  },
+  {
+    "objectID": "LE05.html#designing-custom-map-projections-1",
+    "href": "LE05.html#designing-custom-map-projections-1",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Designing custom map projections",
+    "text": "Designing custom map projections\n-Which of these Map projections would you use for mapping population density? Airline routes? Coastal navigation? Why? One conformal (e.g., Mercator) One equal-area (e.g., Albers) One equidistant (e.g., Azimuthal Equidistant)"
+  },
+  {
+    "objectID": "LE05.html#section-3.6-to-3.9",
+    "href": "LE05.html#section-3.6-to-3.9",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Section 3.6 to 3.9",
+    "text": "Section 3.6 to 3.9\nReading guides:\n\nWhat parameters are required to define different classes of projection?\nWhat is role of scale factor in computing within map projections?\nWhat factors should be considered while designing a map projection?"
+  },
+  {
+    "objectID": "LE05.html#snake-projection",
+    "href": "LE05.html#snake-projection",
+    "title": "Reference Systems - Map Projections part 2",
+    "section": "Snake Projection",
+    "text": "Snake Projection\n\nFor use in railways and pipelines"
   }
 ]

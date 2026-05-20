@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="Poshan Niraula">
-  <title>RS-2026 – Reference Systems - Map Projections part 1</title>
+  <title>RS-2026 – Reference Systems - Map Projections part 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -128,7 +128,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Reference Systems - Map Projections part 1</h1>
+  <h1 class="title">Reference Systems - Map Projections part 2</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -139,15 +139,6 @@ Poshan Niraula
 </div>
 
 </section>
-<section id="reading-guides" class="slide level2">
-<h2>Reading Guides</h2>
-<p>Read section 3.6-3.9 and try answer the following questions for yourself:</p>
-<ol type="1">
-<li>What parameters are required to define different classes of projection?</li>
-<li>What is role of scale factor in computing within map projections?</li>
-<li>What factors should be considered while designing a map projection?</li>
-</ol>
-</section>
 <section id="azimuthal-projections" class="slide level2">
 <h2>Azimuthal Projections</h2>
 <h3 id="general-azimuthal">General Azimuthal</h3>
@@ -155,6 +146,7 @@ Poshan Niraula
 <li>Formed by bringing a plane into contact with sphere or ellipsoid</li>
 <li>Scale factor distortion will be circularly symmetric</li>
 <li>Special case is Polar projection, where plane touches Poles</li>
+<li>Overall scaling possible such that the scale factor at the center is less than 1</li>
 </ul>
 </section>
 <section id="azimuthal-projections-1" class="slide level2">
@@ -170,7 +162,11 @@ Poshan Niraula
 <h2>Azimuthal Projections</h2>
 <h3 id="azimuthal-equal-area">Azimuthal equal area</h3>
 <ul>
-<li></li>
+<li>Formed similar to Azimuthal equidistant but changing the scale factors such that:
+<ul>
+<li>scale factor of lines radial along the centre are inverse of scale fator in the perpendicular direction</li>
+</ul></li>
+<li>Example: Lambert Equal area 2001 used by European statistical mapping</li>
 </ul>
 </section>
 <section id="azimuthal-projections-3" class="slide level2">
@@ -178,35 +174,67 @@ Poshan Niraula
 <h3 id="stereographicconformal">Stereographic/conformal</h3>
 <ul>
 <li><p>Conformal version of Azimuthal</p></li>
-<li><p>Viewing Point on the opposite side of the Earth from the center of projection</p></li>
+<li><p>Graphical can be constructed by setting viewing Point on the opposite side of the Earth from the center of projection</p></li>
 <li><p>Polar stereographic used in complement the UTM in beyond latitude 84 degrees N and 80 degrees South = UPS</p></li>
-<li><p>UPS: scale factor of pole = 0.994</p></li>
-<li><p><img data-src="images/figure327.png"> <!-- ## Azimuthal Projections
+<li><p>UPS: scale factor of pole = 0.994 -&gt; overall scaling</p></li>
+<li><p><img data-src="images/figure327.png"></p></li>
+</ul>
+</section>
+<section id="azimuthal-projections-4" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="stereographicconformal---oblique">Stereographic/conformal - oblique</h3>
+<ul>
+<li>Oblique aspect is tangential to chosen point(origin)</li>
+<li>Or if oveall scaling applied scale factor is true at the small circle centred at the origin</li>
+<li>Used in ellipsoidal forms in places where the range of latitude is similar to range of longitude</li>
+<li>Eg. Netherlands RD, Romania Stereo 70, Prince Edward Island Stereographic</li>
+</ul>
+</section>
+<section id="azimuthal-projections-5" class="slide level2">
+<h2>Azimuthal Projections</h2>
+<h3 id="stereographicconformal--double-stereographic">Stereographic/conformal- Double Stereographic</h3>
+<ul>
+<li>In ellipsoidal case, steps taken are :</li>
+</ul>
+<ol type="1">
+<li><p>Ellipsoidal coordinates are transformed to spherical</p></li>
+<li><p>Project the spherical coordinates onto the grids</p></li>
+</ol>
+<p>On step 1, two approaces are possible</p>
+<ol type="1">
+<li><p>Convert the ellipsoidal coordinates to a conformal sphere with a radius based on the ellipsoidal radii at the projection origin or</p></li>
+<li><p>use radius based on the ellipsoidal radii at each point</p></li>
+</ol>
+<p>This second method is sometimes also called “Double stereographic”</p>
+<!-- ## Azimuthal Projections
 
 ### Gnomonic
 
 - formed by projecting all the points from center of earth
 - seldomly used
-- Only advantage: GReat circles are straight liens  --></p></li>
-</ul>
+- scale factor distortion becomes extreme away from the centre of projeciton
+- Only advantage: Great circles (shortest routes between two points) are straight lines and vice versa,  but this task is replaced by computational techniques
+
+ -->
 </section>
-<section id="azimuthal-projections-4" class="slide level2">
+<section id="azimuthal-projections-6" class="slide level2">
 <h2>Azimuthal Projections</h2>
 <h3 id="discussion-questions">Discussion questions:</h3>
 <ul>
 <li>Why does the UPS projection use a standard parallel at 81 degrees?</li>
 </ul>
 </section>
-<section id="azimuthal-projections-5" class="slide level2">
+<section id="azimuthal-projections-7" class="slide level2">
 <h2>Azimuthal Projections</h2>
 <h3 id="azimuthal-orthographic">Azimuthal orthographic</h3>
 <ul>
 <li>formed by projecting all points on teh ellipsoid onto a plane, along lines that are normal to the plane.</li>
 <li>Viewing height is infinity</li>
+<li>Resulting in view of Earth analogous to how it would look from deep space using a telescope</li>
 </ul>
 
 <img data-src="images/figure332.png" class="r-stretch"></section>
-<section id="azimuthal-projections-6" class="slide level2">
+<section id="azimuthal-projections-8" class="slide level2">
 <h2>Azimuthal Projections</h2>
 <h3 id="azimuthal-perspective-projection">Azimuthal perspective projection</h3>
 <ul>
@@ -224,41 +252,124 @@ Poshan Niraula
 <li>different shapes of cones can be selected</li>
 <li><img data-src="images/figure335.png"></li>
 <li>equivalent of overall scaling achieved by using <strong>two standard parallels</strong></li>
+<li>applicable when the region of interest is broad extent in longitude and regions that are in mid-latitude</li>
 </ul>
 </section>
 <section id="conic-1" class="slide level2">
 <h2>Conic</h2>
 <h3 id="conic-equidistant">Conic equidistant</h3>
 <ul>
+<li>preserves scale factor along the meridian (<span class="math inline">\(k_m\)</span> = 1)</li>
 <li></li>
 </ul>
 </section>
 <section id="conic-2" class="slide level2">
 <h2>Conic</h2>
-<h3 id="albers-equal-area">Albers equal area</h3>
+<h3 id="albers-equal-area-conic-equal-area-projection">Albers equal area/ Conic equal area projection</h3>
 <ul>
-<li></li>
+<li><img data-src="images/figure338.png"></li>
+<li>Pole becomes a circular arc -&gt; shape has been compromised to keep area undistorted</li>
+<li>Compare wiht the cylindrical equal area the distortion is less because of mid-latitude and large east-west extent of Europe.</li>
 </ul>
 </section>
 <section id="conic-3" class="slide level2">
 <h2>Conic</h2>
-<h3 id="lcc">LCC</h3>
+<h3 id="lambert-conformal-conic-lcc">Lambert Conformal Conic (LCC)</h3>
 <ul>
-<li></li>
+<li>widely used projection</li>
+<li><img data-src="images/figure339.png"></li>
+<li>Meridian meet at pole</li>
+<li>if standard parallel set at equator the meridians meet at infinity (they are parallel) same as Mercator</li>
+<li>and if standard parallel set at 90 degrees would be same as polar stereographic</li>
+<li>not to be used at extreme cases</li>
 </ul>
 </section>
 <section id="conic-4" class="slide level2">
 <h2>Conic</h2>
+<h3 id="lambert-conformal-conic-lcc-1">Lambert Conformal Conic (LCC)</h3>
+<ul>
+<li>Zoned LCC: example France Lambert</li>
+<li>Zones are tiered North to South</li>
+<li>Zone boundaries are set midway between the parallels of origin for adjacency zones</li>
+<li>Other examples of LCC are Europe conformal 2001 (std parallel 1 at 65<span class="math inline">\(^\circ\)</span> N and 2 at 35 <span class="math inline">\(^\circ\)</span> N), Tennessee state plane CS83, Geoscience Australia Lambert</li>
+</ul>
+</section>
+<section id="conic-5" class="slide level2">
+<h2>Conic</h2>
 <h3 id="oblique-conic">Oblique conic</h3>
+<ul>
+<li><img data-src="images/figure342.png"></li>
+<li>Example of conformal case is Krovak projection used in Czech Republic and Slovakia</li>
+</ul>
 </section>
 <section id="web-mercator" class="slide level2">
 <h2>Web Mercator</h2>
+<ul>
+<li>Major problem:
+<ul>
+<li>ellipsoidal model of earth + <strong>Mercator projection formula for sphere</strong></li>
+</ul></li>
+<li>https://www.youtube.com/watch?v=R-ENwz5u7pE</li>
+</ul>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="adaptive-composite-projection" class="slide level2">
+<h2>Adaptive composite projection</h2>
+<p>https://berniejenny.info/demos/AdaptiveCompositeMapProjections/</p>
+</section>
+<section id="choice-of-projection-system" class="slide level2">
+<h2>Choice of Projection system</h2>
+<p>https://www.explainxkcd.com/wiki/index.php/977:_Map_Projections</p>
+</section>
+<section id="section-3.6-to-3.9" class="slide level2">
+<h2>Section 3.6 to 3.9</h2>
+<p>Reading guides:</p>
+<ol type="1">
+<li>What parameters are required to define different classes of projection?</li>
+<li>What is role of scale factor in computing within map projections?</li>
+<li>What factors should be considered while designing a map projection?</li>
+</ol>
+</section>
+<section id="non-geometric-projection-method" class="slide level2">
+<h2>Non-geometric projection method</h2>
+<ul>
+<li>with advanced technologies, it is possible to create the projections in which the central line follows feature of interest, not just meridians or parallels</li>
+<li>Formula <span class="math inline">\((E, N) = f(\phi, \lambda)\)</span>, here <span class="math inline">\(f\)</span> gets more complicated</li>
+<li>Example: NewZealand (to fit the shape of country), Space oblique Mercator (to follow the satellite ground track), Snake projection</li>
+</ul>
+</section>
+<section id="snake-projection" class="slide level2">
+<h2>Snake Projection</h2>
+<ul>
+<li>For use in railways and pipelines</li>
+<li></li>
+</ul>
+</section>
+<section id="role-of-scale-factor-in-computing-wihtin-map-projections" class="slide level2">
+<h2>Role of scale factor in computing wihtin map projections</h2>
+</section>
+<section id="whole-earth-case" class="slide level2">
+<h2>Whole earth case</h2>
+</section>
+<section id="designing-custom-map-projections" class="slide level2">
+<h2>Designing custom map projections</h2>
+</section>
+<section id="designing-custom-map-projections-1" class="slide level2">
+<h2>Designing custom map projections</h2>
+<p>-Which of these Map projections would you use for mapping population density? Airline routes? Coastal navigation? Why? One conformal (e.g., Mercator) One equal-area (e.g., Albers) One equidistant (e.g., Azimuthal Equidistant)</p>
 </section>
 <section id="next-lecture" class="slide level2">
 <h2>Next Lecture</h2>
+<p>Date: 11.06.2026</p>
+<ul>
+<li>Reading: Chapter 4.1 - 4.4 of the coursebook</li>
+<li>Reading guides:</li>
+</ul>
+<ol type="1">
+<li>What are two key differences between a conversion and a transformation?</li>
+<li>What is the rst step common to any transformation endeavor?</li>
+<li>What does a grid interpolation do (and why is it needed)?</li>
+<li>What are similarities and differences between an Helmert transformation and a Molodensky transformation?</li>
+</ol>
 
 
 </section>
