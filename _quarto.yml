@@ -20,6 +20,8 @@ website:
         text: LE03
       - href: LE04.qmd
         text: LE04
+      - href: LE05.qmd
+        text: LE05
 format:
   html:
     theme: cosmo

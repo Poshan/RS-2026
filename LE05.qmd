@@ -61,7 +61,7 @@ editor: visual
 - Eg. Netherlands RD, Romania Stereo 70, Prince Edward Island Stereographic
 
 
-## Azimuthal Projections
+<!-- ## Azimuthal Projections
 
 ### Stereographic/conformal- Double Stereographic
 
@@ -71,13 +71,13 @@ editor: visual
 
 2. Project the spherical coordinates onto the grids
 
-On step 1, two approaces are possible
+- On step 1, two approaces are possible: 
 
 1. Convert the ellipsoidal coordinates to a conformal sphere with a radius based on the ellipsoidal radii at the projection origin or  
 
 2. use radius based on the ellipsoidal radii at each point
 
-This second method is sometimes also called "Double stereographic"
+This second method is sometimes also called "Double stereographic" -->
 
 
 <!-- ## Azimuthal Projections
@@ -123,6 +123,9 @@ This second method is sometimes also called "Double stereographic"
 - Touches the sphere/ellipsoid along a parallel of latitude -\> standard parallel
 - different shapes of cones can be selected
 - ![](images/figure335.png)
+
+## Conic
+
 - equivalent of overall scaling achieved by using **two standard parallels**
 - applicable when the region of interest is broad extent in longitude and regions that are in mid-latitude
 
@@ -131,7 +134,7 @@ This second method is sometimes also called "Double stereographic"
 ### Conic equidistant
 
 - preserves scale factor along the meridian ($k_m$ = 1)
-- 
+
 
 ## Conic
 
@@ -174,7 +177,15 @@ This second method is sometimes also called "Double stereographic"
   - ellipsoidal model of earth + **Mercator projection formula for sphere** 
 
 - https://www.youtube.com/watch?v=R-ENwz5u7pE
- 
+
+## Discussion question
+**"When designing a web-based geographical application using libraries like Leaflet, are there libraries used to dynamically reproject vector data and basemaps on-the-fly based on the user's area of interest?"**
+
+  - **Proj4js / proj4-leaflet** — https://kartena.github.io/Proj4Leaflet/
+  - **OpenLayers** — native multi-projection support (unlike Leaflet, which is locked to Web Mercator by default)
+  - **MapLibre GL JS** — supports globe view and alternative projections (recent)
+
+
 ## Adaptive composite projection
 https://berniejenny.info/demos/AdaptiveCompositeMapProjections/
 
@@ -196,24 +207,109 @@ Reading guides:
 - Example: NewZealand (to fit the shape of country), Space oblique Mercator (to follow the satellite ground track), Snake projection
 
 ## Snake Projection
-- For use in railways and pipelines
-- there is difference between the distances measured on the surface of the Earth and one implied by the coordinates of the projected crs.
-- For many Engineering applications, the procedure is: measured distance is transferred to projection after applying ellipsoidal corrections and scale factor corrections
-- 
+ - for linear features a standard projeciton like TM, LCC has a scale factor vaying along the route
+ - creates map distances not equal to ground distance and error gets higher further away from the central meridian/standard parallel
+ - Traditionally fixed by applying ellipsoidal corrections and scale factor correction
+ - But when using modern systems like automated track guidance
+ - Snake Projections when incorporated in such systems makes scale is almost true along the track and ground distance = grid distance so the automated machines work error free.
 
 
-## Role of scale factor in computing wihtin map projections
+## Computing wihtin map projections
+- Main types of computations done are:
+  - calculate distances, area, bearing
+  - Transfer the survey measurements of distances and angles to projections
 
-## Whole earth case
+- distance on the projection = distance on the ellipsoid * $k$
+- scale factor is the key here and should be closely associated with the tolerable degree of error
 
-## Designing custom map projections
+## Discussion question
 
-## Designing custom map projections
 
--Which of these Map projections would you use for mapping population density? Airline routes? Coastal navigation? Why?
-One conformal (e.g., Mercator)
-One equal-area (e.g., Albers)
-One equidistant (e.g., Azimuthal Equidistant)
+- **Q1:** *"What is the significance of the scale factor varying across a map projection?"*
+
+- **Q2:** *"Are there typical thresholds (e.g. maximum scale error in ppm) beyond which you would recommend switching to a different projection or redefining parameters?"*
+
+
+## Computing wihtin map projections - whole earth case
+
+- Usually the computations on the map projections that are designed for the whole earth should be avoided
+- As k can be very large (sometimes even infinity)
+- Some exception examples:
+  - Distances computed from central point on Azimuthal equidistant projection are undistorted.
+  - Area on the equal area projection are correct, but distances are distorted.
+
+## Computing wihtin map projections - Examples
+### Topographic mapping
+
+- Area that the maps cover have been restricted such that the distortion of scale factor away from unity is within reasonable limits: usually within 0.1%
+- And for many applications this is a acceptable limit. Example: distance of an Emergency response vehicle from the scene of accident, computing population that lives within given radius of a supermarket. 
+
+## Computing wihtin map projections - Examples
+### Area computation
+
+- Computation of area of a farmer's field, for land valuation or crop yield estimation.
+- Here scale factor should be applied in two dimensions
+- area on the ellipsoid = area on projection / $k^2$, 
+- assuming k is same in both dimensions (conformality), in case of equal area projection the scale factor is reciprocal on direction to another
+
+## Discussion question
+
+**"The book states that it's unusual to see map projection parameter values printed on maps. Why might this be the case? If someone already went to all the effort to create the map, it should be easy enough to include the values of the parameters..."**
+
+- Hints:
+  - Who is the **target audience** of a printed map?
+  - Is the parameter info **truly missing**, or just **somewhere else**?
+  - Commercial / proprietary reasons?
+  - How have **digital metadata standards** (EPSG, ISO 19115) changed this?
+
+## Discussion question
+
+**"Why are areas computed on an equal-area projection correct, but distances are wrong?"**
+
+- ![*Hint:*](images/figure36.png) 
+
+
+## Computing wihtin map projections - Examples
+### Land Surveying
+
+- Accuracy Requirement is very high 
+- The elevation above the ellipsoid is also considered here.
+
+- Theoretically $k$ changes in each point, but in practice it changes slowly across a projection that a single scale factor can be considered applicable to all distances in one survey
+- Rate of change of $k$: depends on particular projection
+- Most extreme rate of change is on the edge of the projection, over 5 km it vary from 1.00043 to 1.00039 amounting error 8cm if not averaged, 3cm in 3km.
+- To achieve accuracy of 1cm over 1 km scale factor for each line is computed: by mean of end point values of scale factor or by Simpson's rule 
+
+
+## Computing wihtin map projections - Examples
+### Land Surveying
+
+- **Corrections to angles** is also required as the straight lines observed between two points does not plot straight line on projection
+- The magnitude of this correction is never large: eg. at the extermes of TM zone of width 3 degrees: 3s over 5km and 6s over 10km. 
+- **Property of convergence**: angle between grid north and true north, can reach 2-3 degrees even in the survey projections
+
+## Discussion question
+
+- **"What is Unitisation in map projection computations?"**
+- What are the factors that you would consider in designing the map projections?
+- **"Why can't there be one map projection that preserves all these properties (area, shape, distance) accurately at the same time?"**
+
+## Discussion question
+-*"When should we choose projections like Mercator over Equal Area projections in real-world applications? I am confused about how people decide which projection is best."*
+
+- Match the use case to the projection:
+  - Marine navigation → ?
+  - Crop area statistics → ?
+  - Long-distance flight planning → ?
+  - National topographic map → ?
+
+List of Projections:
+  - Mercator (Conformal Cylindrical)
+  - Albers Equal-Area Conic
+  - Gnomonic
+  - Transverse Mercator / Lambert Conformal Conic
+  - Polar stereographic
+  - Robinson
 
 ## Next Lecture
 Date: 11.06.2026
