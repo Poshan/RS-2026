@@ -651,179 +651,326 @@
     "text": "For Lecture 3\nRead Chapter 3 of “datums and map projection” (1st edition) and sections 2.3.4 to 2.5.2 of the coursebook\nThink about:\n\nAre vertical datums related to horizontal datums? If yes, in which way?\nList two different types of height, and name their differences.\nWhat is the difference between the normal and the vertical?\nWhy could the adoption of a single vertical datum over large distances be problematic for height measurement?\n\nSubmit questions to Learnweb by Wednesday noon."
   },
   {
-    "objectID": "LE01.html#overview",
-    "href": "LE01.html#overview",
-    "title": "Reference Systems",
-    "section": "Overview",
-    "text": "Overview\n\nSlido\nLearning objectives of the course\nFundamentals\nWhere/why we need reference systems?\nBook chapters organization\nUp next"
+    "objectID": "LE06.html#reading-guides",
+    "href": "LE06.html#reading-guides",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Reading guides",
+    "text": "Reading guides\n\nReading: Chapter 4.1 - 4.4 of the coursebook\n\n\nWhat are two key differences between a conversion and a transformation?\nWhat is the first step common to any transformation endeavor?\nWhat does a grid interpolation do (and why is it needed)?\nWhat are similarities and differences between a Helmert transformation and a Molodensky transformation?"
   },
   {
-    "objectID": "LE01.html#share-your-thoughts",
-    "href": "LE01.html#share-your-thoughts",
-    "title": "Reference Systems",
-    "section": "1. Share your thoughts",
-    "text": "1. Share your thoughts\nWhat comes to your mind, when you hear “Coordinate reference system”?"
+    "objectID": "LE06.html#chapter-guide",
+    "href": "LE06.html#chapter-guide",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Chapter guide",
+    "text": "Chapter guide"
   },
   {
-    "objectID": "LE01.html#share-your-thoughts-again",
-    "href": "LE01.html#share-your-thoughts-again",
-    "title": "Reference Systems",
-    "section": "1. Share your thoughts again",
-    "text": "1. Share your thoughts again"
+    "objectID": "LE06.html#transformations-and-conversions",
+    "href": "LE06.html#transformations-and-conversions",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Transformations and Conversions",
+    "text": "Transformations and Conversions\n\nWhat are two differences between a conversion and a transformation?\n\nDatum change\nLoss of accuracy\nConversions: e.g. geocentric ↔︎ geographic, or map projection\nTransformations: e.g. from AGD66 to GDA94 (change of geodetic datum)"
   },
   {
-    "objectID": "LE01.html#learning-objectives",
-    "href": "LE01.html#learning-objectives",
-    "title": "Reference Systems",
-    "section": "2. Learning objectives",
-    "text": "2. Learning objectives\nBy the end of the course you will be able to:\n\nIdentify, interpret, and critically evaluate coordinate reference system information in geospatial data and software\nSelect and apply appropriate projections, datums, and transformations for a given task\nDiagnose and fix reference system problems when combining, transforming, or sharing spatial data"
+    "objectID": "LE06.html#transformation-multiplicity",
+    "href": "LE06.html#transformation-multiplicity",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Transformation Multiplicity",
+    "text": "Transformation Multiplicity\n\nParameters are derived from common points in both CRS\nDifferent subsets of common points → different parameter values\nThere is generally no single “true” transformation between two CRS\n\nIn general, there may be many different transformations between any two coordinate reference systems."
   },
   {
-    "objectID": "LE01.html#learning-objectives-1",
-    "href": "LE01.html#learning-objectives-1",
-    "title": "Reference Systems",
-    "section": "2. Learning objectives …",
-    "text": "2. Learning objectives …\nAnd along the way, you’ll be able to explain:\n\nWhy Africa looks the same size as Greenland on many world maps — even though it is 14 times larger -&gt; True size\nWhy Google Maps uses a projection that is mathematically wrong — and why they chose it anyway\nWhy many world maps show Antarctica as an infinitely wide strip at the bottom — or simply cut it off\nWhy your phone’s GPS might say you’re at 8820 m elevation while the official sign at the summit says 8848 m — and both are correct"
+    "objectID": "LE06.html#transformation-accuracy",
+    "href": "LE06.html#transformation-accuracy",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Transformation Accuracy",
+    "text": "Transformation Accuracy\n\nParameters derived by least squares → result is internal precision, not external accuracy\nAccuracy varies with location and area of coverage\nCan be estimated using nearby known points or trend fitting\nAt unobserved points, accuracy is unknown"
   },
   {
-    "objectID": "LE01.html#fundamentals",
-    "href": "LE01.html#fundamentals",
-    "title": "Reference Systems",
-    "section": "3. Fundamentals",
-    "text": "3. Fundamentals"
+    "objectID": "LE06.html#transformation-reversibility",
+    "href": "LE06.html#transformation-reversibility",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Transformation Reversibility",
+    "text": "Transformation Reversibility\n\nIn terms of formulas and parameters\nEg. Map projection methods are reversed through different formulas but same parameters\nIn case of transformations:\n\nif reverse computation is required, the formula have to be used with different set of parameter values\nsome transformations are not exactly reversible in theoretical sense, but in context of application in practical problems it can be considered reversible\nSome can be reversed by applying same formula with reversed sign of some or all parameters."
   },
   {
-    "objectID": "LE01.html#geographic-information--three-components",
-    "href": "LE01.html#geographic-information--three-components",
-    "title": "Reference Systems",
-    "section": "Geographic Information- three components",
-    "text": "Geographic Information- three components\n\nWhere, When and What\nSpace, Time and Attribute\nMünster, 9am 09.04.2025, Temperature -1°C"
+    "objectID": "LE06.html#transformations-between-geocentric-crs",
+    "href": "LE06.html#transformations-between-geocentric-crs",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "4.3 Transformations Between Geocentric CRS",
+    "text": "4.3 Transformations Between Geocentric CRS\n\nReminder on what is geocentric coordinates\nDifferent geodetic datums and their geocentric Cartesian systems differ in:\n\nPosition of origin (offset from Earth’s centre of mass)\nOrientation of axes\nScale"
   },
   {
-    "objectID": "LE01.html#space-representation",
-    "href": "LE01.html#space-representation",
-    "title": "Reference Systems",
-    "section": "Space representation",
-    "text": "Space representation\n\nSpace as Coordinates\n[51.968°, 7.665°, 62m, 9am, 09.04.2025, Temperature -1°C]\nSpace as place name\n[Münster, 9am 09.04.2025, Temperature -1°C]\nSpace as a spatial description\n[64Km west of Bielfeld, 9am 09.04.2025, Temperature -1°C]"
+    "objectID": "LE06.html#parameter-transformation-geocentric-translations",
+    "href": "LE06.html#parameter-transformation-geocentric-translations",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "3-Parameter Transformation (Geocentric Translations)",
+    "text": "3-Parameter Transformation (Geocentric Translations)\n\nApplies only 3 translations (ΔX, ΔY, ΔZ)\nAssumes axes are parallel and scale is identical\nCompact — easy to store and apply\nUsed in many handheld GPS devices for national mapping systems\nAccuracy typically 5–10 m\nIgnores axis misalignment and scale differences\nEasily reversible with reversed parameters"
   },
   {
-    "objectID": "LE01.html#coordinates-are-values-in-a-reference-system",
-    "href": "LE01.html#coordinates-are-values-in-a-reference-system",
-    "title": "Reference Systems",
-    "section": "Coordinates are values in a reference system",
-    "text": "Coordinates are values in a reference system\n\n51.968849°,7.6650811°, 62m\n51.968849° degrees East from Longitude 0 (Greenwich)\n7.6650811° degrees North from Latitude 0 (Equator)\n62m above the sea level\nWithout the reference(Greenwich, Equator, Sea level,..) the coordinates are meaningless"
+    "objectID": "LE06.html#parameter-transformation-helmert-bursa-wolf",
+    "href": "LE06.html#parameter-transformation-helmert-bursa-wolf",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "7-Parameter Transformation (Helmert / Bursa-Wolf)",
+    "text": "7-Parameter Transformation (Helmert / Bursa-Wolf)\n\nParameters\n\n3 translations (ΔX, ΔY, ΔZ)\n3 rotations (αX, αY, αZ)\n1 scale factor (μ, near 1 — typically expressed in ppm)\n\nMore accurate when axis alignment and scale differ between datums"
   },
   {
-    "objectID": "LE01.html#temporal-descriptions-are-values-in-a-reference-system",
-    "href": "LE01.html#temporal-descriptions-are-values-in-a-reference-system",
-    "title": "Reference Systems",
-    "section": "Temporal descriptions are values in a reference system",
-    "text": "Temporal descriptions are values in a reference system\n\n\n\nTime as a time stamp 09.04.2025 09:00:00\nUniversally? accepted system\n\n\nUTC\nGregorian Calendar https://en.wikipedia.org/wiki/Gregorian_calendar\nNo. of seconds since 01.01.1970 - Epoch time 09.04.2025 10:02:00 GMT = 1744192974"
+    "objectID": "LE06.html#rotation-conventions",
+    "href": "LE06.html#rotation-conventions",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Rotation Conventions",
+    "text": "Rotation Conventions\n\n\nPosition Vector (IAG standard): positive rotation = clockwise when viewed from origin along the axis\nCoordinate Frame: positive rotation = clockwise rotation of the reference frame &gt; Using the wrong convention → rotation in the opposite direction!"
   },
   {
-    "objectID": "LE01.html#attribute-representation",
-    "href": "LE01.html#attribute-representation",
-    "title": "Reference Systems",
-    "section": "Attribute representation",
-    "text": "Attribute representation\n\n\nTemperature, -1°C"
+    "objectID": "LE06.html#parameters-reversibility",
+    "href": "LE06.html#parameters-reversibility",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "7-parameters: Reversibility",
+    "text": "7-parameters: Reversibility\n\nuses approximation formulas valid only when transformation parameters values are small compared to the magnitude of the geocentric coordinates\nConditionally reversible\nparameter values are applied with reverse signs to reverse the transformation"
   },
   {
-    "objectID": "LE01.html#summary-reference-systems-definition",
-    "href": "LE01.html#summary-reference-systems-definition",
-    "title": "Reference Systems",
-    "section": "Summary: Reference systems-definition",
-    "text": "Summary: Reference systems-definition\n\nKey features of any reference system are:\n\nOrigin\nOrientation\nUnit of Measurement"
+    "objectID": "LE06.html#parameters-practical-cases",
+    "href": "LE06.html#parameters-practical-cases",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "7-parameters: practical cases",
+    "text": "7-parameters: practical cases\n\nexample of transforming coordinates from GPS to a national CRS\nNational datums are realized through control points which are possibly erroneous (due to error in survey)\nSo, single transformation will not provide perfect fit.\nTo achieve better fit:\n\ntransformation that introduces a degree of distortion to the geometry of source data, warping it into the target system (4.4.4)\nsplit area into smaller patches and have different parameters for each small area (which causes discontinuities at boundaries)"
   },
   {
-    "objectID": "LE01.html#summary",
-    "href": "LE01.html#summary",
-    "title": "Reference Systems",
-    "section": "Summary",
-    "text": "Summary\n\nValues are not meaningful by themselves, their accurate interpretation necessitates knowledge of the reference system(s)\nPut differently: without a documentation of the reference systems, ambiguity is guaranteed\nConversion between values in different reference systems is often desirable, sometimes possible without information loss, sometimes not\nReference systems are not absolute, they are created (and live by) conventions"
+    "objectID": "LE06.html#parameter-geometric-sensitivity",
+    "href": "LE06.html#parameter-geometric-sensitivity",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "7-Parameter: Geometric Sensitivity",
+    "text": "7-Parameter: Geometric Sensitivity\n\n\nRotations are about the Earth’s centre (several thousand km from the data)\nIf the area of common points is small → the angle subtended is small → ill-conditioned\nRule of thumb: subtended angle should be ≥ 30° (continent scale)"
   },
   {
-    "objectID": "LE01.html#wherewhy-we-need-reference-systems",
-    "href": "LE01.html#wherewhy-we-need-reference-systems",
-    "title": "Reference Systems",
-    "section": "4. Where/why we need reference systems?",
-    "text": "4. Where/why we need reference systems?"
+    "objectID": "LE06.html#parameter-transformation-molodensky-badekas",
+    "href": "LE06.html#parameter-transformation-molodensky-badekas",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "10-Parameter Transformation (Molodensky-Badekas)",
+    "text": "10-Parameter Transformation (Molodensky-Badekas)\n\n3 more parameters (\\(X_0\\), \\(Y_0\\), \\(Z_0\\)) coordinates of a point at the centre of the survey area in source CRS\nRotation applied about the point (\\(\\uparrow\\)), not the Earth’s centre\nAvoids the ill-conditioning problem of the 7-parameter for small areas\nCompared to 7-parameter: Same mathematical effect when correctly applied and Translation values look very different (but rotations are identical)\nNot strictly reversible (centre point remains in source system)"
   },
   {
-    "objectID": "LE01.html#web-mapping",
-    "href": "LE01.html#web-mapping",
-    "title": "Reference Systems",
-    "section": "Web mapping",
-    "text": "Web mapping\n\n[51.9623, 7.6257]"
+    "objectID": "LE06.html#transformations-between-geographic-crs",
+    "href": "LE06.html#transformations-between-geographic-crs",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "4.4 Transformations Between Geographic CRS",
+    "text": "4.4 Transformations Between Geographic CRS\n\n\nTransform latitude (φ), longitude (λ), ellipsoid height (h) between datums\nFour main approaches:\n\nMolodensky — direct formulae\nGeographic offsets — constant correction\nGrid interpolation — spatially varying correction\nIndirect — route through geocentric CRS"
   },
   {
-    "objectID": "LE01.html#positioning",
-    "href": "LE01.html#positioning",
-    "title": "Reference Systems",
-    "section": "Positioning",
-    "text": "Positioning\n\nGPS uses World Geodetic System 1984 (WGS 84)\nGLONASS uses Parametry Zemli (PZ-90)\nGalileo uses Galile Terestrial Reference Frame (GTRF)\nBeidou uses China Terrestrial Reference Frame (CGCS 2000)\nhttps://gssc.esa.int/navipedia/index.php/Reference_Frames_in_GNSS\nWhich of these system does your smart phone use?"
+    "objectID": "LE06.html#molodensky-method",
+    "href": "LE06.html#molodensky-method",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Molodensky Method",
+    "text": "Molodensky Method\n\nDirectly transforms geographic coordinates using:\n\nGeocentric translations (ΔX, ΔY, ΔZ)\nEllipsoid parameter differences (Δa, Δf)\n\nAchieves exactly the same result as the 3-step indirect method:\n\nGeographic → Geocentric\nApply 3-parameter geocentric transformation\nGeocentric → Geographic\n\nThe only advantage of the Molodensky formulae is modest computational efficiency(?).\nAbridged Molodensky(if you only have abacus): simplified version; for 3-parameter accuracy levels (~5–10 m), differences are not significant"
   },
   {
-    "objectID": "LE01.html#positioning-1",
-    "href": "LE01.html#positioning-1",
-    "title": "Reference Systems",
-    "section": "Positioning",
-    "text": "Positioning"
+    "objectID": "LE06.html#geographic-offsets",
+    "href": "LE06.html#geographic-offsets",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Geographic Offsets",
+    "text": "Geographic Offsets\n\nApply constant corrections (Δφ, Δλ) across a limited area\nDerived by averaging coordinate differences at common points\nAccuracy: a few metres → suitable for leisure or marine navigation\nCommonly used on nautical charts to shift GPS positions onto the chart datum\nOnly valid for the specific area it was derived over\nDoes NOT extrapolate beyond that area!"
   },
   {
-    "objectID": "LE01.html#combining-data-from-different-sources",
-    "href": "LE01.html#combining-data-from-different-sources",
-    "title": "Reference Systems",
-    "section": "Combining data from different sources",
-    "text": "Combining data from different sources\n\nEngineering Oops: The Maelstrom of Lake Peigneur"
+    "objectID": "LE06.html#grid-interpolation-ntv2-and-nadcon",
+    "href": "LE06.html#grid-interpolation-ntv2-and-nadcon",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Grid Interpolation — NTv2 and NADCON",
+    "text": "Grid Interpolation — NTv2 and NADCON\n\nNational CRS have spatially varying distortions from historical surveys\nA single transformation cannot fit the whole country well"
   },
   {
-    "objectID": "LE01.html#is-earth-flat",
-    "href": "LE01.html#is-earth-flat",
-    "title": "Reference Systems",
-    "section": "Is earth flat??",
-    "text": "Is earth flat??\n\nThe concentric circles map was created by the Economist"
+    "objectID": "LE06.html#grid-interpolation-ntv2-and-nadcon-1",
+    "href": "LE06.html#grid-interpolation-ntv2-and-nadcon-1",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Grid Interpolation — NTv2 and NADCON",
+    "text": "Grid Interpolation — NTv2 and NADCON\nSteps: 1. Identify common (monumented) control points in both systems 2. Pattern identification:\n\nIn widely spread out points and derive simple similarity transformation\nExamine the horizantal residuals from the inital transformation and identify the spatial correlation (pattern)\nwherever the vecor is sharply chaging -&gt; densify, thus to reveal the pattern of the residuals"
   },
   {
-    "objectID": "LE01.html#look-at-more-examples-here-..",
-    "href": "LE01.html#look-at-more-examples-here-..",
-    "title": "Reference Systems",
-    "section": "Look at more examples here ..",
-    "text": "Look at more examples here ..\n\nJavier Jimenez Shaw: WGS 84: I don’t Know I don’t care"
+    "objectID": "LE06.html#grid-interpolation-ntv2-and-nadcon-2",
+    "href": "LE06.html#grid-interpolation-ntv2-and-nadcon-2",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Grid Interpolation — NTv2 and NADCON",
+    "text": "Grid Interpolation — NTv2 and NADCON\n\nOverlay a regular grid\nAt any query point: interpolate from the surrounding grid nodes\n\n\n\nCorrection at point P is interpolated from 4 surrounding grid nodes (A, B, C, D)\nAccuracy: ~0.1 m — much better than geocentric methods\n\n\nGrid interpolation does NOT preserve the shape of original data — use a similarity transformation when shape matters."
   },
   {
-    "objectID": "LE01.html#has-this-ever-happened-to-you",
-    "href": "LE01.html#has-this-ever-happened-to-you",
-    "title": "Reference Systems",
-    "section": "Has this ever happened to you?",
-    "text": "Has this ever happened to you?"
+    "objectID": "LE06.html#indirect-transformation-for-geographic-3d-coordinates",
+    "href": "LE06.html#indirect-transformation-for-geographic-3d-coordinates",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Indirect Transformation for Geographic 3D Coordinates",
+    "text": "Indirect Transformation for Geographic 3D Coordinates\n\n\nAs geocentric coordinates are referenced to Greenwich meridian, if the geographic coordinate is not refered to Greenwich it should first be corrected"
   },
   {
-    "objectID": "LE01.html#summary-1",
-    "href": "LE01.html#summary-1",
-    "title": "Reference Systems",
-    "section": "Summary",
-    "text": "Summary\n\nReference systems often go unnoticed, yet they are crucial to our interaction with spatio-temporal information\nThree important questions:\n\nHow to document reference system information?\nHow to find out reference system information when it is not “there”?\nHow to convert values from one reference system to another?"
+    "objectID": "LE06.html#indirect-transformation-for-geographic-3d-coordinates-1",
+    "href": "LE06.html#indirect-transformation-for-geographic-3d-coordinates-1",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Indirect Transformation for Geographic 3D Coordinates",
+    "text": "Indirect Transformation for Geographic 3D Coordinates\nIn case the height is unknown:\n\nassume h = 0\nError in horizontal position is typically &lt; 0.5 m\nAcceptable for most mapping applications\n\n\nTwo-dimensional transformations can safely be carried out without knowledge of height for precision within 0.5 m."
   },
   {
-    "objectID": "LE01.html#about-the-book",
-    "href": "LE01.html#about-the-book",
-    "title": "Reference Systems",
-    "section": "5. About the Book",
-    "text": "5. About the Book"
+    "objectID": "LE06.html#question",
+    "href": "LE06.html#question",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Question",
+    "text": "Question\n\nWhich of the following transformations are irreversible:\nGeocentric:\n\n3 parameters\n7 parameters\n10 parameters\n\nGeographic:\n\nMolodensky\nGeographic offset"
   },
   {
-    "objectID": "LE01.html#up-next",
-    "href": "LE01.html#up-next",
-    "title": "Reference Systems",
-    "section": "6. Up Next",
-    "text": "6. Up Next"
+    "objectID": "LE06.html#transformation-of-2d-plane-coordinates",
+    "href": "LE06.html#transformation-of-2d-plane-coordinates",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "4.5 Transformation of 2D plane coordinates",
+    "text": "4.5 Transformation of 2D plane coordinates\n\nIn many applications, only horizontal location is of interest\nExample:\n\nremotely sensed image being warped to fit the coordinates of a set of ground control points\nGPS data being fitted to the local site grid with unknown projection or datum parameters\noverlaying a digitised map with modern dataset on a geographic information system\n\nBut, it is not possible to transform two absurdly different projected coordinate reference system both with unknown datum."
   },
   {
-    "objectID": "LE01.html#for-the-next-lecture",
-    "href": "LE01.html#for-the-next-lecture",
-    "title": "Reference Systems",
-    "section": "For the next lecture",
-    "text": "For the next lecture\n\nRead chapters 1 and 2 of the course book (up to Sec. 2.3.3, page 29)\nAnswer (for yourself) the following questions:\n\nWhy is a geographic dataset without coordinate system information ambiguous?\nWhat is a equipotential surface?\nName one similarity and two differences between latitude and longitude\nName four types of datums and their differences\nName one similarity and two differences between WGS84 and ITRF\n\nSubmit your questions to Learnweb by Wednesday noon next week (22.04.2026 12:00:00){.smaller}"
+    "objectID": "LE06.html#compatibility-and-scale-factor",
+    "href": "LE06.html#compatibility-and-scale-factor",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Compatibility and Scale factor",
+    "text": "Compatibility and Scale factor\n\nEg. it will always be possible to transform coordinates from one conformal projected crs to another\nBut scale factor varies within the map projection, thus a large shape can’t be preserved\nOverall scaling can be applied to account for most of the difference between them."
+  },
+  {
+    "objectID": "LE06.html#similiarity-transformation-method",
+    "href": "LE06.html#similiarity-transformation-method",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Similiarity transformation method",
+    "text": "Similiarity transformation method\n\n4 parameter transformation method to related 2D cartesian CRS to another 2D rectangular CRS\nMinimum 2 control points are required\nUsed when:\n\neach have orthogonal axes\neach have same scale along axes\n\neg. engineering plant grids and projected CRS"
+  },
+  {
+    "objectID": "LE06.html#similiarity-transformation-method-1",
+    "href": "LE06.html#similiarity-transformation-method-1",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Similiarity transformation method",
+    "text": "Similiarity transformation method\n\nMany mapping software packages can derive the parameters given common points in two datasets.\nReversibility:\nIt is reversible by using alternative transformation parameter values"
+  },
+  {
+    "objectID": "LE06.html#similartiy-transformation-method",
+    "href": "LE06.html#similartiy-transformation-method",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Similartiy transformation method",
+    "text": "Similartiy transformation method\n\nWhat are the four parameters?"
+  },
+  {
+    "objectID": "LE06.html#affine-transformation",
+    "href": "LE06.html#affine-transformation",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Affine transformation",
+    "text": "Affine transformation\n\nWhen in either system: scale along the axes differ or axes are not orthogonal\nSix parameters for scale and rotation adjustments independently in each direction\nAt minimum three control points are required\nEg. for remotely sensed images, it corrects first order distortions such as non-orthogonality and scale difference between scan and along track directions\nEg. In digitized maps, it corrects different amount of paper shrinkage in different directions\nReversibility:\n\nis another affine transformation but with different parameter values"
+  },
+  {
+    "objectID": "LE06.html#polynomials",
+    "href": "LE06.html#polynomials",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Polynomials",
+    "text": "Polynomials\n\nSecond order (12 parameters): used in remote sensing for the correction of scanner data\nfor such case minimum 6 ground control points are to be used and the distribution has to be distributed over the whole area to be transformed\nUseful for correcting second-order distortion in satellite images caused due to pitch and roll, sub satellite track curvature and scan line convergence due to earth rotation, map projection, and some problems due to altitude variations along the flight path."
+  },
+  {
+    "objectID": "LE06.html#break",
+    "href": "LE06.html#break",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Break",
+    "text": "Break\n\nQuestions?"
+  },
+  {
+    "objectID": "LE06.html#next-lecture",
+    "href": "LE06.html#next-lecture",
+    "title": "Reference Systems - Transformations Part 1",
+    "section": "Next lecture",
+    "text": "Next lecture\nnext class: 25.06.2026 More details later"
+  },
+  {
+    "objectID": "LE02_discussions.html#the-earth-geoid-and-ellipsoid",
+    "href": "LE02_discussions.html#the-earth-geoid-and-ellipsoid",
+    "title": "Discussion questions",
+    "section": "The Earth — Geoid and Ellipsoid",
+    "text": "The Earth — Geoid and Ellipsoid\n\nWhat is the difference between the geoid and the ellipsoid, and how much do they differ?\nHow is the difference between the geoid and mean sea level at most around 1–2 m?\nDoes Figure 2.2 depict geoid undulation — the deviation of the geoid from the ellipsoid?\nHow do coordinate definitions differ between a geoid/sphere and an ellipsoid?\nInstead of using slightly flawed models, can’t we just model the whole Earth and make the perfect CRS?"
+  },
+  {
+    "objectID": "LE02_discussions.html#the-earth-geoid-and-ellipsoid-answers",
+    "href": "LE02_discussions.html#the-earth-geoid-and-ellipsoid-answers",
+    "title": "Discussion questions",
+    "section": "The Earth — Geoid and Ellipsoid — Answers",
+    "text": "The Earth — Geoid and Ellipsoid — Answers\n\nGeoid vs. ellipsoid: The geoid is an irregular equipotential surface shaped by Earth’s actual gravity field. The ellipsoid is a smooth mathematical approximation defined by just two parameters. They differ by roughly ±100 m globally — the largest deviation is in the Indian Ocean (~−106 m).\nGeoid vs. MSL (~1–2 m): MSL is the observed average ocean surface, which is affected by permanent currents, temperature, and salinity. The geoid is where water would rest under gravity alone. The permanent deviation between them is called Mean Dynamic Topography — roughly ±1–2 m.\nFigure 2.2: Yes — it shows geoid undulation \\(N\\), the height of the geoid above or below the reference ellipsoid at each location.\nCoordinate definitions on geoid vs. sphere vs. ellipsoid: On a sphere, latitude is simply the angle from the equatorial plane to the centre. On an ellipsoid, geodetic latitude is the angle between the surface normal and the equatorial plane — these are not the same because the normal does not pass through the centre. The geoid is too irregular to define coordinates on directly, which is why we use the ellipsoid.\nWhy not model the whole Earth perfectly? We do — that’s the geoid. But the geoid is too complex for coordinate calculations. The ellipsoid is a deliberate simplification that makes mathematics tractable. The difference between them is handled separately through geoid models."
+  },
+  {
+    "objectID": "LE02_discussions.html#coordinate-systems-attributes-and-conventions",
+    "href": "LE02_discussions.html#coordinate-systems-attributes-and-conventions",
+    "title": "Discussion questions",
+    "section": "Coordinate Systems — Attributes and Conventions",
+    "text": "Coordinate Systems — Attributes and Conventions\n\nCan coordinate systems be reasonably interpreted even if not all attributes are given?\nIs axis order constrained by the order in which coordinates were recorded? What happens if axes are swapped?\nWhat is meant by the “ellipsoidal nominal”?\nIn which country are grads used instead of degrees, and why?"
+  },
+  {
+    "objectID": "LE02_discussions.html#coordinate-systems-attributes-and-conventions-answers",
+    "href": "LE02_discussions.html#coordinate-systems-attributes-and-conventions-answers",
+    "title": "Discussion questions",
+    "section": "Coordinate Systems — Attributes and Conventions — Answers",
+    "text": "Coordinate Systems — Attributes and Conventions — Answers\n\nIncomplete attributes: Sometimes software makes assumptions (e.g., “degrees” and “lat first”), but these assumptions vary between tools. Without explicit documentation of axes, units, and order, interpretation is ambiguous — you might get lucky.\nAxis order: Axis order is defined by the CRS standard, not by how data was recorded. ISO 19111 says geographic CRS axes are (latitude, longitude), but GeoJSON and many tools use (longitude, latitude).\nEllipsoidal normal: This likely refers to the normal to the ellipsoid — the line perpendicular to the ellipsoid surface at a given point. Geodetic latitude is defined as the angle this normal makes with the equatorial plane.\nGrads: France historically used grads (gradians), where a right angle = 100 grad instead of 90°. Some French and Swiss cadastral data still uses grads. A full circle = 400 grad."
+  },
+  {
+    "objectID": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid",
+    "href": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid",
+    "title": "Discussion questions",
+    "section": "Coordinates on the Sphere and Ellipsoid",
+    "text": "Coordinates on the Sphere and Ellipsoid\n\nWhat is the difference between geodetic latitude and geocentric latitude? Why are multiple definitions of latitude needed on an ellipsoid?\nCan all latitudes be classified as parallels and all longitudes as meridians?\nWhen is it more advantageous to use geocentric Cartesian coordinates instead of geographic coordinates?"
+  },
+  {
+    "objectID": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid-answers",
+    "href": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid-answers",
+    "title": "Discussion questions",
+    "section": "Coordinates on the Sphere and Ellipsoid — Answers",
+    "text": "Coordinates on the Sphere and Ellipsoid — Answers\n\nGeodetic vs. geocentric latitude: Geocentric latitude is the angle from the equatorial plane to a line drawn to the Earth’s centre. Geodetic latitude is the angle from the equatorial plane to the normal to the ellipsoid surface. On a sphere they are identical. On an ellipsoid they differ — by up to ~11.5 minutes of arc (~21 km) at 45° latitude. We need multiple definitions because the ellipsoid’s curvature varies, so the surface normal does not point at the centre.\nParallels and meridians: Yes. Lines of constant latitude are called parallels. Lines of constant longitude are called meridians.\nWhen to use geocentric Cartesian: When computing satellite orbits, GNSS processing, or performing datum transformations (e.g., 7-parameter Helmert). These operations involve rotations and translations in 3D space, which are simple matrix operations in Cartesian (X, Y, Z) but extremely messy in latitude/longitude."
+  },
+  {
+    "objectID": "LE02_discussions.html#conversions-and-transformations",
+    "href": "LE02_discussions.html#conversions-and-transformations",
+    "title": "Discussion questions",
+    "section": "Conversions and Transformations",
+    "text": "Conversions and Transformations\n\nWhat is the difference between a coordinate conversion and a coordinate transformation?\nHow does the conversion between ellipsoidal and geocentric Cartesian coordinates work mathematically?\nThe book says conversions and transformations are sometimes “intrinsically bundled together.” Can you give a practical example?"
+  },
+  {
+    "objectID": "LE02_discussions.html#conversions-and-transformations-answers",
+    "href": "LE02_discussions.html#conversions-and-transformations-answers",
+    "title": "Discussion questions",
+    "section": "Conversions and Transformations — Answers",
+    "text": "Conversions and Transformations — Answers\n\nConversion vs. transformation: A conversion changes the coordinate system but stays on the same datum — it is exact and reversible (e.g., geographic ↔︎ geocentric, geographic → projected). A transformation changes the datum — it is empirical, based on observations, and always has some error (e.g., ED50 → WGS 84). Key test: if no datum change is involved, it’s a conversion.\nEllipsoidal → geocentric maths: Section 2.2.4 equations 2.6 till 2.8 and 2.9 till 2.14 for the reverse\nBundled conversion + transformation: When you reproject a dataset from, say, ED50 geographic to WGS 84 / UTM zone 32N, the software internally performs a datum transformation (ED50 → WGS 84) and a coordinate conversion (geographic → projected) in a single pipeline. In QGIS or ArcGIS this appears as one operation, but PROJ internally chains them: ED50 latlon → ED50 XYZ → WGS84 XYZ → WGS84 latlon → UTM."
+  },
+  {
+    "objectID": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights",
+    "href": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights",
+    "title": "Discussion questions",
+    "section": "Engineering Coordinates and Gravity-Related Heights",
+    "text": "Engineering Coordinates and Gravity-Related Heights\n\nWhy would the relationship between two engineering height systems be more complex than a simple offset?\nWhat is the difference between orthometric height, normal height, and geopotential number? -&gt; Leave this for Lecture 3.\nWhat is a vertical coordinate system?\nWhat exactly is the difference between a vertical datum and a geodetic datum?"
+  },
+  {
+    "objectID": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights-answers",
+    "href": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights-answers",
+    "title": "Discussion questions",
+    "section": "Engineering Coordinates and Gravity-Related Heights — Answers",
+    "text": "Engineering Coordinates and Gravity-Related Heights — Answers\n\nMore than a simple offset: Two surveyors may use different control points, different instruments, and accumulate different measurement errors. The result is that the height difference between points A and B in system 1 may not match the difference in system 2.\nThree height types: Leave this for Lecture 3.\nVertical coordinate system: A 1D coordinate system with a single axis: height (upward) or depth (downward), in metres, referenced to a vertical datum.\nVertical vs. geodetic datum: A geodetic datum anchors an ellipsoid to the Earth for horizontal positions (lat/lon). A vertical datum defines a reference surface for heights — typically the geoid or a MSL measurement at a specific tide gauge. They are independent: you can use ETRS89 (geodetic datum) with DHHN2016 (vertical datum)."
+  },
+  {
+    "objectID": "LE02_discussions.html#datums",
+    "href": "LE02_discussions.html#datums",
+    "title": "Discussion questions",
+    "section": "Datums",
+    "text": "Datums\n\nWhat is the practical process of defining and realising a datum? Can you demonstrate how one is built?\nWhat is the purpose of the datum?\nIf coordinate transformations between datums can have errors, how do geospatial systems ensure reliability when integrating datasets from multiple sources?"
+  },
+  {
+    "objectID": "LE02_discussions.html#datums-answers",
+    "href": "LE02_discussions.html#datums-answers",
+    "title": "Discussion questions",
+    "section": "Datums — Answers",
+    "text": "Datums — Answers\n\nBuilding a (local) datum — step by step: (1) Choose an ellipsoid (e.g., Bessel 1841). (2) Pick a fundamental point on Earth’s surface (e.g., Rauenberg for the German DHDN). (3) At that point, fix the ellipsoid so that the surface normal aligns with the local gravity direction (“deflection of the vertical” = 0 at this point). (4) Orient the minor axis parallel to Earth’s rotation axis. (5) Survey outward from this point to build a network of known coordinates. For a geocentric datum (e.g., ITRF): skip the fundamental point — instead, use satellite observations to locate the Earth’s centre of mass and define the origin there.\nPurpose of a datum: It anchors an abstract coordinate system to the physical Earth. Without it, coordinates are just numbers floating in mathematical space with no connection to real locations.\nReliability despite transformation errors: In practice: (1) use the most accurate transformation available; (2) record and propagate accuracy metadata (3) choose transformations appropriate to your area of use; (4) accept and document residual uncertainty. There is no way to eliminate transformation error entirely — the goal is to understand and manage it."
+  },
+  {
+    "objectID": "LE02_discussions.html#itrs-wgs-84-and-time",
+    "href": "LE02_discussions.html#itrs-wgs-84-and-time",
+    "title": "Discussion questions",
+    "section": "ITRS, WGS 84, and Time",
+    "text": "ITRS, WGS 84, and Time\n\nWhy do coordinates in the ITRS require a specific time stamp?\nWhat practical problems could arise when two GIS datasets use the same CRS but were created at different points in time?"
+  },
+  {
+    "objectID": "LE02_discussions.html#itrs-wgs-84-and-time-answers",
+    "href": "LE02_discussions.html#itrs-wgs-84-and-time-answers",
+    "title": "Discussion questions",
+    "section": "ITRS, WGS 84, and Time — Answers",
+    "text": "ITRS, WGS 84, and Time — Answers\n\nWhy ITRF needs a time stamp: The Earth’s tectonic plates move continuously — Europe drifts ~2.5 cm/year northeast relative to Earth’s centre. ITRF station coordinates therefore change over time. An ITRF position is only valid at a specific epoch (e.g., 2015.0).\nSame CRS, different times: If the CRS is a dynamic datum (like ITRF), the coordinates of the same physical point are literally different at different epochs — so two datasets “in ITRF2014” but at epochs 2015.0 and 2025.0 will show a systematic shift."
   },
   {
     "objectID": "LE05.html#azimuthal-projections",
@@ -1064,326 +1211,326 @@
     "text": "Next Lecture\nDate: 11.06.2026\n\nReading: Chapter 4.1 - 4.4 of the coursebook\nReading guides:\n\n\nWhat are two key differences between a conversion and a transformation?\nWhat is the rst step common to any transformation endeavor?\nWhat does a grid interpolation do (and why is it needed)?\nWhat are similarities and differences between an Helmert transformation and a Molodensky transformation?"
   },
   {
-    "objectID": "LE02_discussions.html#the-earth-geoid-and-ellipsoid",
-    "href": "LE02_discussions.html#the-earth-geoid-and-ellipsoid",
-    "title": "Discussion questions",
-    "section": "The Earth — Geoid and Ellipsoid",
-    "text": "The Earth — Geoid and Ellipsoid\n\nWhat is the difference between the geoid and the ellipsoid, and how much do they differ?\nHow is the difference between the geoid and mean sea level at most around 1–2 m?\nDoes Figure 2.2 depict geoid undulation — the deviation of the geoid from the ellipsoid?\nHow do coordinate definitions differ between a geoid/sphere and an ellipsoid?\nInstead of using slightly flawed models, can’t we just model the whole Earth and make the perfect CRS?"
+    "objectID": "LE01.html#overview",
+    "href": "LE01.html#overview",
+    "title": "Reference Systems",
+    "section": "Overview",
+    "text": "Overview\n\nSlido\nLearning objectives of the course\nFundamentals\nWhere/why we need reference systems?\nBook chapters organization\nUp next"
   },
   {
-    "objectID": "LE02_discussions.html#the-earth-geoid-and-ellipsoid-answers",
-    "href": "LE02_discussions.html#the-earth-geoid-and-ellipsoid-answers",
-    "title": "Discussion questions",
-    "section": "The Earth — Geoid and Ellipsoid — Answers",
-    "text": "The Earth — Geoid and Ellipsoid — Answers\n\nGeoid vs. ellipsoid: The geoid is an irregular equipotential surface shaped by Earth’s actual gravity field. The ellipsoid is a smooth mathematical approximation defined by just two parameters. They differ by roughly ±100 m globally — the largest deviation is in the Indian Ocean (~−106 m).\nGeoid vs. MSL (~1–2 m): MSL is the observed average ocean surface, which is affected by permanent currents, temperature, and salinity. The geoid is where water would rest under gravity alone. The permanent deviation between them is called Mean Dynamic Topography — roughly ±1–2 m.\nFigure 2.2: Yes — it shows geoid undulation \\(N\\), the height of the geoid above or below the reference ellipsoid at each location.\nCoordinate definitions on geoid vs. sphere vs. ellipsoid: On a sphere, latitude is simply the angle from the equatorial plane to the centre. On an ellipsoid, geodetic latitude is the angle between the surface normal and the equatorial plane — these are not the same because the normal does not pass through the centre. The geoid is too irregular to define coordinates on directly, which is why we use the ellipsoid.\nWhy not model the whole Earth perfectly? We do — that’s the geoid. But the geoid is too complex for coordinate calculations. The ellipsoid is a deliberate simplification that makes mathematics tractable. The difference between them is handled separately through geoid models."
+    "objectID": "LE01.html#share-your-thoughts",
+    "href": "LE01.html#share-your-thoughts",
+    "title": "Reference Systems",
+    "section": "1. Share your thoughts",
+    "text": "1. Share your thoughts\nWhat comes to your mind, when you hear “Coordinate reference system”?"
   },
   {
-    "objectID": "LE02_discussions.html#coordinate-systems-attributes-and-conventions",
-    "href": "LE02_discussions.html#coordinate-systems-attributes-and-conventions",
-    "title": "Discussion questions",
-    "section": "Coordinate Systems — Attributes and Conventions",
-    "text": "Coordinate Systems — Attributes and Conventions\n\nCan coordinate systems be reasonably interpreted even if not all attributes are given?\nIs axis order constrained by the order in which coordinates were recorded? What happens if axes are swapped?\nWhat is meant by the “ellipsoidal nominal”?\nIn which country are grads used instead of degrees, and why?"
+    "objectID": "LE01.html#share-your-thoughts-again",
+    "href": "LE01.html#share-your-thoughts-again",
+    "title": "Reference Systems",
+    "section": "1. Share your thoughts again",
+    "text": "1. Share your thoughts again"
   },
   {
-    "objectID": "LE02_discussions.html#coordinate-systems-attributes-and-conventions-answers",
-    "href": "LE02_discussions.html#coordinate-systems-attributes-and-conventions-answers",
-    "title": "Discussion questions",
-    "section": "Coordinate Systems — Attributes and Conventions — Answers",
-    "text": "Coordinate Systems — Attributes and Conventions — Answers\n\nIncomplete attributes: Sometimes software makes assumptions (e.g., “degrees” and “lat first”), but these assumptions vary between tools. Without explicit documentation of axes, units, and order, interpretation is ambiguous — you might get lucky.\nAxis order: Axis order is defined by the CRS standard, not by how data was recorded. ISO 19111 says geographic CRS axes are (latitude, longitude), but GeoJSON and many tools use (longitude, latitude).\nEllipsoidal normal: This likely refers to the normal to the ellipsoid — the line perpendicular to the ellipsoid surface at a given point. Geodetic latitude is defined as the angle this normal makes with the equatorial plane.\nGrads: France historically used grads (gradians), where a right angle = 100 grad instead of 90°. Some French and Swiss cadastral data still uses grads. A full circle = 400 grad."
+    "objectID": "LE01.html#learning-objectives",
+    "href": "LE01.html#learning-objectives",
+    "title": "Reference Systems",
+    "section": "2. Learning objectives",
+    "text": "2. Learning objectives\nBy the end of the course you will be able to:\n\nIdentify, interpret, and critically evaluate coordinate reference system information in geospatial data and software\nSelect and apply appropriate projections, datums, and transformations for a given task\nDiagnose and fix reference system problems when combining, transforming, or sharing spatial data"
   },
   {
-    "objectID": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid",
-    "href": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid",
-    "title": "Discussion questions",
-    "section": "Coordinates on the Sphere and Ellipsoid",
-    "text": "Coordinates on the Sphere and Ellipsoid\n\nWhat is the difference between geodetic latitude and geocentric latitude? Why are multiple definitions of latitude needed on an ellipsoid?\nCan all latitudes be classified as parallels and all longitudes as meridians?\nWhen is it more advantageous to use geocentric Cartesian coordinates instead of geographic coordinates?"
+    "objectID": "LE01.html#learning-objectives-1",
+    "href": "LE01.html#learning-objectives-1",
+    "title": "Reference Systems",
+    "section": "2. Learning objectives …",
+    "text": "2. Learning objectives …\nAnd along the way, you’ll be able to explain:\n\nWhy Africa looks the same size as Greenland on many world maps — even though it is 14 times larger -&gt; True size\nWhy Google Maps uses a projection that is mathematically wrong — and why they chose it anyway\nWhy many world maps show Antarctica as an infinitely wide strip at the bottom — or simply cut it off\nWhy your phone’s GPS might say you’re at 8820 m elevation while the official sign at the summit says 8848 m — and both are correct"
   },
   {
-    "objectID": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid-answers",
-    "href": "LE02_discussions.html#coordinates-on-the-sphere-and-ellipsoid-answers",
-    "title": "Discussion questions",
-    "section": "Coordinates on the Sphere and Ellipsoid — Answers",
-    "text": "Coordinates on the Sphere and Ellipsoid — Answers\n\nGeodetic vs. geocentric latitude: Geocentric latitude is the angle from the equatorial plane to a line drawn to the Earth’s centre. Geodetic latitude is the angle from the equatorial plane to the normal to the ellipsoid surface. On a sphere they are identical. On an ellipsoid they differ — by up to ~11.5 minutes of arc (~21 km) at 45° latitude. We need multiple definitions because the ellipsoid’s curvature varies, so the surface normal does not point at the centre.\nParallels and meridians: Yes. Lines of constant latitude are called parallels. Lines of constant longitude are called meridians.\nWhen to use geocentric Cartesian: When computing satellite orbits, GNSS processing, or performing datum transformations (e.g., 7-parameter Helmert). These operations involve rotations and translations in 3D space, which are simple matrix operations in Cartesian (X, Y, Z) but extremely messy in latitude/longitude."
+    "objectID": "LE01.html#fundamentals",
+    "href": "LE01.html#fundamentals",
+    "title": "Reference Systems",
+    "section": "3. Fundamentals",
+    "text": "3. Fundamentals"
   },
   {
-    "objectID": "LE02_discussions.html#conversions-and-transformations",
-    "href": "LE02_discussions.html#conversions-and-transformations",
-    "title": "Discussion questions",
-    "section": "Conversions and Transformations",
-    "text": "Conversions and Transformations\n\nWhat is the difference between a coordinate conversion and a coordinate transformation?\nHow does the conversion between ellipsoidal and geocentric Cartesian coordinates work mathematically?\nThe book says conversions and transformations are sometimes “intrinsically bundled together.” Can you give a practical example?"
+    "objectID": "LE01.html#geographic-information--three-components",
+    "href": "LE01.html#geographic-information--three-components",
+    "title": "Reference Systems",
+    "section": "Geographic Information- three components",
+    "text": "Geographic Information- three components\n\nWhere, When and What\nSpace, Time and Attribute\nMünster, 9am 09.04.2025, Temperature -1°C"
   },
   {
-    "objectID": "LE02_discussions.html#conversions-and-transformations-answers",
-    "href": "LE02_discussions.html#conversions-and-transformations-answers",
-    "title": "Discussion questions",
-    "section": "Conversions and Transformations — Answers",
-    "text": "Conversions and Transformations — Answers\n\nConversion vs. transformation: A conversion changes the coordinate system but stays on the same datum — it is exact and reversible (e.g., geographic ↔︎ geocentric, geographic → projected). A transformation changes the datum — it is empirical, based on observations, and always has some error (e.g., ED50 → WGS 84). Key test: if no datum change is involved, it’s a conversion.\nEllipsoidal → geocentric maths: Section 2.2.4 equations 2.6 till 2.8 and 2.9 till 2.14 for the reverse\nBundled conversion + transformation: When you reproject a dataset from, say, ED50 geographic to WGS 84 / UTM zone 32N, the software internally performs a datum transformation (ED50 → WGS 84) and a coordinate conversion (geographic → projected) in a single pipeline. In QGIS or ArcGIS this appears as one operation, but PROJ internally chains them: ED50 latlon → ED50 XYZ → WGS84 XYZ → WGS84 latlon → UTM."
+    "objectID": "LE01.html#space-representation",
+    "href": "LE01.html#space-representation",
+    "title": "Reference Systems",
+    "section": "Space representation",
+    "text": "Space representation\n\nSpace as Coordinates\n[51.968°, 7.665°, 62m, 9am, 09.04.2025, Temperature -1°C]\nSpace as place name\n[Münster, 9am 09.04.2025, Temperature -1°C]\nSpace as a spatial description\n[64Km west of Bielfeld, 9am 09.04.2025, Temperature -1°C]"
   },
   {
-    "objectID": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights",
-    "href": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights",
-    "title": "Discussion questions",
-    "section": "Engineering Coordinates and Gravity-Related Heights",
-    "text": "Engineering Coordinates and Gravity-Related Heights\n\nWhy would the relationship between two engineering height systems be more complex than a simple offset?\nWhat is the difference between orthometric height, normal height, and geopotential number? -&gt; Leave this for Lecture 3.\nWhat is a vertical coordinate system?\nWhat exactly is the difference between a vertical datum and a geodetic datum?"
+    "objectID": "LE01.html#coordinates-are-values-in-a-reference-system",
+    "href": "LE01.html#coordinates-are-values-in-a-reference-system",
+    "title": "Reference Systems",
+    "section": "Coordinates are values in a reference system",
+    "text": "Coordinates are values in a reference system\n\n51.968849°,7.6650811°, 62m\n51.968849° degrees East from Longitude 0 (Greenwich)\n7.6650811° degrees North from Latitude 0 (Equator)\n62m above the sea level\nWithout the reference(Greenwich, Equator, Sea level,..) the coordinates are meaningless"
   },
   {
-    "objectID": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights-answers",
-    "href": "LE02_discussions.html#engineering-coordinates-and-gravity-related-heights-answers",
-    "title": "Discussion questions",
-    "section": "Engineering Coordinates and Gravity-Related Heights — Answers",
-    "text": "Engineering Coordinates and Gravity-Related Heights — Answers\n\nMore than a simple offset: Two surveyors may use different control points, different instruments, and accumulate different measurement errors. The result is that the height difference between points A and B in system 1 may not match the difference in system 2.\nThree height types: Leave this for Lecture 3.\nVertical coordinate system: A 1D coordinate system with a single axis: height (upward) or depth (downward), in metres, referenced to a vertical datum.\nVertical vs. geodetic datum: A geodetic datum anchors an ellipsoid to the Earth for horizontal positions (lat/lon). A vertical datum defines a reference surface for heights — typically the geoid or a MSL measurement at a specific tide gauge. They are independent: you can use ETRS89 (geodetic datum) with DHHN2016 (vertical datum)."
+    "objectID": "LE01.html#temporal-descriptions-are-values-in-a-reference-system",
+    "href": "LE01.html#temporal-descriptions-are-values-in-a-reference-system",
+    "title": "Reference Systems",
+    "section": "Temporal descriptions are values in a reference system",
+    "text": "Temporal descriptions are values in a reference system\n\n\n\nTime as a time stamp 09.04.2025 09:00:00\nUniversally? accepted system\n\n\nUTC\nGregorian Calendar https://en.wikipedia.org/wiki/Gregorian_calendar\nNo. of seconds since 01.01.1970 - Epoch time 09.04.2025 10:02:00 GMT = 1744192974"
   },
   {
-    "objectID": "LE02_discussions.html#datums",
-    "href": "LE02_discussions.html#datums",
-    "title": "Discussion questions",
-    "section": "Datums",
-    "text": "Datums\n\nWhat is the practical process of defining and realising a datum? Can you demonstrate how one is built?\nWhat is the purpose of the datum?\nIf coordinate transformations between datums can have errors, how do geospatial systems ensure reliability when integrating datasets from multiple sources?"
+    "objectID": "LE01.html#attribute-representation",
+    "href": "LE01.html#attribute-representation",
+    "title": "Reference Systems",
+    "section": "Attribute representation",
+    "text": "Attribute representation\n\n\nTemperature, -1°C"
   },
   {
-    "objectID": "LE02_discussions.html#datums-answers",
-    "href": "LE02_discussions.html#datums-answers",
-    "title": "Discussion questions",
-    "section": "Datums — Answers",
-    "text": "Datums — Answers\n\nBuilding a (local) datum — step by step: (1) Choose an ellipsoid (e.g., Bessel 1841). (2) Pick a fundamental point on Earth’s surface (e.g., Rauenberg for the German DHDN). (3) At that point, fix the ellipsoid so that the surface normal aligns with the local gravity direction (“deflection of the vertical” = 0 at this point). (4) Orient the minor axis parallel to Earth’s rotation axis. (5) Survey outward from this point to build a network of known coordinates. For a geocentric datum (e.g., ITRF): skip the fundamental point — instead, use satellite observations to locate the Earth’s centre of mass and define the origin there.\nPurpose of a datum: It anchors an abstract coordinate system to the physical Earth. Without it, coordinates are just numbers floating in mathematical space with no connection to real locations.\nReliability despite transformation errors: In practice: (1) use the most accurate transformation available; (2) record and propagate accuracy metadata (3) choose transformations appropriate to your area of use; (4) accept and document residual uncertainty. There is no way to eliminate transformation error entirely — the goal is to understand and manage it."
+    "objectID": "LE01.html#summary-reference-systems-definition",
+    "href": "LE01.html#summary-reference-systems-definition",
+    "title": "Reference Systems",
+    "section": "Summary: Reference systems-definition",
+    "text": "Summary: Reference systems-definition\n\nKey features of any reference system are:\n\nOrigin\nOrientation\nUnit of Measurement"
   },
   {
-    "objectID": "LE02_discussions.html#itrs-wgs-84-and-time",
-    "href": "LE02_discussions.html#itrs-wgs-84-and-time",
-    "title": "Discussion questions",
-    "section": "ITRS, WGS 84, and Time",
-    "text": "ITRS, WGS 84, and Time\n\nWhy do coordinates in the ITRS require a specific time stamp?\nWhat practical problems could arise when two GIS datasets use the same CRS but were created at different points in time?"
+    "objectID": "LE01.html#summary",
+    "href": "LE01.html#summary",
+    "title": "Reference Systems",
+    "section": "Summary",
+    "text": "Summary\n\nValues are not meaningful by themselves, their accurate interpretation necessitates knowledge of the reference system(s)\nPut differently: without a documentation of the reference systems, ambiguity is guaranteed\nConversion between values in different reference systems is often desirable, sometimes possible without information loss, sometimes not\nReference systems are not absolute, they are created (and live by) conventions"
   },
   {
-    "objectID": "LE02_discussions.html#itrs-wgs-84-and-time-answers",
-    "href": "LE02_discussions.html#itrs-wgs-84-and-time-answers",
-    "title": "Discussion questions",
-    "section": "ITRS, WGS 84, and Time — Answers",
-    "text": "ITRS, WGS 84, and Time — Answers\n\nWhy ITRF needs a time stamp: The Earth’s tectonic plates move continuously — Europe drifts ~2.5 cm/year northeast relative to Earth’s centre. ITRF station coordinates therefore change over time. An ITRF position is only valid at a specific epoch (e.g., 2015.0).\nSame CRS, different times: If the CRS is a dynamic datum (like ITRF), the coordinates of the same physical point are literally different at different epochs — so two datasets “in ITRF2014” but at epochs 2015.0 and 2025.0 will show a systematic shift."
+    "objectID": "LE01.html#wherewhy-we-need-reference-systems",
+    "href": "LE01.html#wherewhy-we-need-reference-systems",
+    "title": "Reference Systems",
+    "section": "4. Where/why we need reference systems?",
+    "text": "4. Where/why we need reference systems?"
   },
   {
-    "objectID": "LE06.html#reading-guides",
-    "href": "LE06.html#reading-guides",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Reading guides",
-    "text": "Reading guides\n\nReading: Chapter 4.1 - 4.4 of the coursebook\n\n\nWhat are two key differences between a conversion and a transformation?\nWhat is the first step common to any transformation endeavor?\nWhat does a grid interpolation do (and why is it needed)?\nWhat are similarities and differences between a Helmert transformation and a Molodensky transformation?"
+    "objectID": "LE01.html#web-mapping",
+    "href": "LE01.html#web-mapping",
+    "title": "Reference Systems",
+    "section": "Web mapping",
+    "text": "Web mapping\n\n[51.9623, 7.6257]"
   },
   {
-    "objectID": "LE06.html#chapter-guide",
-    "href": "LE06.html#chapter-guide",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Chapter guide",
-    "text": "Chapter guide"
+    "objectID": "LE01.html#positioning",
+    "href": "LE01.html#positioning",
+    "title": "Reference Systems",
+    "section": "Positioning",
+    "text": "Positioning\n\nGPS uses World Geodetic System 1984 (WGS 84)\nGLONASS uses Parametry Zemli (PZ-90)\nGalileo uses Galile Terestrial Reference Frame (GTRF)\nBeidou uses China Terrestrial Reference Frame (CGCS 2000)\nhttps://gssc.esa.int/navipedia/index.php/Reference_Frames_in_GNSS\nWhich of these system does your smart phone use?"
   },
   {
-    "objectID": "LE06.html#transformations-and-conversions",
-    "href": "LE06.html#transformations-and-conversions",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Transformations and Conversions",
-    "text": "Transformations and Conversions\n\nWhat are two differences between a conversion and a transformation?\n\nDatum change\nLoss of accuracy\nConversions: e.g. geocentric ↔︎ geographic, or map projection\nTransformations: e.g. from AGD66 to GDA94 (change of geodetic datum)"
+    "objectID": "LE01.html#positioning-1",
+    "href": "LE01.html#positioning-1",
+    "title": "Reference Systems",
+    "section": "Positioning",
+    "text": "Positioning"
   },
   {
-    "objectID": "LE06.html#transformation-multiplicity",
-    "href": "LE06.html#transformation-multiplicity",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Transformation Multiplicity",
-    "text": "Transformation Multiplicity\n\nParameters are derived from common points in both CRS\nDifferent subsets of common points → different parameter values\nThere is generally no single “true” transformation between two CRS\n\nIn general, there may be many different transformations between any two coordinate reference systems."
+    "objectID": "LE01.html#combining-data-from-different-sources",
+    "href": "LE01.html#combining-data-from-different-sources",
+    "title": "Reference Systems",
+    "section": "Combining data from different sources",
+    "text": "Combining data from different sources\n\nEngineering Oops: The Maelstrom of Lake Peigneur"
   },
   {
-    "objectID": "LE06.html#transformation-accuracy",
-    "href": "LE06.html#transformation-accuracy",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Transformation Accuracy",
-    "text": "Transformation Accuracy\n\nParameters derived by least squares → result is internal precision, not external accuracy\nAccuracy varies with location and area of coverage\nCan be estimated using nearby known points or trend fitting\nAt unobserved points, accuracy is unknown"
+    "objectID": "LE01.html#is-earth-flat",
+    "href": "LE01.html#is-earth-flat",
+    "title": "Reference Systems",
+    "section": "Is earth flat??",
+    "text": "Is earth flat??\n\nThe concentric circles map was created by the Economist"
   },
   {
-    "objectID": "LE06.html#transformation-reversibility",
-    "href": "LE06.html#transformation-reversibility",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Transformation Reversibility",
-    "text": "Transformation Reversibility\n\nIn terms of formulas and parameters\nEg. Map projection methods are reversed through different formulas but same parameters\nIn case of transformations:\n\nif reverse computation is required, the formula have to be used with different set of parameter values\nsome transformations are not exactly reversible in theoretical sense, but in context of application in practical problems it can be considered reversible\nSome can be reversed by applying same formula with reversed sign of some or all parameters."
+    "objectID": "LE01.html#look-at-more-examples-here-..",
+    "href": "LE01.html#look-at-more-examples-here-..",
+    "title": "Reference Systems",
+    "section": "Look at more examples here ..",
+    "text": "Look at more examples here ..\n\nJavier Jimenez Shaw: WGS 84: I don’t Know I don’t care"
   },
   {
-    "objectID": "LE06.html#transformations-between-geocentric-crs",
-    "href": "LE06.html#transformations-between-geocentric-crs",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "4.3 Transformations Between Geocentric CRS",
-    "text": "4.3 Transformations Between Geocentric CRS\n\nReminder on what is geocentric coordinates\nDifferent geodetic datums and their geocentric Cartesian systems differ in:\n\nPosition of origin (offset from Earth’s centre of mass)\nOrientation of axes\nScale"
+    "objectID": "LE01.html#has-this-ever-happened-to-you",
+    "href": "LE01.html#has-this-ever-happened-to-you",
+    "title": "Reference Systems",
+    "section": "Has this ever happened to you?",
+    "text": "Has this ever happened to you?"
   },
   {
-    "objectID": "LE06.html#parameter-transformation-geocentric-translations",
-    "href": "LE06.html#parameter-transformation-geocentric-translations",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "3-Parameter Transformation (Geocentric Translations)",
-    "text": "3-Parameter Transformation (Geocentric Translations)\n\nApplies only 3 translations (ΔX, ΔY, ΔZ)\nAssumes axes are parallel and scale is identical\nCompact — easy to store and apply\nUsed in many handheld GPS devices for national mapping systems\nAccuracy typically 5–10 m\nIgnores axis misalignment and scale differences\nEasily reversible with reversed parameters"
+    "objectID": "LE01.html#summary-1",
+    "href": "LE01.html#summary-1",
+    "title": "Reference Systems",
+    "section": "Summary",
+    "text": "Summary\n\nReference systems often go unnoticed, yet they are crucial to our interaction with spatio-temporal information\nThree important questions:\n\nHow to document reference system information?\nHow to find out reference system information when it is not “there”?\nHow to convert values from one reference system to another?"
   },
   {
-    "objectID": "LE06.html#parameter-transformation-helmert-bursa-wolf",
-    "href": "LE06.html#parameter-transformation-helmert-bursa-wolf",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "7-Parameter Transformation (Helmert / Bursa-Wolf)",
-    "text": "7-Parameter Transformation (Helmert / Bursa-Wolf)\n\nParameters\n\n3 translations (ΔX, ΔY, ΔZ)\n3 rotations (αX, αY, αZ)\n1 scale factor (μ, near 1 — typically expressed in ppm)\n\nMore accurate when axis alignment and scale differ between datums"
+    "objectID": "LE01.html#about-the-book",
+    "href": "LE01.html#about-the-book",
+    "title": "Reference Systems",
+    "section": "5. About the Book",
+    "text": "5. About the Book"
   },
   {
-    "objectID": "LE06.html#rotation-conventions",
-    "href": "LE06.html#rotation-conventions",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Rotation Conventions",
-    "text": "Rotation Conventions\n\n\nPosition Vector (IAG standard): positive rotation = clockwise when viewed from origin along the axis\nCoordinate Frame: positive rotation = clockwise rotation of the reference frame &gt; Using the wrong convention → rotation in the opposite direction!"
+    "objectID": "LE01.html#up-next",
+    "href": "LE01.html#up-next",
+    "title": "Reference Systems",
+    "section": "6. Up Next",
+    "text": "6. Up Next"
   },
   {
-    "objectID": "LE06.html#parameters-reversibility",
-    "href": "LE06.html#parameters-reversibility",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "7-parameters: Reversibility",
-    "text": "7-parameters: Reversibility\n\nuses approximation formulas valid only when transformation parameters values are small compared to the magnitude of the geocentric coordinates\nConditionally reversible\nparameter values are applied with reverse signs to reverse the transformation"
+    "objectID": "LE01.html#for-the-next-lecture",
+    "href": "LE01.html#for-the-next-lecture",
+    "title": "Reference Systems",
+    "section": "For the next lecture",
+    "text": "For the next lecture\n\nRead chapters 1 and 2 of the course book (up to Sec. 2.3.3, page 29)\nAnswer (for yourself) the following questions:\n\nWhy is a geographic dataset without coordinate system information ambiguous?\nWhat is a equipotential surface?\nName one similarity and two differences between latitude and longitude\nName four types of datums and their differences\nName one similarity and two differences between WGS84 and ITRF\n\nSubmit your questions to Learnweb by Wednesday noon next week (22.04.2026 12:00:00){.smaller}"
   },
   {
-    "objectID": "LE06.html#parameters-practical-cases",
-    "href": "LE06.html#parameters-practical-cases",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "7-parameters: practical cases",
-    "text": "7-parameters: practical cases\n\nexample of transforming coordinates from GPS to a national CRS\nNational datums are realized through control points which are possibly erroneous (due to error in survey)\nSo, single transformation will not provide perfect fit.\nTo achieve better fit:\n\ntransformation that introduces a degree of distortion to the geometry of source data, warping it into the target system (4.4.4)\nsplit area into smaller patches and have different parameters for each small area (which causes discontinuities at boundaries)"
+    "objectID": "LE08.html#review-of-transformation-1",
+    "href": "LE08.html#review-of-transformation-1",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Review of Transformation 1",
+    "text": "Review of Transformation 1\nTransformations 4.1 - 4.5 of course book\n\nTransformations between Geocentric CRS (3,7, 10 params)\nTransformations Between Geographic CRS (Molodensky, geographic offsets, grid interpolation, indirect)\nTransformation of 2D plane coordinates (Similarity, Affine, Polynomial)"
   },
   {
-    "objectID": "LE06.html#parameter-geometric-sensitivity",
-    "href": "LE06.html#parameter-geometric-sensitivity",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "7-Parameter: Geometric Sensitivity",
-    "text": "7-Parameter: Geometric Sensitivity\n\n\nRotations are about the Earth’s centre (several thousand km from the data)\nIf the area of common points is small → the angle subtended is small → ill-conditioned\nRule of thumb: subtended angle should be ≥ 30° (continent scale)"
+    "objectID": "LE08.html#todays-lecture",
+    "href": "LE08.html#todays-lecture",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Today’s lecture",
+    "text": "Today’s lecture\n\nGoogle Earth overlay\nHow does GPS work?\nGPS data projection to local grids\nIndirect transformation between 2D projected cooridnates\nVertical coordinates and their transformations"
   },
   {
-    "objectID": "LE06.html#parameter-transformation-molodensky-badekas",
-    "href": "LE06.html#parameter-transformation-molodensky-badekas",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "10-Parameter Transformation (Molodensky-Badekas)",
-    "text": "10-Parameter Transformation (Molodensky-Badekas)\n\n3 more parameters (\\(X_0\\), \\(Y_0\\), \\(Z_0\\)) coordinates of a point at the centre of the survey area in source CRS\nRotation applied about the point (\\(\\uparrow\\)), not the Earth’s centre\nAvoids the ill-conditioning problem of the 7-parameter for small areas\nCompared to 7-parameter: Same mathematical effect when correctly applied and Translation values look very different (but rotations are identical)\nNot strictly reversible (centre point remains in source system)"
+    "objectID": "LE08.html#google-earth--overlays",
+    "href": "LE08.html#google-earth--overlays",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Google Earth -overlays",
+    "text": "Google Earth -overlays\n\nGoogle Earth visualizes earth in 3D view by using azimuthal perspective projection\nallows overlays (images, other vector layers), are by default assumed to be cylindrical equidistant projection\nUser can perform 5 parameter affine like transformation\nMismatch due to the difference between assumption of projection and actual geometry\nMismatch larger in areas with large E-W dimension and higher latitude"
   },
   {
-    "objectID": "LE06.html#transformations-between-geographic-crs",
-    "href": "LE06.html#transformations-between-geographic-crs",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "4.4 Transformations Between Geographic CRS",
-    "text": "4.4 Transformations Between Geographic CRS\n\n\nTransform latitude (φ), longitude (λ), ellipsoid height (h) between datums\nFour main approaches:\n\nMolodensky — direct formulae\nGeographic offsets — constant correction\nGrid interpolation — spatially varying correction\nIndirect — route through geocentric CRS"
+    "objectID": "LE08.html#gpsgnss",
+    "href": "LE08.html#gpsgnss",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "GPS/GNSS",
+    "text": "GPS/GNSS\n\nHow does GPS work?\n\nhttps://www.youtube.com/watch?v=AlHPDRQ08jU\nRead chapter 5 for more details"
   },
   {
-    "objectID": "LE06.html#molodensky-method",
-    "href": "LE06.html#molodensky-method",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Molodensky Method",
-    "text": "Molodensky Method\n\nDirectly transforms geographic coordinates using:\n\nGeocentric translations (ΔX, ΔY, ΔZ)\nEllipsoid parameter differences (Δa, Δf)\n\nAchieves exactly the same result as the 3-step indirect method:\n\nGeographic → Geocentric\nApply 3-parameter geocentric transformation\nGeocentric → Geographic\n\nThe only advantage of the Molodensky formulae is modest computational efficiency(?).\nAbridged Molodensky(if you only have abacus): simplified version; for 3-parameter accuracy levels (~5–10 m), differences are not significant"
+    "objectID": "LE08.html#gps-data-into-local-site-grid",
+    "href": "LE08.html#gps-data-into-local-site-grid",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "GPS data into local site grid",
+    "text": "GPS data into local site grid\n\nEngineering sites often have local coordinate system without link to the national grids/global systems\nIn some cases: one might have data from GPS that needs to be overlaid onto the local grids"
   },
   {
-    "objectID": "LE06.html#geographic-offsets",
-    "href": "LE06.html#geographic-offsets",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Geographic Offsets",
-    "text": "Geographic Offsets\n\nApply constant corrections (Δφ, Δλ) across a limited area\nDerived by averaging coordinate differences at common points\nAccuracy: a few metres → suitable for leisure or marine navigation\nCommonly used on nautical charts to shift GPS positions onto the chart datum\nOnly valid for the specific area it was derived over\nDoes NOT extrapolate beyond that area!"
+    "objectID": "LE08.html#transforming-gps-data-onto-local-site-grid",
+    "href": "LE08.html#transforming-gps-data-onto-local-site-grid",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Transforming GPS data onto local site grid",
+    "text": "Transforming GPS data onto local site grid\n\nDeal with horizantal and vertical seperately, starting with horizantal\nFirst: convert ellipsoidal coordinates (from GPS) into projected -&gt; selecting appropriate projection system\n\nNow both are in 2D plane coordinate system\n\nSecond: acquire transformation parameters using either of affine, simialarity(preferred to preserve shape) or polynomial transformation\nThis works well in small areas"
   },
   {
-    "objectID": "LE06.html#grid-interpolation-ntv2-and-nadcon",
-    "href": "LE06.html#grid-interpolation-ntv2-and-nadcon",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Grid Interpolation — NTv2 and NADCON",
-    "text": "Grid Interpolation — NTv2 and NADCON\n\nNational CRS have spatially varying distortions from historical surveys\nA single transformation cannot fit the whole country well"
+    "objectID": "LE08.html#transforming-gps-data-onto-local-site-grid-1",
+    "href": "LE08.html#transforming-gps-data-onto-local-site-grid-1",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Transforming GPS data onto local site grid",
+    "text": "Transforming GPS data onto local site grid\n\nwhat not to do in larger areas?\n\nExtrapolating a local engineering project grid into larger areas by incrementally occupying adjacent control points destroys the regional coherence of the coordinate reference system.\n\nshould we rather use national grids for example mercator grids?\n\nUse a standard conformal projection (e.g., Transverse Mercator) with a central meridian cutting directly through the project center."
   },
   {
-    "objectID": "LE06.html#grid-interpolation-ntv2-and-nadcon-1",
-    "href": "LE06.html#grid-interpolation-ntv2-and-nadcon-1",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Grid Interpolation — NTv2 and NADCON",
-    "text": "Grid Interpolation — NTv2 and NADCON\nSteps: 1. Identify common (monumented) control points in both systems 2. Pattern identification:\n\nIn widely spread out points and derive simple similarity transformation\nExamine the horizantal residuals from the inital transformation and identify the spatial correlation (pattern)\nwherever the vecor is sharply chaging -&gt; densify, thus to reveal the pattern of the residuals"
+    "objectID": "LE08.html#indirect-transformation-between-projected-coordinates",
+    "href": "LE08.html#indirect-transformation-between-projected-coordinates",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Indirect transformation between projected coordinates",
+    "text": "Indirect transformation between projected coordinates"
   },
   {
-    "objectID": "LE06.html#grid-interpolation-ntv2-and-nadcon-2",
-    "href": "LE06.html#grid-interpolation-ntv2-and-nadcon-2",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Grid Interpolation — NTv2 and NADCON",
-    "text": "Grid Interpolation — NTv2 and NADCON\n\nOverlay a regular grid\nAt any query point: interpolate from the surrounding grid nodes\n\n\n\nCorrection at point P is interpolated from 4 surrounding grid nodes (A, B, C, D)\nAccuracy: ~0.1 m — much better than geocentric methods\n\n\nGrid interpolation does NOT preserve the shape of original data — use a similarity transformation when shape matters."
+    "objectID": "LE08.html#indirect-transformation-between-projected-coordinates-1",
+    "href": "LE08.html#indirect-transformation-between-projected-coordinates-1",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Indirect transformation between projected coordinates",
+    "text": "Indirect transformation between projected coordinates\nwith datum change\n\nSteps:\n\nConvert from Projected CRS -&gt; base geographic system\nbilinear grid interpolation to transform geographic crs to target datum\nconvert back to projected CRS\n\nAlternatively: Convert all the way to Geocentric and back"
   },
   {
-    "objectID": "LE06.html#indirect-transformation-for-geographic-3d-coordinates",
-    "href": "LE06.html#indirect-transformation-for-geographic-3d-coordinates",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Indirect Transformation for Geographic 3D Coordinates",
-    "text": "Indirect Transformation for Geographic 3D Coordinates\n\n\nAs geocentric coordinates are referenced to Greenwich meridian, if the geographic coordinate is not refered to Greenwich it should first be corrected"
+    "objectID": "LE08.html#indirect-transformation-between-projected-coordinates-2",
+    "href": "LE08.html#indirect-transformation-between-projected-coordinates-2",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Indirect transformation between projected coordinates",
+    "text": "Indirect transformation between projected coordinates\nwithout datum change\n\neg. UTM zone 31 N to UTM zone 32N both on WGS 84 datum\nSteps:\n\nUTM 31 -&gt; WGS 84 geographic CRS\nProject Geographic to UTM 32 N"
   },
   {
-    "objectID": "LE06.html#indirect-transformation-for-geographic-3d-coordinates-1",
-    "href": "LE06.html#indirect-transformation-for-geographic-3d-coordinates-1",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Indirect Transformation for Geographic 3D Coordinates",
-    "text": "Indirect Transformation for Geographic 3D Coordinates\nIn case the height is unknown:\n\nassume h = 0\nError in horizontal position is typically &lt; 0.5 m\nAcceptable for most mapping applications\n\n\nTwo-dimensional transformations can safely be carried out without knowledge of height for precision within 0.5 m."
+    "objectID": "LE08.html#direct-vs-indirect-approach",
+    "href": "LE08.html#direct-vs-indirect-approach",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Direct Vs indirect approach",
+    "text": "Direct Vs indirect approach\n\nIn case both source and target are conformal, conformality is preserved whereas the direct affine plane transformation across a large area will distort shapes\nDirect is computationally efficient"
   },
   {
-    "objectID": "LE06.html#question",
-    "href": "LE06.html#question",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Question",
-    "text": "Question\n\nWhich of the following transformations are irreversible:\nGeocentric:\n\n3 parameters\n7 parameters\n10 parameters\n\nGeographic:\n\nMolodensky\nGeographic offset"
+    "objectID": "LE08.html#vertical-crs---revision",
+    "href": "LE08.html#vertical-crs---revision",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Vertical CRS - revision",
+    "text": "Vertical CRS - revision\n\nEllipsoidal height (h)\nGravity related height (H)"
   },
   {
-    "objectID": "LE06.html#transformation-of-2d-plane-coordinates",
-    "href": "LE06.html#transformation-of-2d-plane-coordinates",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "4.5 Transformation of 2D plane coordinates",
-    "text": "4.5 Transformation of 2D plane coordinates\n\nIn many applications, only horizontal location is of interest\nExample:\n\nremotely sensed image being warped to fit the coordinates of a set of ground control points\nGPS data being fitted to the local site grid with unknown projection or datum parameters\noverlaying a digitised map with modern dataset on a geographic information system\n\nBut, it is not possible to transform two absurdly different projected coordinate reference system both with unknown datum."
+    "objectID": "LE08.html#coordinate-operations-of-vertical-crs",
+    "href": "LE08.html#coordinate-operations-of-vertical-crs",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Coordinate operations of vertical CRS",
+    "text": "Coordinate operations of vertical CRS\n\nchanging of one ellipsoidal height to another\n\nperformed as part of complete 3D transformations\n\nchanging between two gravity related heights systems\nchanging between ellipsoidal height and gravity-related height"
   },
   {
-    "objectID": "LE06.html#compatibility-and-scale-factor",
-    "href": "LE06.html#compatibility-and-scale-factor",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Compatibility and Scale factor",
-    "text": "Compatibility and Scale factor\n\nEg. it will always be possible to transform coordinates from one conformal projected crs to another\nBut scale factor varies within the map projection, thus a large shape can’t be preserved\nOverall scaling can be applied to account for most of the difference between them."
+    "objectID": "LE08.html#coordinate-operations-of-vertical-crs-1",
+    "href": "LE08.html#coordinate-operations-of-vertical-crs-1",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Coordinate operations of vertical CRS",
+    "text": "Coordinate operations of vertical CRS\nVertical offsets\n\npossible to convert between two different system using Gravity related height (H)\nmany vertical system exists but they rarely overlap so chnage of vertical datum is rare.\nBut following scenarios are possible:\n\nlocal datum with refernce height but later needed to join wiht national height system\nhistorical datum change with some values still in old system\nOccasional projects that cover cross regions"
   },
   {
-    "objectID": "LE06.html#similiarity-transformation-method",
-    "href": "LE06.html#similiarity-transformation-method",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Similiarity transformation method",
-    "text": "Similiarity transformation method\n\n4 parameter transformation method to related 2D cartesian CRS to another 2D rectangular CRS\nMinimum 2 control points are required\nUsed when:\n\neach have orthogonal axes\neach have same scale along axes\n\neg. engineering plant grids and projected CRS"
+    "objectID": "LE08.html#coordinate-operations-of-vertical-crs-2",
+    "href": "LE08.html#coordinate-operations-of-vertical-crs-2",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Coordinate operations of vertical CRS",
+    "text": "Coordinate operations of vertical CRS\nVertical offset by interpolation of gridded data\n\ncapture widespread, local irregularities\nhorizantal positioning needed along with height"
   },
   {
-    "objectID": "LE06.html#similiarity-transformation-method-1",
-    "href": "LE06.html#similiarity-transformation-method-1",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Similiarity transformation method",
-    "text": "Similiarity transformation method\n\nMany mapping software packages can derive the parameters given common points in two datasets.\nReversibility:\nIt is reversible by using alternative transformation parameter values"
+    "objectID": "LE08.html#coordinate-operations-of-vertical-crs-3",
+    "href": "LE08.html#coordinate-operations-of-vertical-crs-3",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Coordinate operations of vertical CRS",
+    "text": "Coordinate operations of vertical CRS\nVertical offset and slope method\n\nmodeling the difference between two vertical CRS using an inclined plane\nExample of Europe: here national height systems are related to pan-European height system using formula and params\nHorizantal location always should be in ETRS89"
   },
   {
-    "objectID": "LE06.html#similartiy-transformation-method",
-    "href": "LE06.html#similartiy-transformation-method",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Similartiy transformation method",
-    "text": "Similartiy transformation method\n\nWhat are the four parameters?"
+    "objectID": "LE08.html#coordinate-operations-of-vertical-crs-4",
+    "href": "LE08.html#coordinate-operations-of-vertical-crs-4",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Coordinate operations of vertical CRS",
+    "text": "Coordinate operations of vertical CRS\nThe Hub Concept\n\nExample: Relating the Dutch system (NAP) and German system (DHHN92) via the European vertical hub EVRS2000.\nCan also be applied to horizontal systems using WGS 84 as the central hub."
   },
   {
-    "objectID": "LE06.html#affine-transformation",
-    "href": "LE06.html#affine-transformation",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Affine transformation",
-    "text": "Affine transformation\n\nWhen in either system: scale along the axes differ or axes are not orthogonal\nSix parameters for scale and rotation adjustments independently in each direction\nAt minimum three control points are required\nEg. for remotely sensed images, it corrects first order distortions such as non-orthogonality and scale difference between scan and along track directions\nEg. In digitized maps, it corrects different amount of paper shrinkage in different directions\nReversibility:\n\nis another affine transformation but with different parameter values"
+    "objectID": "LE08.html#between-ellipsoidal-and-gravity-related-heights",
+    "href": "LE08.html#between-ellipsoidal-and-gravity-related-heights",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Between ellipsoidal and gravity-related heights",
+    "text": "Between ellipsoidal and gravity-related heights\nGeoid Models\n\nTo convert geometric GPS heights (\\(h\\)) to practical, gravity-related orthometric heights (\\(H\\)), we need the geoid separation (\\(N\\)).\n\\[H = h - N\\]\nGlobal geoid models (e.g., EGM96) use a spherical harmonic expansion to model gravity wavelengths.\nAccuracy drops where dense local gravity network observations are missing.\nDifferential methods/ relatice techniques are also used where \\(\\Delta N\\) can be assumed zero"
   },
   {
-    "objectID": "LE06.html#polynomials",
-    "href": "LE06.html#polynomials",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Polynomials",
-    "text": "Polynomials\n\nSecond order (12 parameters): used in remote sensing for the correction of scanner data\nfor such case minimum 6 ground control points are to be used and the distribution has to be distributed over the whole area to be transformed\nUseful for correcting second-order distortion in satellite images caused due to pitch and roll, sub satellite track curvature and scan line convergence due to earth rotation, map projection, and some problems due to altitude variations along the flight path."
+    "objectID": "LE08.html#between-ellipsoidal-and-gravity-related-heights-1",
+    "href": "LE08.html#between-ellipsoidal-and-gravity-related-heights-1",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Between ellipsoidal and gravity-related heights",
+    "text": "Between ellipsoidal and gravity-related heights\nHeight Correction Models\n\nNational vertical datums are realizations of the geoid, but rarely match it perfectly due to historical local datum definitions.\nFormula modified to include a localized correction surface (\\(C\\)): \\[H_D = h - C\\]\nHeight correction surface differ from geoid model by small amounts\nApplications:\n\ncorrection of GPS derived ellipsoidal height to chart datum\ncan also be used to relate two gravity-related height systems"
   },
   {
-    "objectID": "LE06.html#break",
-    "href": "LE06.html#break",
-    "title": "Reference Systems - Transformations Part 1",
-    "section": "Break",
-    "text": "Break\n\nQuestions?"
+    "objectID": "LE08.html#transformation-involving-compound-crs",
+    "href": "LE08.html#transformation-involving-compound-crs",
+    "title": "Reference Systems - Transformations Part 2",
+    "section": "Transformation involving Compound CRS",
+    "text": "Transformation involving Compound CRS\n\nA 3D position described by combining an independent 2D horizontal system (\\(\\phi, \\lambda\\) or \\(E, N\\)) with an independent 1D gravity-related vertical system (\\(H\\)).\nTransformation of 3D geographic -&gt; compound system requires splitting the 3D system into horizantal and vertical and treat them seperately"
   },
   {
-    "objectID": "LE06.html#next-lecture",
-    "href": "LE06.html#next-lecture",
-    "title": "Reference Systems - Transformations Part 1",
+    "objectID": "LE08.html#next-lecture",
+    "href": "LE08.html#next-lecture",
+    "title": "Reference Systems - Transformations Part 2",
     "section": "Next lecture",
-    "text": "Next lecture\nnext class: 25.06.2026 More details later"
+    "text": "Next lecture\n\nnext class: 09.07.2026\nTemporal Data and Temporal Reference Systems"
   },
   {
     "objectID": "LE04.html#reading-guides",
