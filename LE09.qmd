@@ -1,0 +1,200 @@
+---
+title: "Reference Systems - Temporal reference system"
+author: "Poshan Niraula"
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    logo: 2021-logo-ifgi-text-de.png
+    incremental: false
+    css: logo.css
+    width: 1600
+    height: 900
+editor: visual
+---
+
+## Readings
+
+* **Temporal Data and Temporal Reference Systems**
+  * Radoš ŠUMRADA, Slovenia
+  * FIG Working Week 2003
+
+
+## Introduction: Time in Spatial Data
+
+  * Time is a fundamental component of physical space. 
+  * Modern GIS technology goes beyond static 2D or 3D models by directly embedding temporal properties into spatial data.
+  * Users today need to track the temporal span, validity, and up-to-dateness of geographic information.
+  * It allows us to analyze the chronology of events, object stability, and sequences of activities over time.
+- **Advanced Applications**
+  * Implementing a standardized temporal schema enables complex spatial simulations, environmental monitoring, and dynamic forecasting.
+
+
+## Object Oriented Approach
+
+* Traditionally, time is just another attribute of spatial objects (e.g., date of property transfer).
+* Modern approaches treat time as a separate, important dimension—similar to space.
+* Discrete time modeling: Most analysis (e.g., tracking movement or changes) uses these snapshot states, even though real changes can be continuous.
+
+---
+
+## The Object-Oriented Approach: Defining a "Stable State"
+
+* According to Šumrada (2003), an object remains in a stable state until a distinct event forces a transition. 
+* This state is defined by three pillars:
+  1. **Static Attributes & Associations:** The current geometric/thematic values and established relationships with other objects.
+  2. **Active Processing:** Ongoing actions or internal processes currently being executed by the object.
+  3. **Event Listening:** The object passively awaits an internal or external trigger to change.
+
+---
+
+## State Transitions via Messaging
+
+* Spatial objects interact and communicate by sending and receiving messages/events.
+* A change of state is immediate and happens as a direct response to a discrete event.
+
+```text
+       Object A                                 Object B
+    +-----------+                            +-----------+
+    |  State A1 |                            |  State B1 |
+    +-----------+                            +-----------+
+          |                                        ^
+          | ----- message / event to Object B ---->|
+          |                                        |
+    event |                                  event |
+          v                                        |
+    +-----------+                            +-----------+
+    |  State A2 |<---- message / event to A -----|  State B2 |
+    +-----------+                            +-----------+
+  ```
+
+## ISO 19108:2002
+* An international standard developed to specify how temporal characteristics of spatial objects should be defined and exchanged.
+* **The Unified Schema**
+  * It provides a consistent, standardized temporal structure for a wide variety of spatial datasets.
+  * This ensures seamless data exchange and interoperability.
+
+
+## ISO 19108- Temporal Schema
+
+* main focus on the temporal validity of spatial datasets and not on the management of data transactions.
+* provide consistent temporal structure for variety of spatial datasets.
+* By treating time as an independent dimension, ISO 19108 allows us to combine it with physical space to model dynamic systems.
+* **Example: Tracking Trajectories**
+  * The path of a moving object (e.g., a delivery truck or migrating bird) is recorded as a discrete sequence of points. 
+  * Each point represents a location at a specific instant: **(x, y, z, t)**.
+
+---
+
+## Temporal Geometry
+
+* Time is a special dimension that is similar and related to the other dimensions of space. Like space, time has its own geometry and topology (ISO 19108).
+* Temporal point occupies a location, the location can be specified in temporal reference system.
+* Temporal reference system can be considered like linear reference system.
+
+---
+
+## Two scales of measuring time
+
+* **Ordinal temporal scale**
+  * Who owned the land parcel before and after a transfer, without knowing the exact dates.
+  * Owner A → Owner B → Owner C
+* **Interval temporal scale**
+  * Owner A: Jan 2000 - May 2005 (5 years and 4 months)
+  * Owner B: May 2005 - March 2010 (4 years and 10 months)
+  * Owner C: March 2010 – present
+
+---
+
+## Geometric temporal classes
+
+* **Instant:**
+  * zero dimensional temporal point -> conceptually similar to point
+* **Period:**
+  * single dimensional temporal geometric primitive -> analogous to segment
+
+---
+
+## Topological temporal classes 
+
+* gives logical relations among objects in time and may provide information about the ordering of objects in time - but does not provide the data about position of objects.
+* topology is generally explicitly stored, although it might be also indirectly derived from temporal attributes.
+
+---
+
+## Topological temporal classes 
+
+* Temporal topology determines the basic rules of single dimensional topology.
+* Temporal node is 0D topological primitive i.e. instant.
+* Temporal edge is 1D topological segment that geometrically determines an interval in time or period between the start and end temporal nodes.
+
+---
+
+## Temporal Reference Systems
+
+* Any TRS is a temporal location system that enables measurements and specifications of time.
+* ISO 8601: Gregorian calendar and UTC as the basis measures for specification and temporal data and info.
+* So does ISO 19108 uses Gregorian calendar (YYYY-MM-DD) and 24-hour local time given as UTC (HH:MM:SS).
+
+---
+
+## Temporal Reference Systems: Temporal coordinate system
+
+* Based on continuos interval scale
+* **Fundamental Parameters:**
+  * **Origin:** The starting instant of the scale (e.g., a specific date and time).
+  * **Period:** The basic temporal unit (e.g., one day, hour, second) used to measure intervals.
+* **Example:**
+  * Julian day counting with origin on the Greenwich Meridian on noon 01.01.4371 BC. Today it is 2461230 JDN
+  * Unix time: origin at midnight on January 1, 1970 (known as the Unix Epoch)
+  - what is the other difference?
+---
+
+## Temporal Reference Systems: Ordinal
+
+* Useful in anthropology, archeology, geology etc, where relative temporal order of events can be well specified.
+* But, extent or span of intervals between events cannot be reliably determined.
+* An ordinal TRS consists of set of named eras ordered in time. Sometimes could also have heirarchical structure.
+* **Examples:** Stone Age → Bronze Age → Iron Age.
+
+---
+
+## Calender and clock
+
+* Both fundamental temporal classes
+* Calender defined on daily resolution, whereas clock provides temporal position within a day.
+* Complete desription of the temporal position is given by combination
+
+## GPS calendar
+
+* **Origin:** Midnight (00:00:00 UTC), 06.01.1980
+* **Calendar representations:**
+  * 2426:3 - GPS week number
+  * 189 - Day of year
+* *https://navigationservices.agi.com/GNSSWeb/*
+
+---
+
+## Time, atomic clocks and GPS
+
+* Video link: https://www.youtube.com/watch?v=OKms5a0nGO4
+
+---
+
+## Temporal metadata elements
+* metadata/ data about data describe the technical and administrative charactersticts of a certain dataset, could be at dataset lebel or even at objects/records level
+* ISO 19115 states: general temporal properties of dataset, temporal reference system and temporal properties of classes and their attributes
+
+
+## Discussions: Temporal reference systems
+
+* Why is a temporal point zero dimensional?
+* Are there situations in which ordinal temporal reference systems are preferable to coordinate-based systems, even when exact timestamps are available? 
+
+---
+
+## Next lecture
+
+* **16.07.2026:** Questioning
+* Upload your questions about the course materials to learnweb by 15.07.2026 12:00
+* The class takes place only if there are questions
