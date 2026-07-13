@@ -26,6 +26,8 @@ website:
         text: LE06
       - href: LE08.qmd
         text: LE08
+      - href: LE09.qmd
+        text: LE09
 format:
   html:
     theme: cosmo
